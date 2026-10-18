@@ -16,7 +16,7 @@
 
 
  <!-- METADADOS DE VERSÃO E CONTEÚDO ADULTO -->
-    <meta name="version" content="1.0.0.2">
+    <meta name="version" content="1.0.0.3">
     <meta name="channel-category" content="humor">
     <meta name="channel-id" content="S46hcFbcWqfqzR53aV4S">
     <meta name="channel-name" content="Os Caras de Pau TV">
@@ -25,7 +25,7 @@
     <meta name="channel-adult" content="false">
     <meta name="generator" content="Gerador de TV Online">
     <meta name="adult-content" content="false">
-    <meta name="programming-mode" content="grade">
+    <meta name="programming-mode" content="playlist">
     <style>
         * {
             margin: 0;
@@ -1186,7 +1186,7 @@
     <div class="debug-info">
         <div class="program-item">
             <div class="program-label">Modo de Programação:</div>
-            <div class="program-name" id="programmingModeDisplay">Grade</div>
+            <div class="program-name" id="programmingModeDisplay">Playlist</div>
         </div>
         <div class="program-item">
             <div class="program-label">Comerciais por intervalo:</div>
@@ -1239,7 +1239,7 @@
         
  <div class="contact-info">Contato: oscarasdepau@gmail.com</div>
         <div style="text-align: center; margin-top: 5px; font-size: 0.75rem; opacity: 0.5;">
-            Versão 1.0.0.2
+            Versão 1.0.0.3
         </div>
     </div> <!-- Fecha container -->
 </div> <!-- Fecha mainContent -->
@@ -2421,16 +2421,16 @@ function calculateExpectedTime(duration) {
     <script>
         // CONFIGURAÇÕES DO CANAL
 
-        const TV_PROGRAMS = [{"id":0,"name":"Os Caras de Pau","totalVideos":1,"videos":["PTVX::Z61BrH5ut16ihkKEOqPR5I0RBWMd9zq4s/6ZOEM1swqki5taXmioYrbloDbgulSkFASC/yn0bucxJFw8pD/4L8aPnYJHk6xTAwcEFYFfpjQ1Fhbuw9FgqLrEQTLODxJ0N1PGouEQKiTZq1ZPsdrn"]}];
-        const TV_PLAYLIST = [{"id":0,"name":"Os Caras de Pau","url":"PTVX::k6P7xf/quHi1rjvjcjMgtRjOwSale7t+fyI0Cq1BMBrrEMIJXp/Ej9YuNCFLKoE1OQkAuZ2zZ+f980N6BFCbWwxfh+Hz/6j/8LgNyQJdnlXOd6mMJmd8WxDXboSYTqN9YmkZoF9tXEVa5L+pHrhH"},{"id":1,"name":"Os Caras de Pau","url":"PTVX::SvMlcrktGRV6+FKr/3vgUPX7JZRsfWNC0LEXg0aF8Obpqds/gatQlbHvPuecJDnfVJsB5GdzI4PnVt2RRDDEq9bEhuHAoyaPo4WdsRPmYo0oM1KiTDN6nb+Rag2NaWsE9z66zMy1q1yhuQQwOaxa"},{"id":2,"name":"Os Caras de Pau","url":"PTVX::hZgeTNQBrE8pUK55lt7+n+D0mFXmu4V+mUJ8Alsz5cPk8z5C/NtEcEXQFZQRCMfn4oXWouElJmsIJSJJXPo01vLgaaEo0humdAxJf/VGSdTwVdwixg6DVRxtW//0vu7UtpbfANgJN4yCrrxZJMLm"}];
-        const PROGRAMMING_MODE = "grade";const TOTAL_PROGRAMS = 1;
-        const TOTAL_PLAYLIST_VIDEOS = 3;
+        const TV_PROGRAMS = [{"id":0,"name":"Os Caras de Pau","totalVideos":1,"videos":["PTVX::P/o/Qdrxik0bNQBCTNum+vSz4tYr+PUgN1/iwLnsl9TKWG51XREmsuurheRzymarVgtPNzbILp6aaVooUS1txmKtbKaJGz8f4cyl/XBqu+K0VMJWlMgy0z7ItdJJ1yGHAKNV5wiw4WmGtYIJiBHA"]}];
+        const TV_PLAYLIST = [{"id":0,"name":"","url":"PTVX::w7y7yC1Xjw+3Akcip+Mk9qK4FEa+c9kcUxnihcX/vWUGi3EpoKrAxh8+ZqTUZH6n7hFidwj1RK1bpoBI5DxHJDRkZLPcb1pNJjNp9RqFdvhPMD1c2llZAt8AHgdNGPAazyT4Zxnm9q1qr8W+KQ=="}];
+        const PROGRAMMING_MODE = "playlist";const TOTAL_PROGRAMS = 1;
+        const TOTAL_PLAYLIST_VIDEOS = 1;
         const PROGRAM_VIDEO_COUNTS = [1];
         const TV_COMMERCIALS = [];
         const ENABLE_COMMERCIALS = false;
         const COMMERCIALS_PER_BREAK = 2;
         const COMMERCIALS_ORDER = "sequential";
-        const GRADE = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+        const GRADE = [];
         const TOTAL_SLOTS = 58;
         const SLOT_DURATION = 25;
         const SHOW_TIME = true;
@@ -2442,7 +2442,7 @@ function calculateExpectedTime(duration) {
         
         const RELEASE_DATE = "2026-10-18";
         const IS_OFFLINE = false;
-        const CHANNEL_VERSION = "1.0.0.2";
+        const CHANNEL_VERSION = "1.0.0.3";
         const CHANNEL_ID = "S46hcFbcWqfqzR53aV4S";
         // --- Subscription ---
         const SUBSCRIPTION_ENABLED = false;
