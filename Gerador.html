@@ -5519,7 +5519,7 @@ if (slotIndex === currentPlayingSlot) {
                     <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.1" value="1">
                 </div>
                 <google-cast-launcher id="cast-launcher" style="width:24px; height:24px; margin:0 10px; --connected-color:#fdbb2d; --disconnected-color:white; cursor:pointer; vertical-align:middle;"></google-cast-launcher>
-<button class="fullscreen-btn" id="fullscreenBtn">⛶</button>
+                <button class="fullscreen-btn" id="fullscreenBtn">⛶</button>
             </div>
             `}
         </div>        
@@ -6632,11 +6632,11 @@ function atualizarIconeVolume(volume) {
     }
     
     // 🎬 HLS (m3u8)
-    if (url && typeof url === 'string' && /\.m3u8(\?|$|#)/i.test(url)) {
-        return carregarVideoHLS(url, iniciarNoPercentual, autoplay);
-    }
+        if (url && typeof url === 'string' && /\.m3u8(\?|$|#)/i.test(url)) {
+            return carregarVideoHLS(url, iniciarNoPercentual, autoplay);
+        }
 
-    // 🎥 YouTube delega
+        // 🎥 YouTube delega
     if (url && (url.indexOf('youtube.com') !== -1 || url.indexOf('youtu.be') !== -1)) {
         return _carregarVideoYouTube_raw(url, iniciarNoPercentual, autoplay);
     }
