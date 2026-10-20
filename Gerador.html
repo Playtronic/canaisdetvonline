@@ -4377,6 +4377,9 @@ if (slotIndex === currentPlayingSlot) {
     <!-- YouTube IFrame API -->
     <script src="https://www.youtube.com/iframe_api"><\/script>
 
+    <!-- [HLS-v1] HLS.js para URLs .m3u8 -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.7/dist/hls.min.js"><\/script>
+
 
  <!-- METADADOS DE VERSÃO E CONTEÚDO ADULTO -->
     <meta name="version" content="${version}">
@@ -5467,8 +5470,8 @@ if (slotIndex === currentPlayingSlot) {
         <div class="container" style="position: relative; z-index: 1;">
 
 <div class="channel-header" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 20px;">
-    <img src="${dados.logo || DEFAULT_LOGO}" class="channel-logo-main" onerror="this.onerror=null;this.src='${DEFAULT_LOGO}';">
-    ${dados.showChannelNameWithLogo ? `<h1 style="font-size: 2rem; text-align: center; margin: 0;">${dados.name}</h1>` : ''}
+    <img src="${dados.logo || DEFAULT_LOGO}" class="channel-logo-main" onerror="this.onerror=null;this.src='${DEFAULT_LOGO}';" onclick="location.reload();" style="cursor: pointer;" title="Clique para recarregar">
+    ${dados.showChannelNameWithLogo ? `<h1 style="font-size: 2rem; text-align: center; margin: 0; cursor: pointer;" onclick="location.reload();" title="Clique para recarregar">${dados.name}</h1>` : ''}
 </div>
 
         <p class="subtitle">${dados.slogan}</p>
@@ -5512,6 +5515,7 @@ if (slotIndex === currentPlayingSlot) {
                     ${dados.enableRewind10 ? '<button class="control-btn" id="rewind10Btn" title="Retroceder 10 segundos">-10s</button>' : ''}
                     ${dados.enableRestart ? '<button class="control-btn" id="restartBtn" title="Voltar ao início">⏮ Início</button>' : ''}
                     ${dados.enableLive ? '<button class="control-btn" id="liveBtn" title="Ir para Ao Vivo"><span class="live-dot" id="liveDot"></span> AO VIVO</button>' : ''}
+                    <button class="control-btn" id="castBtn" title="Transmitir para Smart TV" style="display:none;">📺 Smart TV</button>
                 </div>
                 <div class="volume-controls">
                     <button class="volume-btn" id="volumeBtn">🔊</button>
@@ -6674,7 +6678,38 @@ videoElement.setAttribute('playsinline', '');
     
     // 6. DEFINIR a URL (CRÍTICO: fazer ANTES dos event listeners)
     console.log('📥 Definindo src no elemento de vídeo');
-    videoElement.src = url;
+
+    // [HLS-v1] Detecta URLs .m3u8 e usa HLS.js
+    if (window.__hlsInstance) {
+        try { window.__hlsInstance.destroy(); } catch(e){}
+        window.__hlsInstance = null;
+    }
+    const __isHls = /\.m3u8(\?|#|$)/i.test(url);
+    if (__isHls) {
+        if (window.Hls && Hls.isSupported()) {
+            console.log('🎥 [HLS] usando HLS.js');
+            const hls = new Hls({ enableWorker: true, lowLatencyMode: true });
+            hls.loadSource(url);
+            hls.attachMedia(videoElement);
+            hls.on(Hls.Events.ERROR, function(evt, data) {
+                if (data && data.fatal) {
+                    console.warn('⚠️ [HLS] erro:', data.type, data.details);
+                    if (data.type === Hls.ErrorTypes.NETWORK_ERROR) hls.startLoad();
+                    else if (data.type === Hls.ErrorTypes.MEDIA_ERROR) hls.recoverMediaError();
+                    else hls.destroy();
+                }
+            });
+            window.__hlsInstance = hls;
+        } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
+            console.log('🎥 [HLS] nativo (Safari/iOS)');
+            videoElement.src = url;
+        } else {
+            console.warn('⚠️ [HLS] não suportado neste navegador');
+            videoElement.src = url;
+        }
+    } else {
+        videoElement.src = url;
+    }
     
     // 7. Configurar eventos
     function handleLoadedMetadata() {
@@ -6820,6 +6855,11 @@ function _carregarVideoYouTube_raw(url, iniciarNoPercentual = 0, autoplay = true
         videoElement.style.display = 'none';
         videoElement.pause();
         videoElement.src = '';
+        // [HLS-v1] clean
+        if (window.__hlsInstance) {
+            try { window.__hlsInstance.destroy(); } catch(e){}
+            window.__hlsInstance = null;
+        }
     }
     
     // Extrair ID do vídeo
@@ -7752,6 +7792,56 @@ function verificarFimDoVideo() {
             likeDislikeContainer = document.getElementById('likeDislikeContainer');
             
             configurarControles();
+
+    // [CAST-v1] Botão Transmitir para Smart TV (Remote Playback / AirPlay)
+    (function setupCastButton() {
+        const castBtn = document.getElementById('castBtn');
+        if (!castBtn) return;
+
+        const hasRemote = ('remote' in HTMLVideoElement.prototype);
+        const hasAirPlay = ('WebKitPlaybackTargetAvailabilityEvent' in window);
+
+        if (!hasRemote && !hasAirPlay) {
+            castBtn.style.display = 'none';
+            return;
+        }
+
+        function updateCastVisibility() {
+            if (typeof isYoutubeVideo !== 'undefined' && isYoutubeVideo) {
+                castBtn.style.display = 'none';
+                return;
+            }
+            const v = document.getElementById('myVideo');
+            if (v && v.src && v.style.display !== 'none' && v.readyState >= 1) {
+                castBtn.style.display = 'block';
+            } else {
+                castBtn.style.display = 'none';
+            }
+        }
+        setInterval(updateCastVisibility, 2000);
+        updateCastVisibility();
+
+        castBtn.addEventListener('click', async function() {
+            const v = document.getElementById('myVideo');
+            if (!v) return;
+
+            if (v.webkitShowPlaybackTargetPicker) {
+                v.webkitShowPlaybackTargetPicker();
+                return;
+            }
+            if (v.remote && typeof v.remote.prompt === 'function') {
+                try {
+                    await v.remote.prompt();
+                } catch (err) {
+                    if (err.name !== 'NotAllowedError' && err.name !== 'AbortError') {
+                        alert('Não foi possível conectar à Smart TV.\n\nVerifique:\n• Está na mesma rede Wi-Fi que a TV\n• A TV suporta Chromecast ou AirPlay\n• Está usando Chrome, Edge ou Safari');
+                    }
+                }
+                return;
+            }
+            alert('Este navegador não suporta transmissão para Smart TV.\nUse Chrome, Edge ou Safari.');
+        });
+    })();
 
     // Verificar se YouTube API está carregada
     if (typeof YT === 'undefined') {
@@ -8689,25 +8779,60 @@ adLog('API: window.__ads.diag()');
             const smartlinkOverlay = document.getElementById('smartlinkOverlay');
             const unlockBtn = document.getElementById('unlockChannelBtn');
             const mainContent = document.getElementById('mainContent');
-            
+            const smartlinkUrl = '${smartlinkUrl}';
+
+            // [SMARTLINK-IFRAME-v1] Lightbox com iframe + fechamento após 5s
+            let slLightbox = document.getElementById('smartlinkIframeOverlay');
+            if (!slLightbox) {
+                slLightbox = document.createElement('div');
+                slLightbox.id = 'smartlinkIframeOverlay';
+                slLightbox.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:2147483200;display:none;flex-direction:column;';
+                slLightbox.innerHTML =
+                    '<div style="display:flex;justify-content:space-between;align-items:center;padding:12px 18px;background:#111;border-bottom:2px solid #fdbb2d;font-family:Arial,sans-serif;">' +
+                        '<span style="color:#fdbb2d;font-weight:bold;font-size:1rem;">🔓 Liberando canal...</span>' +
+                        '<button id="slCloseBtn" disabled style="background:#555;color:#fff;border:none;padding:10px 22px;border-radius:8px;font-weight:bold;cursor:not-allowed;font-size:0.95rem;">Fechar (5)</button>' +
+                    '</div>' +
+                    '<iframe id="slIframe" src="about:blank" style="flex:1;width:100%;border:none;background:#fff;" allow="autoplay; encrypted-media; fullscreen" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+                document.body.appendChild(slLightbox);
+            }
+
+            const slCloseBtn = document.getElementById('slCloseBtn');
+            const slIframe = document.getElementById('slIframe');
+
             if (smartlinkOverlay && unlockBtn && mainContent) {
-                // 1. MOSTRA a lightbox ao carregar
                 smartlinkOverlay.style.display = 'flex';
-                
-                // 2. ESCONDE o conteúdo principal
                 mainContent.style.display = 'none';
-                
+
                 unlockBtn.addEventListener('click', function() {
-                    // Abre o smartlink em nova aba
-                    window.open('${smartlinkUrl}', '_blank');
-                    
-                    // 3. ESCONDE a lightbox
+                    slIframe.src = smartlinkUrl;
+                    slLightbox.style.display = 'flex';
                     smartlinkOverlay.style.display = 'none';
-                    
-                    // 4. MOSTRA o conteúdo principal
+
+                    let seg = 5;
+                    slCloseBtn.disabled = true;
+                    slCloseBtn.textContent = 'Fechar (' + seg + ')';
+                    slCloseBtn.style.background = '#555';
+                    slCloseBtn.style.cursor = 'not-allowed';
+
+                    const __slTimer = setInterval(function() {
+                        seg--;
+                        if (seg > 0) {
+                            slCloseBtn.textContent = 'Fechar (' + seg + ')';
+                        } else {
+                            clearInterval(__slTimer);
+                            slCloseBtn.disabled = false;
+                            slCloseBtn.textContent = 'Fechar';
+                            slCloseBtn.style.background = '#e74c3c';
+                            slCloseBtn.style.cursor = 'pointer';
+                        }
+                    }, 1000);
+                });
+
+                slCloseBtn.addEventListener('click', function() {
+                    if (slCloseBtn.disabled) return;
+                    slLightbox.style.display = 'none';
+                    slIframe.src = 'about:blank';
                     mainContent.style.display = 'block';
-                    
-                    // Inicia o player
                     if (typeof iniciarPlayer === 'function') {
                         setTimeout(() => iniciarPlayer(), 300);
                     }
