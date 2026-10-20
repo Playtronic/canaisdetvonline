@@ -132,6 +132,9 @@ header{
   flex-shrink:0;
   display:block;
 }
+.logo-header{transition:opacity .2s}
+.logo-header:hover img{opacity:.85;transform:scale(1.03);transition:transform .2s}
+.logo-header:active img{transform:scale(.98)}
 .logo-text{
   display:flex;
   flex-direction:column;
@@ -474,13 +477,13 @@ footer.site-footer{
 <body>
 
 <header>
-  <div class="logo-header">
+  <a href="/" class="logo-header" id="logoHomeLink" title="Clique para atualizar a página" style="text-decoration:none;color:inherit;cursor:pointer;">
     <img src="https://raw.githubusercontent.com/Playtronic/tv/refs/heads/main/template/logotv.png" alt="Canais de TV Online">
     <div class="logo-text">
       <span class="logo-title">Canais de TV Online</span>
       <span class="logo-subtitle" id="channelCount">Carregando canais...</span>
     </div>
-  </div>
+  </a>
 
   <div class="header-right">
     <div class="search-box">
@@ -1020,6 +1023,13 @@ function updateNavButtons(){
 document.getElementById('searchInput').addEventListener('input', e => {
   searchTerm = e.target.value.trim();
   render();
+});
+
+// Logo do topo — recarrega a página ao clicar (respeita ctrl/cmd/shift/middle-click)
+document.getElementById('logoHomeLink').addEventListener('click', function(e){
+  if (e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+  e.preventDefault();
+  location.reload();
 });
 
 setupAuth();
