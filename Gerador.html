@@ -5467,7 +5467,7 @@ if (slotIndex === currentPlayingSlot) {
         <div class="container" style="position: relative; z-index: 1;">
 
 <div class="channel-header" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 20px;">
-    <img src="${dados.logo || DEFAULT_LOGO}" class="channel-logo-main" onerror="this.onerror=null;this.src='${DEFAULT_LOGO}';">
+    <img src="${dados.logo || DEFAULT_LOGO}" class="channel-logo-main" style="cursor:pointer;" title="Clique para atualizar o canal" onclick="location.reload()" onerror="this.onerror=null;this.src='${DEFAULT_LOGO}';">
     ${dados.showChannelNameWithLogo ? `<h1 style="font-size: 2rem; text-align: center; margin: 0;">${dados.name}</h1>` : ''}
 </div>
 
