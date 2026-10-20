@@ -13,12 +13,10 @@
    
     <!-- YouTube IFrame API -->
     <script src="https://www.youtube.com/iframe_api"></script>
-<!-- Google Cast SDK -->
-<script src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
 
 
  <!-- METADADOS DE VERSÃO E CONTEÚDO ADULTO -->
-    <meta name="version" content="1.0.1.8">
+    <meta name="version" content="1.0.1.9">
     <meta name="channel-category" content="animes">
     <meta name="channel-id" content="WeXOEW0DWwXYZNh1cIbK">
     <meta name="channel-name" content="Black">
@@ -1142,7 +1140,7 @@
         <div class="container" style="position: relative; z-index: 1;">
 
 <div class="channel-header" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 20px;">
-    <img src="https://i.pinimg.com/736x/2a/37/04/2a3704245dc0266556801b83e764ab88.jpg" class="channel-logo-main" style="cursor:pointer;" title="Clique para atualizar o canal" onclick="location.reload()" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/Playtronic/tv/refs/heads/main/template/logotv.png';">
+    <img src="https://i.pinimg.com/736x/2a/37/04/2a3704245dc0266556801b83e764ab88.jpg" class="channel-logo-main" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/Playtronic/tv/refs/heads/main/template/logotv.png';">
     <h1 style="font-size: 2rem; text-align: center; margin: 0;">Black</h1>
 </div>
 
@@ -1185,17 +1183,7 @@
                     <button class="volume-btn" id="volumeBtn">🔊</button>
                     <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.1" value="1">
                 </div>
-                <button id="castBtn" class="control-btn" title="Transmitir para TV" style="display:none;">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;">
-        <path d="M1 18v3h3c0-1.66-1.34-3-3-3zm0-4v2c2.76 0 5 2.24 5 5h2c0-3.87-3.13-7-7-7zm0-4v2c4.97 0 9 4.03 9 9h2c0-6.08-4.93-11-11-11zm20-7H3c-1.1 0-2 .9-2 2v3h2V5h18v14h-7v2h7c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
-    </svg>
-</button>
-<button id="airplayBtn" class="control-btn" title="Transmitir (AirPlay/Smart TV)" style="display:none;">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;">
-        <path d="M6 22h12l-6-7-6 7zM21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4v-2H3V5h18v12h-4v2h4c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
-    </svg>
-</button>
-<button class="fullscreen-btn" id="fullscreenBtn">⛶</button>
+                <button class="fullscreen-btn" id="fullscreenBtn">⛶</button>
             </div>
             
         </div>        
@@ -1304,7 +1292,7 @@
         
  <div class="contact-info">Contato: tvmanchete@mail.com</div>
         <div style="text-align: center; margin-top: 5px; font-size: 0.75rem; opacity: 0.5;">
-            Versão 1.0.1.8
+            Versão 1.0.1.9
         </div>
     </div> <!-- Fecha container -->
 </div> <!-- Fecha mainContent -->
@@ -2487,7 +2475,7 @@ function calculateExpectedTime(duration) {
         // CONFIGURAÇÕES DO CANAL
 
         const TV_PROGRAMS = [];
-        const TV_PLAYLIST = [{"id":0,"name":"01 - A metamorfose","url":"PTVX::R7UC6Mp2r09bunwHLf5HRu+u9fkN+Yjw9qEXRO82hH46RkLYqRUTdFhoV1YOp3BkHqapVOntaj4vJuHrvLBWdJ4jSZ8v8qRuH8xczzwVjF9DXixFLZau"},{"id":1,"name":"02 - A festa dos monstros","url":"PTVX::/YbVuxyWOGbM8uAPSQGapAo+LTF8177o6dcPUYMvJHH5bPzJ/wukz8NgcITGvTy207MApNJK9UIfErjIYnn50MTNqbTlxMcuJRYrIxUmLtMqbXdCjGPz"},{"id":2,"name":"03 - O mutante das galáxias","url":"PTVX::HemEZljsF+cbmZAcXvpTCRQgo19XfKaDybB+Z7f/VAcAhMJy82rkRtK1bRfWwVtAAKVA55qcySycT3KlqTHlssufvxaJ2xeth9tQwazfNfDBhS2gjW4u"},{"id":3,"name":"04 - Experiência maquiavélica","url":"PTVX::IofXQvY3HoglTVNxDsJZ+iiZqoxwiWbLwYEAsMFxtJTxbiTb+jEu0XDdaYYVWB8GC+xAt+Sz5+kPLu19qpegXg2xeG7qF6Dm6u4+Lu2R8oRUmGXYbQiv"},{"id":4,"name":"05 - A peste das trevas","url":"PTVX::531URN/7Rw/D8O47KgzKAKApRwzz+3yPSVgfPD3lT5E5MwDZKj2SJNnz2zlxLs3WfSjNm8hk+iqDo0gI6PLZE3d0kpdZeXmRAK68EzOAHH2ScDkbVvsS"},{"id":5,"name":"06 - A guerra dos computadores","url":"PTVX::oABm2I+QBSR0OlHZnZkpyg8XntkmXhCnc4uReK4BX0SCNL0jueB72rHA0gKN6Cl1DcRS7QWam4oK7/uB0cWMyDIPsqyhp26CdMjHdZwsqlKeGKw4LeYU"},{"id":6,"name":"07 - A regeneração de Battle Hopper","url":"PTVX::KKX6QFHnwkhvx3veSReTRl2cX5OBlc/afAlNmhAOfV3cat3BuAm/48/RDf2L6VZRpcz1bkcqKzze5cud2vmtvz+zSCqADUM86Vb71aMclmOTXQ709H/Q"},{"id":7,"name":"08 - O poema do demônio","url":"PTVX::nvNAsUN4/bifW2UYzcU4P/lCyhqgVDxK2g0Nf4mwoRrfPl3mzzvqThbugFy4Es+qEPDibqcHiLNUFXwyKibsaAO2dPrxOdNIrJWm6maJ3txu0hzow5rQ"},{"id":8,"name":"09 - As façanhas de Madame Pérola","url":"PTVX::ujIHP+O3oPiWRykOAbjRSbIV5/q3u9FBEvBbZUdD7AtRuvWQ5WfF8YqPWK3zyRz9xTy+jkiY1Z7Vuzww9quzFWQpYRMJ9ge3UEM2VhMs8xqM5sZbT8Vs"},{"id":9,"name":"10 - Os rebeldes","url":"PTVX::MmaEnQXs9uSQpaVj/kjBfDUQBssuDBiy8YZJiVH5vFvRfr7mTtJZaVVmckA0UD3IqQrboAUMjjZmj7ujK/NFFHyZYFgmEefAVNEyf6eybv7D4n7pQcZ5"},{"id":10,"name":"11 - Tempestade negra","url":"PTVX::vUgJrbyPG27nHk2PKhkQMye+6I+ume0JHts4AiaZqHEUCAKiz7agty8W/p2Ho+7o6BosPJCnmJRDXNwwVkzZ/tnrZxaBJVFbwziyzQdZT3t8IUlW47kX"},{"id":11,"name":"12 - Máquina lendária","url":"PTVX::7gkTAUhCOGomXt0bJ9BiGZ/5crjAjv/3EJRAoli4/BPHreban7H5DSeFt5RLe0N0KTLye079zdSdyBYrrAHGnXboWDyky7pG0uVsDrnMbiOHwGnJPZAo"},{"id":12,"name":"13 - O rapto das mães","url":"PTVX::W+G4P53imFjQzj3v86OY65slPlSymVhOhyIgkOxiZJFDvdjLuD/082Yk3xeNCKCo+yuFLxQc4hcYJrlFULV/FK8pcnr1v1Vun6TUBxhZX/dPWOm362Mw"},{"id":13,"name":"14 - O desaparecimento dos peixes","url":"PTVX::gVFcxeEhN67KsKBnkdkAfkIF9EdcWSdpYdKZrkj2s9Yr6mGMb1ux+U5Sm8RXQ3Q2pCFQ+Wv/x++o9huLl2v0AoZ2ccILSMSfR+wsOv0s4q7eV+BPgabA"},{"id":14,"name":"15 - A escola em perigo","url":"PTVX::k+Jv2GHsaiPyO+ajHuUw+VQUR88NIobvvMOmmpTYuwSsUpU5Rn/8WSUedvhScZD9DdxV+od38Iqx89KblhlcOnozWaKggj5dliQdycbKIpQ4hD7jyv1k"},{"id":15,"name":"16 - Amigos para valer","url":"PTVX::yKlVsuhIlId5fUHnbq6oG6WMrGImc7bE4cZCWKccA7FA/Ppfg4sDg3/UDqogzx5CUbK3FxBjDPBbV/rm8/8+8Zwr1aBV8d7r/EGjYWvfoibDXRzBeFa+"},{"id":16,"name":"17 - Sonho de infância","url":"PTVX::DRzDAUATSkEg9ENp0X0allvGQdlUY4eEY0Ekvp4ImNLsV6BNlIyvK3jgAE7sdyq06hOuMAS+tIh1XrNY54j205MlBJkj3mP5D1skMYf7jUFK4/UhsPTw"},{"id":17,"name":"18 - O imortal das trevas","url":"PTVX::CczQD6y4XqPlQCRPLHHDbNjZKx/xSSbQWBKYWiIkUP8ZcKAQwYWps3uYEYMJ3QZnnemtCROCJ7pyjTwu0xQh1pOL1BGk60PtQBQ4TTJUUHKY193oL8XI"},{"id":18,"name":"19 - Armadilha satânica","url":"PTVX::Dt5oYXet1PWkCDUnLbQBeI20XbS3Za7r/1QI5EUABZJMDblxG4+d7vwfSk6qSLfSkxIfNEzefVXyPw1HGKr19K2GVCiObSXmLSl+9oz7S7E+TvklLmEZ"},{"id":19,"name":"20 - O túmulo de Kamen Rider","url":"PTVX::HtN9yFy0mOcV8HdkY+yzhK5Yf0UXRCdFm4rgolLqB8JjUv6t0FzSxWG098VGadPRLRh4XoXW7eYf7cxBB/9f/Gy2Zn6kMxeLooSpDsOgw3MFfMaoaqDj"},{"id":20,"name":"21 - Duelo das máquinas","url":"PTVX::AB5pFK4ci8ChKkm6sHyDCLDtpHoBPQy5TVaPI6UEaW327L5+UTMcbWPK/IHAW9Xh1LKXprHh0+b6DxZGCFGk/OWpXIPIMy8Isz3pvCJTWtLtjVqxWsHx"},{"id":21,"name":"22 - Sombra negra","url":"PTVX::cuN/nCtbpZ0JEARzFRrVUBJD7fpTFt8pp3mME0wMHxUiiAb6ixLVPhIpRVT3HY5QvnNdYGnMTflLRjtkYpVAVB6/ZZuT7mWx+wcwdQ5IwwUgq2D+sDNl"},{"id":22,"name":"23 - O monstro de duas cabeças","url":"PTVX::M2WJJ/m4WxUwyQHPYeKT6OJZ9cZSxhXThOtSjc8mR+FOIBbMyTnce3FnBbCRti5HFysHbkL7ZnM4Qm+9iAMOmgs6LOz7chSs4a9zY17OUPo/W+7APtIW"},{"id":23,"name":"24 - Pesadelo sem fim","url":"PTVX::TAqNIGUZjWNCt8PMT44KaK8I25cVfs8lP8TU60Hy/AGLDoYUxvnY0lExj6niCSVO2GtrxqLkmJ3FdyXx5qaTy7OWdBsrIGJANdTNJT3L5Lq2+pX3k90Y"},{"id":24,"name":"25 - Máquina combate","url":"PTVX::YWnYEMVIfLDUsACitaasgZ7HJPhv9j4tQXBNfOLVXiFnDMLAXWdQXUVRV4s8C83XeAkn0lcpeXh1KxtMr27HkJN9cZshv7QoNAOXTxs5DI/R9X/Wjdxj"},{"id":25,"name":"26 - A possuída","url":"PTVX::UbM86aYZ0mn5oVh96SAZIUUXoZteaS+HYfzymJEsPWgPixcq5ylwZuy/zdIaaiOggyWZkFS+Kpx2GzLRJHbZ0Xs27FjCnLTEGKmZGJxvpKNQUU/g9yxc"},{"id":26,"name":"27 - No fio da navalha","url":"PTVX::GL7s4F1rqHO0R905vc7TAgPLKZkOJteJlEGmLGPimgYme1+e4mzH8IeR5pEOLH8Ss4dF2bkvvQCw9H7MAibZEvlnmu7tHaSop740FitHIF1xAscB+tgt"},{"id":27,"name":"28 - O amuleto dourado","url":"PTVX::RpSZbkPijbonW5zGPzBsOWmkq01RWSHxoLAwVutR1GInMgYn7+pY0mhgRcMLVQnJEmakWzKEXzmz8Du7ZZq4Pl5uMjlb2ub7AJvA9xfeM7SkYqu8tZEn"},{"id":28,"name":"29 - Boneco assassino","url":"PTVX::0UTP7xCJaL3juD9ZZN+8M94+l3gV160sMhfiB2w6qHVQCpGxSbju83l/2vX/+ChWGEN3PWmqkPPX+Zg0Fv8pJEUIevwboUjoZ20dQ5W4LEKsxGzUoSXn"},{"id":29,"name":"30 - A misteriosa Lana","url":"PTVX::yxhK9QxMkGrQGQehIKpY9lfyrBYHoKMpjcLMk0BWQbd+3NG/clQmioGsQz7UI/HNtdEKcbvBRJAgVNpZ6Qqq0G8Rz82DvRv1KQIP65lLKkMtKNHLgyuQ"},{"id":30,"name":"31 - A força do comando jovem","url":"PTVX::g7mIXGRszDaDvYtMRjQbax/71xlU78WxwDGSQPzaEwbCDF7B8nKyJwPPe/2J5AsM92BMmPaRIdshksudtZmh66FasAlJZ+ZSpVOVD9ZIb5l/dzq8S+Pt"},{"id":31,"name":"32 - Febre alucinante","url":"PTVX::Yp0RhmzP3OCRSJdL7TOXcYTUEo53Rb/6bkhvtYTzWQfiMrQZM/YmybEsA8rfX9kcS4b1/3TJeewfWx7Hm35RoYQop/bewqTnV4+vBaYqD1qxXh4Iy4Wk"},{"id":32,"name":"33 - Eu venci o mundo!","url":"PTVX::eYaa2lvvnF/lSx1FZGCaPugxM7AzcN3SfbaEZTVKxa2uO8zENRRh3SNO2gorkQnq4Z4Sj669Kcf0OVk+7wDpGx31JeOZR9TMxK1QJW/zV2MsIKnwsoBk"},{"id":33,"name":"34 - A ressurreição de Shadow Moon","url":"PTVX::fQgLZbuZu5Ab80+aExXF1kzcQ4w6KasSc8NKPOdqdU3AVwFM2urF7zIw08HwgrpZ+vqyA6OZiz6AlrjxwE6PRmFIaZH+sAQV3OXXey5j1P/ZAMztg4e6"},{"id":34,"name":"35 - O herdeiro imperial","url":"PTVX::fZlbXYwDOIuVg5bVOHylXkU1m8KeFW13e/uuVxKLEy1GyrsJVOMUQ3Bi5rSVvS0zA7+xM3hjMKerraNQSL8Pwp7GeA+oayt0XcGVKdGYooKnODTSJ4qy"},{"id":35,"name":"36 - O renascimento dos sacerdotes","url":"PTVX::Ws21l+D8JxIGf/st2hxgjZBEeL8cfBqXiY8Bq2oiqIsUTgC/IwgZXyyCd25Z3gZsEEs3OTDXGOlUWByYBheEjqbRHhrqEOI3zU0zdsomqgMeGAYaDbGx"},{"id":36,"name":"37 - Nos céus de Yubari","url":"PTVX::hrSEpMFkLkA2kPvhOhO2NKsyBxyniyK8BAQumirbYKfDPQeQdkMxbYGKOEyIjhW+iD+3CqI/4R7JTBBC2G7Jz2LGMOhi8H20xqQieVVSGAlvIhmsrPA1"},{"id":37,"name":"38 - Conspiração negra","url":"PTVX::1S4fxXdxRaoV5m9/ndvppJs0aMVgFWfcASkrl0kbL7WUWbmXvBJqDPB9Pj/eMRsYTkFF/wrIHZvD00TeEu8B04D67m+X6k9923iVzAVSB74wytOENuX9"},{"id":38,"name":"39 - Ídolo fatal","url":"PTVX::AcH60Jl+6wZgmIjsi58uvQENWx2I5stEZIOp8sAeAWdbr/BZtfPjHxPFt+DlsnQIz24irpEKh0XAP6J3i/sZ5OmtkGL7IUiLLtbfLLXw5wXeA3PDlpTo"},{"id":39,"name":"40 - O segredo do Karateca","url":"PTVX::/LLAG0NJSoUHR35ejIgtdutq7H14Z7PuXw1TgblQe+mJaQ8f8yQhlFq8YvdqdndKAZsNa/YZsdatRcrn7u0npMzUIvsPmBzbC59CH9R+mOln8DbmKQ6V"},{"id":40,"name":"41 - O ladrão do tempo","url":"PTVX::56DxIRjqrAVx1U6EAUWRohvN7ZK9BNgt4ATf5lve4G41ZjEqmAa/FLds3a1WndOHKQu3bA6BSSdg+ZXvCXJKM2D/hp6zPW6U5VgYqZeNchGF3bbzdLEz"},{"id":41,"name":"42 - Congresso dos monstros","url":"PTVX::ISrqi7O5psNyp/x69Po9Z6dEPZqM6nQJDs6A4elhnbkZdCpieZT92p1XPdpwJzCeRyu0FPf5gMOaMHk2yTI+tVkWFgvv9n6xrK/Y0AcmRhixkFkPM0KF"},{"id":42,"name":"43 - Paraíso subterrâneo","url":"PTVX::rp6OBekCGKjaM4Adwd4kgsh2ofqN/Uf6pen2ReirEaWFGFDbcIGDJ7+4FLqC6D5MDuiKJRk+nZFl2K4GLVFNCXR9/3d9pTDBI7TCzlcOGAC66Xe030R6"},{"id":43,"name":"44 - Dimensão do mal","url":"PTVX::/G/KOkDfXihNYJUSD1YUlYZ6yCt3QM3lIe/fJHyHBxgI65O2NZh8TOkz9LBO6LsbC8HZu8i9HO6ENPHKjfTqwDssNxCOEZseUiER3d5bYnG7UqYCVdeH"},{"id":44,"name":"45 - A esfera solar","url":"PTVX::Uxz4M/OWAy4B0KR+IgVOcSzJ+9kZet12cX8CmkwRUayqtnfeVfyfZP1CqsNcHeMgZR6K2H5vMIYHQEeJMb+rDshO/m3q3rsgFxbGSjlMgKAd7rnqmxQp"},{"id":45,"name":"46 - O inimigo das sombras","url":"PTVX::PEw7lpGsGBm9SYw22yASK3IW7U6TLRlwXOE9sTMYbjlTLo+rlYVJxMxxOXliTvP6MNk0vI7SgQoQ3AICB3YYn8wAI+FHt0mStwVb3K8DTAwiQ+5TUwnV"},{"id":46,"name":"47 - A morte de Kamen Rider","url":"PTVX::vPnb7hB+zY38HQGtKcVmf7fP9MJHmTWH0HbVMOWGo7YyHG2M+r44XW9wWKGnSQJdtG5QMWwPcZy+wctX1mI7BPPwEOHUEROLnwJM3dekHfqQTXGf21qB"},{"id":47,"name":"48 - A Terra há de vencer","url":"PTVX::JOWn5GoYCVsOXbjNA5wTbGF1yuhGX3ftH7iVwfLfPyQKJCSUkOfsToYYJXwudten68CyuMEtkH0U3tHs1lzgYAkc1UdwhIWOlJEy1FPjLXiqWxNc3OEv"},{"id":48,"name":"49 - O último dos sacerdotes","url":"PTVX::HYX7dJGicJ/u3kTtn+MHKFDvZ3Ff+Sah4nVvXyJPoL3UP03KKbxtHczNKPYQoBUO6ZSi/3DSbWZpD2w+CbpICWCgRkTz+EFPXEWUPnXHeqmJDcqFsKMK"},{"id":49,"name":"50 - Quem é o Grande Rei?","url":"PTVX::ATSghV0Eb1KP/zU1utEhXNwgbUCelBtz61mIxPCCmrj5itF4zBAvmDH+9o58yj+cQ6v8sau/whkWc7MCQkw7FQGG2fi7cEGPujYQqt4r473g5I+qSgO2"},{"id":50,"name":"51 - O Último Dia de Gorgom","url":"PTVX::dlHyCylwc8btpec5VXtKeT9xxP17R+VaGnqapJf4qB1QHHb66BP8xKSZFp3aARMccacqplrZiXN/NulnSU1EaCTa+V4Al4PWxC21ntHclCejuLJ4tujA"},{"id":51,"name":"52 - RX, O Filho do Sol!","url":"PTVX::7ZG/txDs7qgPzsIT6c3FrJC3gty8++GG1kJ+GQS8JSaevp3YQ1kGJon4A3qftFRt3yEwUvUp/HzrFszG5WzuyY6kdiu7wpsAX7/2Kwknj9X2UQwulYJE"},{"id":52,"name":"53 - O Renascer de RX!","url":"PTVX::ZYtAUuBSf1HCLWraB1JihpspHE1RcUEDRtC2A/q3YWItRMeioW8IO0G3j0X4EiFscPhz8nRhE2xig+ydjW7MaFppkk/tNZYJyrMlnXCtkbDauA7g6b5U"},{"id":53,"name":"54 - RX Contra o Cavaleiro do Vento","url":"PTVX::LmmSJw3JIIOoS0Ot6USfSo7CjuJOg5sRwOrHDaEYbLUpkclrR7wt8eN18D3K62DfqOcsp4IQuC8/RLqQSWqHi0Ke9X5ce9NLEil5ZgBDnOY+xULqkbb/"},{"id":54,"name":"55 - Raidron, O Carro da Luz","url":"PTVX::o2/6n62n0r8ljNlakOK2ZidT1od3PwSdkq/DQ/8sG49GjAVAOWIarobEZJ7AEFVkPS9T1iK3jy6iEYyr9oECNCQFiS/ILwnOrLnJtgc1DeV837vwk28h"},{"id":55,"name":"56 - Uma Armadilha na Gruta","url":"PTVX::IpCuPvfWIzGyHDgC+xrttwcchmjONS7dtl+67NRIKnysh2rwSrp+842AhYUFlY/9AcpKezCARV+BXyEAgKsdeU1TlK7X3UDlaYHgMkwhMOf3BBPKX8a/"},{"id":56,"name":"57 - A Bagunça do Monstro Extraterrestre","url":"PTVX::/BqiWY9jnpPPO3Gpd+n2BFI67b/kocWZwFQulBuso36M9uYTe0Z02t+KSTH58KYYZlDpSIzB8hVqpiZjhtq4BQaMf+mR3EF0VZH0qOqG/3+GBCB4/1gL"},{"id":57,"name":"58 - S.O.S. Laços de Amizade!","url":"PTVX::0WKvOIKriAv39YghY5CWvNoZeM056PmMC7CbU4Y3VAQ6T0ftjvxCGyzBaW3S1iFYsiDJPZ6D6rFK0J8D9YQ+y4c6SlJjX78CggMCuZeM99VsgVXwuzaz"},{"id":58,"name":"59 - O Segredo de Papai e Mamãe","url":"PTVX::WyuBmyF3O1D7hUwLyaOzTL1JSRZYe57StW26xSkQw9LQCuee03E4UQp50FVVUwuOCQYazAsALo4efms+/3u7qLwVIvSyZ9zaSwdPCTMV3mIge3MYcFpu"},{"id":59,"name":"60 - A Magia de Maribaron","url":"PTVX::Dw+ip5NqK9ltHbkVlYkcRh5k/X69xam6xhAlVe5g+FXe5TKfuvc/4IZT6qC45IonwVBx3AcjXSuhAVbsrI7Ko6O3CnbCbyNasEVAOAyLtBhlLlUs/mCI"},{"id":60,"name":"61 - O Ataque dos Clones","url":"PTVX::PwpP4rRRo2WpKig3QiRqiYDV3p7mHOr4OhIyb4kLjYUstApBH0ALKhzyumZ08VDRT/p8Lw7n+ePeOXCyIfYyXn+cz2NzSGLBA2MhnIwXJdelmVR3YvyO"},{"id":61,"name":"62 - A Revolta do Ferro-Velho","url":"PTVX::WCuzQwgUeTvg9kfL1AA/yQRbmgDob09LS1gjxtDothQUodCypffvbkP47baNGQVadavgh35lY9d1vikyi57HbxwVOwUxw6LHHsmo+1kJ2Wa4VeszOwfk"},{"id":62,"name":"63 - Pesadelo Assassino","url":"PTVX::NEXPrS4lasDDoyRSXcIBL7r0hyPSGeR2o2bzBz7SFIlZlsTXaoA1DUc+tCesgoN0f2tDzDUcWhZywWTO6RDaMjT5dL095f4Eqxjwen5/xzbVH/FnCPrY"},{"id":63,"name":"64 - A Garota de Kaima","url":"PTVX::EZoS64hveHO82LoimopK62ccpbsPrQkD57/B9kiaF1hCOmQMAOd1AhZGaKPP94155wxuMC1VzQkBt5J5r2I9LUt4K4dzKF4N1gbmlD14R4NOorr8q4Dd"},{"id":64,"name":"65 - O Rapto de Hitomi","url":"PTVX::bv530kxJ8JbMgnCQNXbCJHpFVM6C3LrrOcy+nlpg1UIi0u+IOomsmCWCWFIvIvEhG595nW2uP8PXi8Mb7sbHtur642oacna0nEhy+BjDZ6cPwKBz2dXp"},{"id":65,"name":"66 - O Nascimento de RoboRider","url":"PTVX::FwjL/si9gzkjBIqbD+6Osb2hxloblPcn16c3JTG8yjTaNYYV59fC7ElAzJxAhnH/NWT62LxiZWMKzVRdILaYWcKJGXPrIfIIe4YUltrybOAhD2PlsYdc"},{"id":66,"name":"67 - A Princesa do Vale dos Milagres","url":"PTVX::8wSbvH/SMPXx+NdwDLmPEkMW+cfPhUNAyHalxq8VdtfzZ8cK15WxQEF/CepLjJh2pIK+Pbwa2nc+Z8VFRPjBCByUraA2Ko3TnwnzaR8mJ6+hDB3CpwFy"},{"id":67,"name":"68 - BioRider","url":"PTVX::M73/NGG0bnCi15n4FpEfnAoALISrZQCfk08aT8BjVLB5obHL1ewalRAUaLum3OcUfijKNslSInIUlIZUdgeCcUzoOEnt9rUQFBeuBjOrRmiYwqkdErnM"},{"id":68,"name":"69 - Um Voo Para a Morte","url":"PTVX::1RzSy0khhZKmNTY1zNibL6QocTQTB3rq+WTXwFe4ZAlFJhD6f47EGuP0eRy+ZeffcRSc1EQET2b32/4ZbbGpvznBkOowTtwMYF1FfF6Fh3oHZ3HOK6DS"},{"id":69,"name":"70 - O Terrível Sol Artificial","url":"PTVX::9/rYDpK6Y923sqam0LjxRjsklUqkIpKssgmZA0Q7qpXxtosDHE+SMeznRLEVfRwZc8Gi9G2q3hfgdZzTYuaTCBnaNG9/62RJXWCguFhuRepsahMP8ZmA"},{"id":70,"name":"71 - O Monstro Que Come Banana","url":"PTVX::cIYZi67E3mlxva+x/h19668C37nog8RzKR8K6vt+kzpThwMgGHogQdvkS53v7LKQA7gE5HTvYtIyxoXfUE9Y/LmN8ARWJN9zIuMFhNu0IWwhx8gJUmkl"},{"id":71,"name":"72 - Entre o Amor e a Amizade","url":"PTVX::nQptjp7fHjQb0fPhV1NXInPsEfI08Irn5SAebKoUd99S6Pzwvy3N7ChcqaGIi+LGwLQpNB0PGuBd7L4p4gHH0gV5BC2NZADr/QskpKqnqgePBUSgu5qC"},{"id":72,"name":"73 - Shadow Moon","url":"PTVX::EXQq/QXX6GHAXHu2Npyi0tYvXeEprGL8gq99yQdPed6oDzfkEu8erIeSHloOF384WYdgYv1piwZbKSNX3mCabqV7we+P+1c3HD9rMKV53VkPaRMyxtmN"},{"id":73,"name":"74 - RX Virou Porco!","url":"PTVX::MxDkmNdG8iS8aPh0TjhW5UHRob396ZERc2lKs5Ruhwh4HLU4yGx49vK/f/GPHqihemG0arqNU7R5eG7N+A0H6L+lv3ks/f0u6Spv+wscyg6MlUJLfxNt"},{"id":74,"name":"75 - Meu Pai é o Drácula!","url":"PTVX::nqdpIVSkd2rC3t336nEMxIWLZvr3Kdq9eOmdWJfV3+PPicZtK9OgZZF2HY+YAu7dnKFZrEWiWxwlNJTYBNm5cu/vpoN2FYedmJRh/tXMndFuIutuNW82"},{"id":75,"name":"76 - As Noivas de Escorpião","url":"PTVX::3DTwTiWJKmept48tGyNgOUtfvGFGSbyRhgGr/mXH2RYsd+yYG8qGIgxGX7DbDGBO6YgrF+5X2jHOekL/pA1Be48KzzAW4O3O+tlQ2QbHX2QvJkgGYZ6Q"},{"id":76,"name":"77 - Bosgan Contra-Ataca","url":"PTVX::qSs9Nh1t4I5p27D/0jZWFJ/h7klpbkBHUWcnR+m9gcXfjrnoDfq5+N0Cjz+SriHb7f+0eQSgvPFr7fK0a0kjDWX0Ic/ZD79jtXlEUPpFhxO9GSte130E"},{"id":77,"name":"78 - O Grande Contra-Ataque! O Retorno do Príncipe das Sombras!","url":"PTVX::u4KMLEYrFe2NwA/2oRdxBtA0PsvYycGmEl7K3I7TwuOUGLQ8lfx+9doqQLQtZJmk6KYiD9hJbxDMUDj2SWEV03haSq7AnSC6n8GpRSVw7VbSkBZV2tJl"},{"id":78,"name":"79 - Os Representantes de Sua Majestade, O Imperador","url":"PTVX::9zX1McZBIg5GJ2WhiCZhmNMXfiMbL7unDor50OrCf96u3Degy9pLaDetSarwphL0KN1jFXhh9ppaXGjaUls4EEWaaUfuDfl8/cxqA2/b1+ZAbAO9IS/8"},{"id":79,"name":"80 - Um Planeta Sem Água","url":"PTVX::aqM3xdSZSPRfVcSMs2UFC9gUE71Ix4wIniJBL8jX+53esO+sYdRnsbSsFA8aj8Vwa8eP/BTxUp2j/3QEf0s17tXXprJHgrXVHKEyIdE8MvhIwscmlI5Y"},{"id":80,"name":"81 - Um Deserto em Tóquio","url":"PTVX::EIFw6Y6dJMuF8dGxc7unfgvxPHSs9i6KsCgRLuPHuy2nbrmnhFwnGT0Vl+NUCweXlT4/fwD1o2ZXdO/5o6K/EQioIgq9B1bOnVX/sApY5pCTBi19c+ph"},{"id":81,"name":"82 - A Mulher Que Esteve em Kaima","url":"PTVX::QEltn9HTLeyzUQFCJ/GpZuCMYkm6B5A009jTUzdy78hzfeaGQpjTu7YcIuaPvvUqzDY28Yhk1GhYt6wLQOOHipmZ626nM6Ip3SJE4o+WDS4R4hg52Gzf"},{"id":82,"name":"83 - O Céu do Amor e da Esperança","url":"PTVX::yqm9wMTzH1y6WHj6ySJ14zfI32s8X+TwsoLanvmNbo+2riwDmXCXFBFj5a1ozTzzM9/8xlSeyJ6vJScboXU5SJ2h5xOcuCrtXCCyAxfbaEpZyvn+dRAL"},{"id":83,"name":"84 - O Duelo na Ponte","url":"PTVX::do0rxM31jPa/NKx3jUvAnmSlSfuPBszG6riCMAtZdUnUCuSoqurHFnARBp+6ZzGus1dd1ZlpEJpnfGJGMNU/Fx9Zz1QPQEc8L/LsGuEcfyKhLBXHNLI/"},{"id":84,"name":"85 - Operação Nave-Mãe Shikoku","url":"PTVX::xsv1bXnkKOvtSZr5V8BIcpLOJNE2+zbBYESDOM/qwdHANHzcMNhKMJqw+h5bzDDLWP6U8Ym6bDJh9ButHMHGZnnZJe86/jzaIj8yiH3FEFAjpmRAGF/7"},{"id":85,"name":"86 - Issamu Minami Procurado Pela Polícia!","url":"PTVX::1ZVGC4dqNUZsrAlRCemmThhxJ89gzSynpTyvLYmlHs2horDzziHa70581jLJDC2IW4My15x4I2i2YTz5kMzLU/ar4sN1f9ecz/+7MpNzaFuaK/oSTqgc"},{"id":86,"name":"87 - Quem é o Meu Herói?","url":"PTVX::bozmni46csF1so4Jc2XZd8AyQXspKFFrbhYiwdp+sXtaB/XaaNtvhb8DQ89VAR8OxAE0I9LXA6n7Gk78NnncPRgnXp3iXfPYUXlfXGjp9lujthg1xk6t"},{"id":87,"name":"88 - O Ataque dos Monstros Ninja","url":"PTVX::EIlHmhEXA7eClH720rd7E2IxDFYKJqjWvR5c3fB22FMRYVWSxIZ3UVq+vFwNxOHo0JKj6DbMXRrDlEEFLYvNQq1IRguioVS6/OJZxlcoT+1qjt30A+I9"},{"id":88,"name":"89 - O Império Subterrâneo","url":"PTVX::6eDsMHXIvSbSNh8FraKubSX8kDZL6uV7sdzWD0qfejl+fosP8qshOm5L9fEyHsy/9jh4wWD224764WVb4EfBc8PCJMne8xXDJv3CxQgieBBv+mHMi5Mi"},{"id":89,"name":"90 - O Grande Prêmio dos Mini 4WD","url":"PTVX::LplK7CvT16MYqS2zv6fzOWJ9BxrOowER4jkf51onVHq5sgC7ZcPfdP67hFi3ooQSCxffavZpzX9TxIfS6WlruW2QBP0k+ej/yqHtilXokOv/5tUJcouF"},{"id":90,"name":"91 - Armadilha no Condomínio dos Fantasmas!","url":"PTVX::zA3fLsOzdHqHIBb70Yfkz8Tm0c9gGVfpMUBGLi0f92zw9FY15ar/ntNLbWgCmcEt6VFmDbGitYzf4KUq7MAPkb6VwSiw7+LE6zxHSgq5ehstQHvEYgsY"},{"id":91,"name":"92 - O Terror da Medusa dos 100 Olhos","url":"PTVX::HFopStbeksdc6hK5K/g1/rdpB8AfmjWuVbLk4vMFt0jbuICjK8y431glb5tWYCeEtDTu5kH6fCHorcwfEMbm88lEk52M/GpoYZ3zEDkBER5rGnjMbgXU"},{"id":92,"name":"93 - A Expulsão dos 4 Comandantes","url":"PTVX::b5Om+aepNihd2D/eQ7FKx5PS9uFmkcvZkJucB0OKzl07W4dJU054IGYyyZFJu1KfV1uwDZy+TUJs6x31/Eg4jgx38E+7E30RfTEdtFHg84teyvIaRn/+"},{"id":93,"name":"94 - A Derrota de RX","url":"PTVX::JkpExbDnRpr10X5SXEfDEmHlMP5o1BCwgWt2kGRIXTUr5/+488u5vdkk89iL12uy3zzHNZGlu5xkoYJQzLIl0vJkOQ3+AgF1CftgFzYsFTWjTFBhrUi3"},{"id":94,"name":"95 - Kamen Riders: Todos Juntos na Luta!","url":"PTVX::/GW2W4MCwsH8yBYDLdM/JIyCeioKiWUI9F0q8Pzi8X3QtHrR6nTtrKfOrQaZfFOS9eeqgjQF15+VSHUP7q4CuefUKH+yjuPc17AyAbV9AR6yLo18MDja"},{"id":95,"name":"96 - O Falso Fim de RX","url":"PTVX::TQy6ZWRrR/Eebd7A91ArN0ARtZSJqYvjeqzzjYWQTTsCDn5tihrsj1w7uCEY3zD7qsCu+uxAW/7H5Qo7hM2sUiRoBzFtXdZ4dLjByCUEdHc3oahhbuGj"},{"id":96,"name":"97 - O Ataque dos Kamen Riders","url":"PTVX::QU5lOri+fi29LE0EyBO8m4GZnqdU8BAsMf9CvbNjKeNu5KxTDPneUdAR06+WlGG+0M9QtnCx0ifJSBhHj3Odx0uGIr6rwYFqkZcVcveadPWx4OCgJ7Wp"},{"id":97,"name":"98 - A Luz do Amanhã","url":"PTVX::viIMw0lCyU25YwVRIB6km0a0lIT/IXa47/J6vOXmdpqDm7833v2epqGBySLWzB05eRVJgfjvuR6Vf1GTxr9AObDkcn5S8J8eE3RP/HHw40taJp4JbIfb"}];
+        const TV_PLAYLIST = [{"id":0,"name":"01 - A metamorfose","url":"PTVX::T4x9JFxTfCf32rtsJ84URKY4tfKvOZukEeF0tsCCuDfNcdWAMdW6yiv7OkeMtwhEr5UDZP62F7w+ogTJeUIubBWu6HrHThkgUYaCUnNqO/cT7mba/2Rp"},{"id":1,"name":"02 - A festa dos monstros","url":"PTVX::LaWqxVlZD9VIptfve+RiXnTXLtnPJg337h7JlrQZTaVMN4n+Swj8gQSuW0T8UyKD7CobsqZrPsEYqoSr6KzqtF4gFM89vxiXN1pZ5SXkdkOsi184g8+5"},{"id":2,"name":"03 - O mutante das galáxias","url":"PTVX::TQKkVYLPzEH+Pk8rWAl1gJxeras1TuzFEkskpCIrybb05oBwaRTGmnBLoPFb1BMy+36/MsBKNXY931HxFHPXT9KJ6XYyIQH3OdCyorugTl16jseVa8Ln"},{"id":3,"name":"04 - Experiência maquiavélica","url":"PTVX::TGN9fZ8nq0eh29Zu8DKLIL0S+wj/A/nJhZo2zMLgnbMW83ZX24t3h0dRVMvlS7O7DGqlvinUUiHdXwOUtZ4A98s8cjsEiDWFFcKxm1GH0nY5+YJlTy5T"},{"id":4,"name":"05 - A peste das trevas","url":"PTVX::kL1ATMs+kh1zPnFZuIQWd4wgmQnsG9Oc0aGa60tiTKog8GEwnqDyjCwMBYoaNKX615iFQzn5cA8nKjkyJBfyJ3ts0MK/MKsYBcoz8d1i7KKo36DKtT6j"},{"id":5,"name":"06 - A guerra dos computadores","url":"PTVX::jNVk0mUOsT4uwaJvQDF/gCl2701Ux1ZR0JVHtqLtCe5TRxFHU1xft9m4Zc34/jbwx5UzbQI56f2Uob9CTXZMp/G1y5F3pgy/Tis27Zhb6bN5kYY9TYMo"},{"id":6,"name":"07 - A regeneração de Battle Hopper","url":"PTVX::sfnlsdLQ8nGR+aWwQ2C4FRXI75GUUPylMLi5co32/ynx8+GAnMDagBPaf3hKnkPmgH3sK1ZppjWFL82Hxr5j2FeN6I8KuZ3zBGDUQ6WvTv0x+hW/TvBN"},{"id":7,"name":"08 - O poema do demônio","url":"PTVX::p7DdZPAl6AmszegvOpI06DCdWDoJ5slgClNy/ahMKa1lmT5dBj3PPQXPOar5qKkIQ62HAwQj5vimDyEkiQQyR+ZehfN7ur+G+OxLERE+56PqjPAY4ZkV"},{"id":8,"name":"09 - As façanhas de Madame Pérola","url":"PTVX::Af0qBJ5oKS2xpd93gZ7ssjHPnlB3ZNBpuj06ZJEH5OoLZ1vcBwn/OUvkVvNg1Osu8yj43Kh2B+dQYN3qwFaWBX124k7XoPwONJlcQ2EjZ9wqux16klV5"},{"id":9,"name":"10 - Os rebeldes","url":"PTVX::CNmtDeDU+ZMyvQmzwMzVUR/Nzi6RQAcm2iFdemwoo3yWZoC/jpkOs3od2TrYWbHVgLmQjPYK2oN2/Fme34o+4OOAz6hAACsGweafcR9ZCbDbzVQVN/n8"},{"id":10,"name":"11 - Tempestade negra","url":"PTVX::jcLAy7Xl89fDgG+1u/JQGlb4ov7NkCdXL78foHLCgM8WLRRU4PimZtjgEGED0iyMnQD4PG3OXoX3Uc2hMnPqxZygXP0oy3+44VwDSWZK0WsBxLMdeWQ5"},{"id":11,"name":"12 - Máquina lendária","url":"PTVX::voql7HvHdMHZKrOtRDLer+3MG7i7CJyE/Ez2N76JeeohgeV2Je6yTrd6fBviZ5tzzdCjKuMApkH05HUQLYlaU60Ev9ULFOtkCv/rokdZIjf1h/AKy66D"},{"id":12,"name":"13 - O rapto das mães","url":"PTVX::yO5U3gl5AubFh3O8sgugl4PMqixNqDiyYpBiN9QdNSKLj2MarIFDFE4C75Ck0mbR5Q0czxtaQTxZm+70hca/3N6mtrg6C67qm1Js6mo2GX07Uy68+Y+q"},{"id":13,"name":"14 - O desaparecimento dos peixes","url":"PTVX::yNegtBOarsI1KjoibStuo3PeBhLoka2epYtusybqr8xg3DUGwni5EkAej4nRhbjuEWcQ3Cev9nSMT1ZkEzxqxXoTK6zWFqigpkJQuNmxQpg5D8y7qbu+"},{"id":14,"name":"15 - A escola em perigo","url":"PTVX::xO2dgRjZx2tUNVhgafH1xxUiZ84okwppa7iJLcT56Fj7soPQst1SY821a3fLDY/UgGJhQmLKuUBTqm+u29XP8FXbovPumgPwtF7li4/GAy2h2VXqnkTo"},{"id":15,"name":"16 - Amigos para valer","url":"PTVX::Uldh4RLgz4onxHmrTMP35NVegNC1sO9FKZgvT/alNYUlDmTUCG7oDLNVcf6fmmb3Te3omvJ6BujXYwvmZx2mt1M6WXAC5EoHU51tQdWwP4KR3/+YJKhG"},{"id":16,"name":"17 - Sonho de infância","url":"PTVX::EM73nOrHh1BlMOMJ3L/6Qh0aD6Jn16g57tkqSNORxQVRLnedFUMoR5kBM2r/hZ8rMCd17dHylgWgwgq6BFwDuDNLitUhwCdzcdER0WgEdINJbQesVgIC"},{"id":17,"name":"18 - O imortal das trevas","url":"PTVX::n6wfmOclwJ6GmymgRJylvV7wVMHSTG7sE8GsnLfrBYNL9uP4mqa1oe9TYhKl+ipwSXd09q2ggH8DQ5noQ98sQWHgWxrO4eXpl1djntRjL6p5wyK+wvvy"},{"id":18,"name":"19 - Armadilha satânica","url":"PTVX::NIHVmsxRf0NoQXY5c2fPvlP+mJpb0KYoeji0jB7Q5XpaLTCV3DxSqfhlKECXCJPZ9TQODiqhSlrYptB7+nxBFk1FLmQziaXq6pKymHz1b7Zg/A9DtltF"},{"id":19,"name":"20 - O túmulo de Kamen Rider","url":"PTVX::ns52JiyV8p/0+yfahZwxzjjuYPspsjdJ2TEb/cDhOuuXZj+fVKDH3RQYNZRrCIHLEosf3DG32fjZn1AWRBXczwpleVMT0DYqTLoxczHS1ehlY0IEg7vK"},{"id":20,"name":"21 - Duelo das máquinas","url":"PTVX::NzC3D/Q68JFlMYDW8EzkAIBnXxqmPFVbGrzJf30OuEl2wwSf6CmcKs+soex+BKS0Twwu43YpqsZOkAjseZOXEKbWktdcCp4JsthLcE5b2jL4MBhzLErQ"},{"id":21,"name":"22 - Sombra negra","url":"PTVX::Mz0vfCUXroKh4ss0XiuwXNtykKJ29i1fDSKGrK18YMYA+HfpE8RM61NaeaD7ViH5Sicuh75dHGrVO0AL+89edbtim1RtDUlQa7xvFeLYlfFiiArNTPWw"},{"id":22,"name":"23 - O monstro de duas cabeças","url":"PTVX::VQXQxsN0p4roNeJO7JuCH6/X26RkDk6FvMsusYCFNqJ+fMq53sNdMLo6gYlL6ALymgCaUcC7WQn43fPYKC4Yb1pzE4B/zcif8hxE4ETWs+/eN6yqUBiY"},{"id":23,"name":"24 - Pesadelo sem fim","url":"PTVX::Ryugj2pHUmFjh5mU2Ixe+JQooG7gZsj/40x1+2lFs+PoaTrLYdNQgFnYpw/FdbskiF5yJYYeWmnYKhIXKzBVwFmR35dRi/AniO3YQtyOsyWKgoZmyVIy"},{"id":24,"name":"25 - Máquina combate","url":"PTVX::Ff+5ApuR0iagGiA/3jSTUAlVd7G7knZy7wlPRak87KDMDBQb3HNRPlfEdLGSRAguGyCJ9yy3B9/bZKMjrnqcgUNNUNUrf4cyZf63as1ibsISJO8+zepl"},{"id":25,"name":"26 - A possuída","url":"PTVX::o7EyxFwYdn8nb7kSFlwOq9WkY/S51unhXNo4X/RDDDxXUdnFmIv1SUfv2ggtWm+lWuscQiOolfrYakdfLRO1fn6YavwfEAqPFEsMOCCfjCXCn3ejzsgt"},{"id":26,"name":"27 - No fio da navalha","url":"PTVX::4KjQy24lUXlm9be0eodv/Lkc0tmTQNMupKFoa2fMecHJsd9qcE+RY3HKsWaH3EGITkLWvvg2WbGLC1UnUYe0l3U2Yq2J9jDVkJwlrQc0fKqkjKkJqOLe"},{"id":27,"name":"28 - O amuleto dourado","url":"PTVX::5MG2DijCv8SBpbkmUAcIdjIYhQXz6ROc+k56ttGVwLbYy6jGZcqUCLhW91PvPfeyGhzU6WyAP5B5QiaJmCY0EOV2gJ4PFjBjAMYArNN9OW6irGOu81KL"},{"id":28,"name":"29 - Boneco assassino","url":"PTVX::WCpemffAsjmQtMVN4r0nK50k82EHpPbv9c4bnDj5M3uzG83wA8MwxUaeuaa80sLAshd0kgeF8l2fVVtZ3bu8753+7aaKqHl7z36sqWEsQeOgFfmkr8CV"},{"id":29,"name":"30 - A misteriosa Lana","url":"PTVX::Qyc5A5/HOLg7Js3kaNGojM9enVB5FjRW+jM+QmtSDz79uVAi6Jw6tZPX3wf72Lw0pohTmuPgTQHAFZZY1Vibq+Y8uIgTzvozlSSVvWxQ4k2IE+Sh6NaK"},{"id":30,"name":"31 - A força do comando jovem","url":"PTVX::qsM9CYjk4fOdo+9OJG7Tyo3Q0ajEtcv5JQ6hoJl8lh6/w32SInDp6uYlEdA5LiN60wx7NQmYKonj/tve4OIj6JavzvsqYJeDFsHMyHklpF7mjI9z5eju"},{"id":31,"name":"32 - Febre alucinante","url":"PTVX::5V9THSBV47dpzkkiQBhcGVuhP9cnVBD6nTk2d2svy6OSRFbE52OGlcTe6LkGogzc+rWEoy8Y3CfSqJxlEbGrbTxMEf1MfE7ViNH1SRpO10zljAiV3wZ0"},{"id":32,"name":"33 - Eu venci o mundo!","url":"PTVX::mBSBTgS2k1tTz9FIg1Y/dm88jrfe2Z1CVQZ7Ym1eQZucaEJ2gEjm02PdOd9+s/PCuQwHCpnM73ijqAKjr6HQlMSyiYvC82vQaZcYrJeCF2xBW/1fcpJD"},{"id":33,"name":"34 - A ressurreição de Shadow Moon","url":"PTVX::tY9oq2pdTbe/1X9ZkSTBD8msRD0Cjj12YeND2bXthVz2TZ5/3nuXQY321JAc5Tdrw1w5cqys3kx2LSizlkrt+Su5Vn+rt2Vb+BYXJq63XHwl5DWiACsp"},{"id":34,"name":"35 - O herdeiro imperial","url":"PTVX::s7ZfSh0waU3as0kw0YVjRF8pTu10TdlvLg4BxVPLQKhiExr41CoZCFPHeZNcgvfXif7NO02NeVucs//koQCjdn/Ul1BEKdVjDOV3/rbZhCYYXaSv80l5"},{"id":35,"name":"36 - O renascimento dos sacerdotes","url":"PTVX::bgQW2x5su+U2Os138qAYraQ9M6fHkAg1TIXxdfaCZZhU9oD7h+9301o1RsgalBCKSYw3eCRDfRPs73wki7P33GjVGP5EzFYAQ+Q/fCV2mIsv60Rj+vpQ"},{"id":36,"name":"37 - Nos céus de Yubari","url":"PTVX::zsQCzMaDk64OqFi/f/MQwzC0EtaWlOnZWUYD74H5aD6zDTorY26zwAwDVjyvkgnML8Xll+WfmMS8EQ+Q77VoSL6mz3S66eAtrKDOsqcstbvg/d5/ZhQV"},{"id":37,"name":"38 - Conspiração negra","url":"PTVX::aBaaNHCkqz+OOQqKx/cNA+OOLGd6i9Q3lePMpvFAQ8pDMppqmESzOHEka401eaaYAT6smCbE0b+n730QJBb4kMv0LOWufj9aMUXG4zpDNnhtXlZMgG9p"},{"id":38,"name":"39 - Ídolo fatal","url":"PTVX::dverSnji7cDc+l/RMtfk4Y1X33BX7/PFow1eijfiWW2ZjEELwGOmSYOjtq7GbJAL3KC0gcDpbiwxcyWoga+QhtEET8uMKIXSKpHBZG6fp6CVb4s+BRTg"},{"id":39,"name":"40 - O segredo do Karateca","url":"PTVX::fOeyuR2tpY8yLJOfmYFLiiG130GiXLNvAMuyeIt3NVPJYCtMd2rlcqSu27dpX1gOKB21reBhsdgmXhUSIhGSU7HqtLxrbCVLqm/RmcN35gF3Puz6EZoL"},{"id":40,"name":"41 - O ladrão do tempo","url":"PTVX::LbU9mlYlPGZrqkF/+qIKk73yXExaw3G8vVn5HbDDd4oEC8XaEzAVQuIoMDn7jcLjV6SnVYYYmld2wCDxfqaWmb3dxtnT0tPh5ihj453TccbE/pS83ZC0"},{"id":41,"name":"42 - Congresso dos monstros","url":"PTVX::AAwkIAvXMhlUISNZob7mHyaT+LVDKmhlfnZ4x2jZORxLZTtS8Qwg9Tv/QCaaYteLZssjCNOsoKmkZfnbbbb7usA+aY609uZHderLu6TO81f6BG/h9jjz"},{"id":42,"name":"43 - Paraíso subterrâneo","url":"PTVX::CHtLcUw6PJ8pg0mOEkSXmRi/KIuhvVcvn6O/7z21weQVXEbeYu0iOzkCLtiBKdeVMV/Sl8+u/iZNQia1sIcUUs7xqp0a96ci9rcVSVKtOG9qtcxW0crD"},{"id":43,"name":"44 - Dimensão do mal","url":"PTVX::dly7aNU6eguNI8PyfyTeR/OhW6pexYZhNuL8hkwC6RGrq1PgYGFKVE4MliOk5otl5k6/pZJZZWN99ywKgKU5b1Dg18faCsH55YmGC1/d7Rp3NeAf2FU6"},{"id":44,"name":"45 - A esfera solar","url":"PTVX::TJT8B5R5FSr3dzpOzje0O4rFAM5ZHKZxrlEMie9Ijdn55NjqZL8F0184LcTT2GzmRDJBZaJCqbfP386z5xOcylDwGkufRuL2IWZcn4gtMQolwLknQN53"},{"id":45,"name":"46 - O inimigo das sombras","url":"PTVX::ievSPuj9p4dR/OIJtzljk1XMWaajWaTGx3opzWEjLFN4+HSF1nyvCfhr1P5c4/8OaB6pOt1p2Iznp/kAXHc14dp9gksIZ/taI1xtOXuTE9Mjn4dbCNAg"},{"id":46,"name":"47 - A morte de Kamen Rider","url":"PTVX::uKr/y0JykITutUImJD4HhaOm9THe6inwLOxXf5dsnz9Xs3QC4ei9INnIWB9viXLVvDlVT7s6nZ6JhYAp831g8BoAdTWpO6QaErXEv64Ru0sdRXg/6XHt"},{"id":47,"name":"48 - A Terra há de vencer","url":"PTVX::TwW3AWV5udtGYI+6B3Wp+px/WztKUWVy6ECv2Fttjc/b9PcNVmfTDqwuplherIdgf8UfXZZoUH17Sb3McYmle6SgYd36ZoS/oPh+c0RqUAbOp+ho/Pte"},{"id":48,"name":"49 - O último dos sacerdotes","url":"PTVX::DWBtofwIJDFjWEmdouRPL6DYSEZJs67a4WbBDs7jxkAfkBvegK1DbcDXYgaiR2Bwlz6lw52RR9fG7ttdNdEYDE0Frq4+2bylCCIF9seGqnFY3Df3DvHm"},{"id":49,"name":"50 - Quem é o Grande Rei?","url":"PTVX::sxE2gLinrVcdPH5W/IoLoVZT2tViB24VeDLYBvI9UatM7dUj5Oci52aNpoxeYuMnh6gbIpk/BDjW8bsR3oY6RUL1eV60HyuIJ19UCNCCgbTaTz5wb2/A"},{"id":50,"name":"51 - O Último Dia de Gorgom","url":"PTVX::pJaLH+DghwMGhU4zHcxoWe2xo1S+YT8/gLewbPIFQJjPvOGabukANd96EaZshdYSeaNfAQWHLWfWJSoQXyvw0OohcCmfbrjnsUzmbPrYayzCjGEk3/Ew"},{"id":51,"name":"52 - RX, O Filho do Sol!","url":"PTVX::ma1lzDvB8WbZYqYD0gRxYJHP4vANRQhucIcH1+oFtHkGVsKB0UbcZQXwkrI0Yhj6zIET5W9XcTV+EKqkXeJAthC25pbXu6kWFTgmx/P8k8G3SO/aH036"},{"id":52,"name":"53 - O Renascer de RX!","url":"PTVX::IzkX/qkWgZ+x8UlhqBoP9y9DD2Ea+eFxhH8aPSa8DZ954bQwzdsfTAX1KyCSHumH3H/fltRpj//155FCu+yNE2E1VRkGkROGvjUYEWUbYYej7tn8ZmUj"},{"id":53,"name":"54 - RX Contra o Cavaleiro do Vento","url":"PTVX::al0DGWXBzRGZ3RywkP96zBO/3v2Ui3qawWZmX+MIoKGQL64j1Y+5J3et1x/1VPQmQMJHbC7jE6QNEc+g+XlU78EUAVUyUxCI2W4AT7UmdvUwsoB3yQs+"},{"id":54,"name":"55 - Raidron, O Carro da Luz","url":"PTVX::oeqjVQfb1dGbphYKophgq5eImGAcLd9NV+hYSnvS5q5Hsf0LlahS1b0rZPPcDVpbMJv3WyRNSeFWioHrZcN/q5HrEqoZ0LbLip67bjWUNO/TZu+g5I4B"},{"id":55,"name":"56 - Uma Armadilha na Gruta","url":"PTVX::eTFYPxgC4w8NR9AlJdzN8Anxa6zawW/5MfaE/SZxwuUwLUhvhE72xH+2FDViEZxXov2Z/hXU496X/zdb2KXcAJlAmSzaZNTtuSUc/I97Fu4kJT2AnpQ+"},{"id":56,"name":"57 - A Bagunça do Monstro Extraterrestre","url":"PTVX::pt5kjxepHrKQJEQkcKKJ75S2Z3F35sEEk60phR2knykpwXB+ShFa3KZUJdQ0iRgUM7bqweK+zc/GeO9fFBZ0kk2Oa+33rkY+Z45/5YOZVYNP4bKbjJ/P"},{"id":57,"name":"58 - S.O.S. Laços de Amizade!","url":"PTVX::ibNrqmTnlbgPlfIIC5cZ6AmWmSUzltSgaEByB+cQibZoZkYIsCBmQoJLXX80MIKPzfUXxNKNL/Z4JGQ62p7TBcbAsG/8ZYOj7gvSQNk2FJEMdnl7smNN"},{"id":58,"name":"59 - O Segredo de Papai e Mamãe","url":"PTVX::kUohZ8Lojfsy/FfKBnEb+gIhE0q3gLwxf3JBp6jR67XXlio3gP5sSqy3xnY+WbHsc2sh2riLgC5IlSs6v/nVuU6tTesTgGiML0bMCeaowpn8koD+U0Xd"},{"id":59,"name":"60 - A Magia de Maribaron","url":"PTVX::fJVVb9oND8NY1N+XgA0mWHTvAs0YNARtCfj4aS+ePBMrYuVL/9CmJAmJ8HHj6YpEjmq+7867YL3wHjWBm3q51QzoSCM1gu9uENLNXiR1zcZQos1uT4mz"},{"id":60,"name":"61 - O Ataque dos Clones","url":"PTVX::3wIrP3G+Eo6NMu4wpq41LVV6Ihw03rpPavKdqntubTHziHPkAQYwBD0TVLw7yzSyGaXyXJABkzLTT0DgD5tc8BNBxH7J7A238nIGk4NisSZlLVJIiLfH"},{"id":61,"name":"62 - A Revolta do Ferro-Velho","url":"PTVX::Bke4wx0hta43EggaUuxqx5RZ+jxSYR85TVeR9u0YdiCf+Ulhqt7PScqnUvO6OWTa/atGQuC9MCEW/YHtxjQMa80sDDMn+EYj8Te8xJR453ApGJth2vPq"},{"id":62,"name":"63 - Pesadelo Assassino","url":"PTVX::W8y5rl+vlngw6+zt8DRukKW9OtO+8FdRwxWhqwOagNOfQQgVd1exrwvnNW6YXukpXY2mwqYld87aTtGoSxLUcB3GWwnX1WuqUPnhZIaAGy8xHw82kd5s"},{"id":63,"name":"64 - A Garota de Kaima","url":"PTVX::zibsSn5hV0L6kcIgR1J3Webw0TYTQ12LxRN+AnJM7m2S0H1U75hDHoIYzomFEhejPsNi3/7WKH5BX4FXPuG5E+9uy55eQipnTcAc28PuB6NrSxFPMZ82"},{"id":64,"name":"65 - O Rapto de Hitomi","url":"PTVX::Itd1XSCivU7IqAx59w/Nxv8WZum6Egaszet//iW/hjxOOBedtjX9Wicr4hY7cWCrVsimzPf23+Xd+cS2j6CaouJEgbTnLGRZNDNCjXEXDcgvMJU1xuFr"},{"id":65,"name":"66 - O Nascimento de RoboRider","url":"PTVX::7PpvQNzPRhDoje2I7NUU+iEu7asGGhnUT9B0WhTZb6NKZpMlLQaoRSIOVX2NNd82PWB3l+M0BNPqelsbuW7uQkXwVRuy5lVolNQqa49HmgWsCswja3Y8"},{"id":66,"name":"67 - A Princesa do Vale dos Milagres","url":"PTVX::Kz8H+yXm7MJvWdXr7aJVeAW2FrueAUuIzY8Ghl3CqPa5SLL2/8O2v+dofQT85ZRcryDk0DGpL+1gMvN3bsCcLYItWg7cD+efoRSJM2EkRi13J52KDJyI"},{"id":67,"name":"68 - BioRider","url":"PTVX::y1f7EuGAkM3tZLisNd2e42m/KfNs87p9LTBUsSFKcPS8o6FF8PTjkfYcvFyFPKr586Wuaoaf+40Ngc9TlY9G6jGgMfuP4kopCIeeJEc+t4IQTQjmn96K"},{"id":68,"name":"69 - Um Voo Para a Morte","url":"PTVX::Gi8Xpyxq5WJv4wHkeE1vBlW0oVLyh9fd+JKQWvqQNi+eTCnabOksfAsG2f0Tuva4OIrJIX61eiBblpP+P+kXEJW4b+RVIlYcW5dpuwBhR/1jMdUyj4rr"},{"id":69,"name":"70 - O Terrível Sol Artificial","url":"PTVX::A3Dj2Zv17VKTUKrMRiSZEe907rV9P0Lg7aitBHMAV1TEyyPmJN79o/37FR3XPRBziKSVoVYa5J9no9Wj1EoUT/CgE9CbevNsG8B6BSaKQmcsdNO2wKgf"},{"id":70,"name":"71 - O Monstro Que Come Banana","url":"PTVX::6YSy2vWIYtL0/GbsNPsBTknl+d87jTEO2xSUT1Cuuy+W9REf6tbCQ6J2P4N2IqumXJitZ1ulSelrEmDbXgMXD5EuFwYVX3GegZ5sxsKQ7FB9a2wXXMmY"},{"id":71,"name":"72 - Entre o Amor e a Amizade","url":"PTVX::PCaJl7qY4U9gtqX70xvP/nMp9tiSvQdhH2+zJzcZOwbTQoBUkMsNXYEjZ+h07zKqyOqedCmw2exD8xlHCvEXABnFM/k6n46iIdb+aVp19iDzhY8f5i/6"},{"id":72,"name":"73 - Shadow Moon","url":"PTVX::xeUkq+NyoMbS0YfvzyguHsCLcB55l7OfhCruVDG5ewZlm+Hx8NOWpokPd7VY13eSE97r+8GICoa4P5C0+XFxTg7ncnywTzYYUohzLRtwitr9lkCQPkGd"},{"id":73,"name":"74 - RX Virou Porco!","url":"PTVX::70NqsOt3D+AiLWOQh9qrOXapYZLkldfFDLBU1mfOwYZQRLuPKWpnk7RhnGh1Md3O8/kmHy5FQaY9EeIrCk74L68UhslBEKxxHiPor83nol6Y8+hfz5ei"},{"id":74,"name":"75 - Meu Pai é o Drácula!","url":"PTVX::trttVD/WMutDTCXp2fsl74vcCk+8pYm70s57BZXXTxrMVh9QfL4EIJY5L1xEswP1Fdz6pVyCKO+/of3JgOxAm5dwiXNkeq6K20kR5Yh1V38ZfbU6y9vS"},{"id":75,"name":"76 - As Noivas de Escorpião","url":"PTVX::MXFMVqRXZo2U/uLLOrTBFmgAo0DlqlOKoxFg9aNn2/zSBx+hSE48NqU1Z7Q4cMuIj7uJXGffqEx1KPEceJJ4IsfI8FCjuzieaoLMHQl8KpSw9M2ErZK6"},{"id":76,"name":"77 - Bosgan Contra-Ataca","url":"PTVX::4FJJQIEGTIYUshrXDTHwtIPrJu1rUgyJyJSAMah7Jd0NbdfPxTFoUODbz7jVHGKbR67+ZS94UuqnSd10ieaI9W4Ntuwh/keIsYtP5yo7aCXSmQZD+BSw"},{"id":77,"name":"78 - O Grande Contra-Ataque! O Retorno do Príncipe das Sombras!","url":"PTVX::iRwFexxSJyZXRonkSFv0tGY4i7lMNPU/1xK7nPjmn/Pp7sq+d1BiC0OH34eDrQfjFd4n3F5X3719k/34MXzbaBW3suYBA+iF/PjJJg4DN+ZhNx9nqJ1Q"},{"id":78,"name":"79 - Os Representantes de Sua Majestade, O Imperador","url":"PTVX::1Bjd9ja6YB/LiHqj/TIyG9kXGiPmEwJGoWhbOEm5QD25jdIYlQgswIEIiJ1+3JMtVruV/JXTv376R6yxuE7oJ3SAbqff1TPdlhH1YmC4OcpHBgTb0ZTj"},{"id":79,"name":"80 - Um Planeta Sem Água","url":"PTVX::Ssm2F0aiib53OcG7hVfyxSg/1GPT2HMu+UdDRAkuX17VDSjhGHKJOWoEXGYDzcx0fPBxxO+U4GKQMS3RF4IlsaVoO6Kq+6gKNf5yL7Txex9A3tTDBhm8"},{"id":80,"name":"81 - Um Deserto em Tóquio","url":"PTVX::KEo1EKOiZQBZ8Z5AnCKru77zZPugVAUYmpaJ4pYuXEnfHaeYqwyiSbBfCema7L9gTMt8aNiGVaT0Tk+1n94nP4R9h7UAT1qwDODm4DZl6B2IoDql1DS/"},{"id":81,"name":"82 - A Mulher Que Esteve em Kaima","url":"PTVX::JFWV8LAgF2bSkf+22yckYihnKz6ZWMwnxvRFvLhsZpL2dWVwuLDbCBloldgAAABKr1zL2qSHFGXMZ6Djc2tPqXmFp2mBHcvk/+iJNsXxZ+oydtCeMsEo"},{"id":82,"name":"83 - O Céu do Amor e da Esperança","url":"PTVX::6+JoSC/FLmiOIugy/zD0riQ9J4CPAbUFPRMpY1NB+AM+hiYFlr9ntTaKbxqjnu8+E9fXeoSRl7u0bM6DmqI9OCTxUxTwnj5HTUU8O2O4VPJ7V9TMd+Cz"},{"id":83,"name":"84 - O Duelo na Ponte","url":"PTVX::ff0KtDuBj5qzpI06lgQXoWFXWwTxYgBtpkV6Z/xDLPP5KTlimg757pmM+5zE05h0YR220JjsLlZSAlUC/UB8Xe4+M10S3/MAFO9uJOfqjs+B25Tf7wCq"},{"id":84,"name":"85 - Operação Nave-Mãe Shikoku","url":"PTVX::KARilhwkgRc0lOyD38EDHrJRefP8fa4bQQqM2KCWHezAr+QE60bd6Qa2ZRZm8EIozw6TN5dnuHv+2T/vKq2tsK9+tEAsfjYdwfoB3e3ZdHV7/pPeFQlq"},{"id":85,"name":"86 - Issamu Minami Procurado Pela Polícia!","url":"PTVX::HzPiImQJYx9V9Wn1hhn2rqQcS7J/IuXxSWAe6JJamtUszNYNXo88cDCZ4RXkZ42DRu6kOPTg3dQ2XNCqyHWqsbU6nqtFhX8dmQILcj4KVOvgARvsZmzq"},{"id":86,"name":"87 - Quem é o Meu Herói?","url":"PTVX::Z9RmXWuFNeS8KmJ4DaYQCFtwVwREMF3y2tj/JrWpJsS0dx1vwfVbKHeOdz9ZFbY6tFeR7u8J4DC19+Ewq6puScPPtWVxw06X2UlwbGYx09TNYKsLYBnB"},{"id":87,"name":"88 - O Ataque dos Monstros Ninja","url":"PTVX::oXHBaaoW/RH59QT+np9HH+2ByctSfywD6vjyqYiqN9ntbuVGGKFTRLnYN4mSu4hAb7U/3bxOxHXkCvUdJjCXLL6UFw9tuZK+8zLfSVNKalUYFYs4QUsr"},{"id":88,"name":"89 - O Império Subterrâneo","url":"PTVX::CL//mTZqaSlvclor5kmzapUFPo+ByYx1LjQm1i8e1E6NfmtdHrwo4kD0bmoO0kC/m9gamQFaFrNOCT71UGFmEpPkHYNTbJeVvO78oZP+6Vf4MKELowQD"},{"id":89,"name":"90 - O Grande Prêmio dos Mini 4WD","url":"PTVX::/28YQsVPxuP02JQdbPPFlBfetSkYKBrxj1X4qDMu2kpp944jusgqkvUqPEXDJcL09VYrTEUTOa/LXdQWjL5sKmbAPuc6SNv2CtFLGG5ziNkGNih1dE3m"},{"id":90,"name":"91 - Armadilha no Condomínio dos Fantasmas!","url":"PTVX::HWe8o+nZVfIX+iW3gV5EzPZhjxbRmxOWWlQs/e53FN+6MdKwHLJ/r/ivdaOG045OzsvTf4jpZpy8p9PsCF5OsmfnzyjCoDrP625aJdh8dSpf2VrjZsri"},{"id":91,"name":"92 - O Terror da Medusa dos 100 Olhos","url":"PTVX::0haResRl5WvC5E9mi/3vag4v+yPARP/qEyGz8xq0cCwzqOwKJemruuGOVj2XrM83kyRMIyJl87X4slFj6Plg9Z32mpcgKAme8yk3nt3GP9v4LnqNIa+W"},{"id":92,"name":"93 - A Expulsão dos 4 Comandantes","url":"PTVX::uuuRlRb7GtJ/qxaeF+iLheMXjDbyvr+h9YVVvcbehP3K0Z1tul9nDD7bXtVWbQpXG1Fa6pSnhn7eYdfHX5Ve0mfuTNJkBgshbO+MG627hojp+aGVOCrh"},{"id":93,"name":"94 - A Derrota de RX","url":"PTVX::bp1hpm4VntGhGZQUo8hb5TQ7lOiPyY1cAPj+YyttFaDEUptTeZincWaAG6a6EpdZlwHUaki31sDwhuS0a2HAGsG0tburFU8n9241BvEI2aSSB6iH+j7l"},{"id":94,"name":"95 - Kamen Riders: Todos Juntos na Luta!","url":"PTVX::xjeoUva0vLO9/vG0Ouee7AvPVeQqxDFqSRpcIL2y53qSWA4Ro+mnqscS4W7eI9LkbGtiiNY7c39GGfkFZelZPIP1rQrJzcDFOPT85ZYtXjNUOX34cEme"},{"id":95,"name":"96 - O Falso Fim de RX","url":"PTVX::UqSD5KG2UkkG8VWUwnsFKRmIlTOr+WbGBfdPi9pYR3A4KuAKrtU4Ub+gP1LyCz3hpKiNsLlk+eKgqMuGaAv+0JPy7l0QCpiwVgzp6WywIKJuTJhg/+QM"},{"id":96,"name":"97 - O Ataque dos Kamen Riders","url":"PTVX::4fXWdRFk14qbA4LVYmoaxJ04AwLwbWQ2fqyhYNW1TtILxijtQdcbsXD7WTMuXkRZcA/5iMTtZkt1NgxT37LboccVMTNYUNOPYUNivU6CNwDS7FaVOfNA"},{"id":97,"name":"98 - A Luz do Amanhã","url":"PTVX::r4A7NEMrPhjets08V7xzKXp1o25GyYC1CJn51NTwDVclOBbpcVsDtFEReKI7dZOGW49E9IsonWraSEMVBJdkKZPZ9Rq+rSSHUo0651MVzJnb0emvQb8w"}];
         const PROGRAMMING_MODE = "playlist";const TOTAL_PROGRAMS = 0;
         const TOTAL_PLAYLIST_VIDEOS = 98;
         const PROGRAM_VIDEO_COUNTS = [];
@@ -2507,7 +2495,7 @@ function calculateExpectedTime(duration) {
         
         const RELEASE_DATE = "2025-07-17";
         const IS_OFFLINE = false;
-        const CHANNEL_VERSION = "1.0.1.8";
+        const CHANNEL_VERSION = "1.0.1.9";
         const CHANNEL_ID = "WeXOEW0DWwXYZNh1cIbK";
         // --- Subscription ---
         const SUBSCRIPTION_ENABLED = false;
@@ -2519,7 +2507,7 @@ function calculateExpectedTime(duration) {
         const SUBSCRIPTION_TRIAL_DAYS = 0;
         const SUBSCRIPTION_PLAN_ID = "";
         const CHANNEL_NAME_STR = "Black";
-        const OWNER_UID = "OdYeXmE29qPcW97MH5NzNGO6dut2";
+        const OWNER_UID = "";
         
         // ==================== CONFIGURAÇÃO DO FIREBASE ====================
         const firebaseConfig = {
@@ -2649,7 +2637,6 @@ function calculateExpectedTime(duration) {
 
         // VARIÁVEIS PARA YOUTUBE API
         let youtubePlayer = null;
-        let currentHlsInstance = null;
         let isYoutubeVideo = false;
         let playerReady = false;
         
@@ -3025,12 +3012,6 @@ function criarPlayerYouTube(videoId, startSeconds = 0, autoplay = true) {
         youtubePlayer = null;
     }
     
-    // 🎬 [HLS-CLEANUP-YT] Destruir hls.js anterior
-    if (typeof currentHlsInstance !== 'undefined' && currentHlsInstance) {
-        try { currentHlsInstance.destroy(); } catch(e){}
-        currentHlsInstance = null;
-    }
-    
     // Esconder vídeo HTML5
     if (videoElement) {
         videoElement.style.display = 'none';
@@ -3351,16 +3332,6 @@ function configurarControlesYouTube() {
             window.__lastLiveBtnClick = now;
             console.log('[BTN] AO VIVO clicado');
             try {
-                // 🎬 [HLS-LIVE-EDGE] Pular para borda ao vivo se for HLS live
-                if (typeof currentHlsInstance !== 'undefined' && currentHlsInstance) {
-                    var _hlsLivePos = currentHlsInstance.liveSyncPosition;
-                    if (typeof _hlsLivePos === 'number' && isFinite(_hlsLivePos)) {
-                        videoElement.currentTime = _hlsLivePos;
-                        showControls();
-                        resetControlsTimer();
-                        return;
-                    }
-                }
                 if (isYoutubeVideo && youtubePlayer && playerReady) {
                     var vd = null;
                     try { vd = youtubePlayer.getVideoData ? youtubePlayer.getVideoData() : null; } catch(e){}
@@ -3519,11 +3490,6 @@ function atualizarIconeVolume(volume) {
         }
     }
     
-    // 🎬 HLS (m3u8) — suporte a streams
-    if (url && typeof url === 'string' && /\.m3u8(\?|$|#)/i.test(url)) {
-        return carregarVideoHLS(url, iniciarNoPercentual, autoplay);
-    }
-    
     // 🎥 YouTube delega
     if (url && (url.indexOf('youtube.com') !== -1 || url.indexOf('youtu.be') !== -1)) {
         return _carregarVideoYouTube_raw(url, iniciarNoPercentual, autoplay);
@@ -3531,210 +3497,6 @@ function atualizarIconeVolume(volume) {
     
     // ▶️ HTML5 direto
     return _carregarVideoHTML5_raw(url, iniciarNoPercentual, autoplay);
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   🎬 [HLS FUNCTIONS INSERT] Suporte a streams m3u8 (HLS)
-   ═══════════════════════════════════════════════════════════════ */
-var HLS_CDN_URLS = [
-    'https://cdn.jsdelivr.net/npm/hls.js@1/dist/hls.min.js',
-    'https://unpkg.com/hls.js@1/dist/hls.min.js',
-    'https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.5.17/hls.min.js'
-];
-
-var _hlsJsLoadingPromise = null;
-function _loadHlsJs() {
-    if (typeof Hls !== 'undefined') return Promise.resolve(true);
-    if (_hlsJsLoadingPromise) return _hlsJsLoadingPromise;
-
-    _hlsJsLoadingPromise = (async function() {
-        for (var i = 0; i < HLS_CDN_URLS.length; i++) {
-            var cdnUrl = HLS_CDN_URLS[i];
-            try {
-                await new Promise(function(resolve, reject) {
-                    var s = document.createElement('script');
-                    s.src = cdnUrl;
-                    s.async = true;
-                    s.onload = resolve;
-                    s.onerror = function() { reject(new Error('load failed')); };
-                    document.head.appendChild(s);
-                });
-                if (typeof Hls !== 'undefined') {
-                    console.log('[HLS] hls.js carregado de:', cdnUrl);
-                    return true;
-                }
-            } catch(e) {
-                console.warn('[HLS] CDN falhou:', cdnUrl);
-            }
-        }
-        console.error('[HLS] Todas as CDNs falharam');
-        return false;
-    })();
-
-    return _hlsJsLoadingPromise;
-}
-
-async function carregarVideoHLS(url, iniciarNoPercentual, autoplay) {
-    if (typeof iniciarNoPercentual === 'undefined') iniciarNoPercentual = 0;
-    if (typeof autoplay === 'undefined') autoplay = true;
-
-    console.log('[HLS] Carregando m3u8:', (url || '').substring(0, 100));
-
-    // 1. Destruir YouTube se ativo
-    if (typeof youtubePlayer !== 'undefined' && youtubePlayer) {
-        try { youtubePlayer.destroy(); } catch(e){}
-        youtubePlayer = null;
-        playerReady = false;
-    }
-    isYoutubeVideo = false;
-    if (youtubeContainer) youtubeContainer.style.display = 'none';
-
-    // 2. Destruir instância hls anterior
-    if (typeof currentHlsInstance !== 'undefined' && currentHlsInstance) {
-        try { currentHlsInstance.destroy(); } catch(e){}
-        currentHlsInstance = null;
-    }
-
-    // 3. Reset vídeo
-    if (!videoElement) {
-        console.error('[HLS] videoElement null');
-        return;
-    }
-
-    try {
-        videoElement.pause();
-        videoElement.removeAttribute('src');
-        videoElement.load();
-    } catch(e){}
-
-    videoElement.playsInline = true;
-    videoElement.setAttribute('playsinline', '');
-    videoElement.setAttribute('webkit-playsinline', '');
-    videoElement.style.display = 'block';
-
-    // 4. Callback comum de início
-    function _startPlayback() {
-        if (iniciarNoPercentual > 0 && iniciarNoPercentual < 1) {
-            var dur = videoElement.duration;
-            if (dur && isFinite(dur) && dur > 0) {
-                var startTime = dur * iniciarNoPercentual;
-                if (startTime < dur - 1) {
-                    try { videoElement.currentTime = startTime; } catch(e){}
-                }
-            }
-        }
-
-        if (autoplay && typeof userStartedPlayback !== 'undefined' && userStartedPlayback) {
-            videoElement.muted = (typeof userMuted !== 'undefined') ? userMuted : false;
-            videoElement.volume = videoElement.muted ? 0 : ((typeof userVolume !== 'undefined' && userVolume > 0) ? userVolume : 1.0);
-            var pp = videoElement.play();
-            if (pp && pp.catch) {
-                pp.catch(function(err) {
-                    console.warn('[HLS] play() falhou:', err.name);
-                    if (err.name === 'NotAllowedError') {
-                        videoElement.muted = true;
-                        videoElement.play().catch(function(){});
-                    }
-                });
-            }
-        }
-    }
-
-    // 5. Suporte nativo (Safari / iOS)
-    var canPlayNative = '';
-    try { canPlayNative = videoElement.canPlayType('application/vnd.apple.mpegurl'); } catch(e){}
-    var isAppleDevice = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
-        (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-    var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
-    if (canPlayNative === 'probably' || (canPlayNative === 'maybe' && (isSafari || isAppleDevice))) {
-        console.log('[HLS] Suporte nativo — usando src direto');
-        videoElement.addEventListener('loadedmetadata', _startPlayback, { once: true });
-        videoElement.src = url;
-        videoElement.load();
-        return;
-    }
-
-    // 6. Precisa de hls.js
-    console.log('[HLS] Navegador sem suporte nativo — usando hls.js');
-    var loaded = await _loadHlsJs();
-    if (!loaded || typeof Hls === 'undefined') {
-        console.error('[HLS] hls.js não carregou — tentando fallback nativo');
-        videoElement.addEventListener('loadedmetadata', _startPlayback, { once: true });
-        videoElement.addEventListener('error', function() {
-            console.error('[HLS] Fallback nativo também falhou');
-            setTimeout(function() {
-                if (typeof currentState !== 'undefined' && currentState === 'program') {
-                    var proximoSlot = getNextSlot();
-                    reproduzirPrograma(proximoSlot, 0);
-                }
-            }, 3000);
-        }, { once: true });
-        videoElement.src = url;
-        videoElement.load();
-        return;
-    }
-
-    if (!Hls.isSupported()) {
-        console.error('[HLS] Hls.isSupported() = false');
-        videoElement.addEventListener('loadedmetadata', _startPlayback, { once: true });
-        videoElement.src = url;
-        videoElement.load();
-        return;
-    }
-
-    // 7. Criar instância hls.js
-    console.log('[HLS] Criando instância hls.js');
-    try {
-        currentHlsInstance = new Hls({
-            enableWorker: true,
-            backBufferLength: 90,
-            maxBufferLength: 30,
-            maxMaxBufferLength: 60,
-            startLevel: -1,
-            capLevelToPlayerSize: false
-        });
-    } catch(e) {
-        console.error('[HLS] Erro ao criar instância:', e);
-        return;
-    }
-
-    currentHlsInstance.on(Hls.Events.MANIFEST_PARSED, function(event, data) {
-        console.log('[HLS] Manifest parsed. Níveis:', data.levels ? data.levels.length : 0);
-        _startPlayback();
-    });
-
-    currentHlsInstance.on(Hls.Events.ERROR, function(event, data) {
-        console.error('[HLS] Erro:', data.type, data.details, data.fatal ? 'FATAL' : '');
-        if (!data.fatal) return;
-
-        if (data.type === Hls.ErrorTypes.NETWORK_ERROR) {
-            console.log('[HLS] Recuperando de erro de rede...');
-            try { currentHlsInstance.startLoad(); } catch(e){}
-        } else if (data.type === Hls.ErrorTypes.MEDIA_ERROR) {
-            console.log('[HLS] Recuperando de erro de mídia...');
-            try { currentHlsInstance.recoverMediaError(); } catch(e){}
-        } else {
-            console.error('[HLS] Erro fatal — destruindo e pulando');
-            try { currentHlsInstance.destroy(); } catch(e){}
-            currentHlsInstance = null;
-            setTimeout(function() {
-                if (typeof currentState !== 'undefined' && currentState === 'program') {
-                    var proximoSlot = getNextSlot();
-                    reproduzirPrograma(proximoSlot, 0);
-                }
-            }, 3000);
-        }
-    });
-
-    try {
-        currentHlsInstance.loadSource(url);
-        currentHlsInstance.attachMedia(videoElement);
-    } catch(e) {
-        console.error('[HLS] Erro ao carregar source:', e);
-        try { currentHlsInstance.destroy(); } catch(_e){}
-        currentHlsInstance = null;
-    }
 }
 
 function _carregarVideoHTML5_raw(url, iniciarNoPercentual = 0, autoplay = true) {
@@ -3748,12 +3510,6 @@ function _carregarVideoHTML5_raw(url, iniciarNoPercentual = 0, autoplay = true) 
         youtubeContainer.style.display = 'none';
     }
     isYoutubeVideo = false;
-    
-    // 🎬 [HLS-CLEANUP-HTML5] Destruir hls.js anterior
-    if (typeof currentHlsInstance !== 'undefined' && currentHlsInstance) {
-        try { currentHlsInstance.destroy(); } catch(e){}
-        currentHlsInstance = null;
-    }
     
     // 2. Verificar se elemento de vídeo existe
     if (!videoElement) {
@@ -4541,16 +4297,6 @@ var _ocultarYtInterval = setInterval(function() {
             window.__lastLiveBtnClick = now;
             console.log('[BTN] AO VIVO clicado');
             try {
-                // 🎬 [HLS-LIVE-EDGE] Pular para borda ao vivo se for HLS live
-                if (typeof currentHlsInstance !== 'undefined' && currentHlsInstance) {
-                    var _hlsLivePos = currentHlsInstance.liveSyncPosition;
-                    if (typeof _hlsLivePos === 'number' && isFinite(_hlsLivePos)) {
-                        videoElement.currentTime = _hlsLivePos;
-                        showControls();
-                        resetControlsTimer();
-                        return;
-                    }
-                }
                 if (isYoutubeVideo && youtubePlayer && playerReady) {
                     var vd = null;
                     try { vd = youtubePlayer.getVideoData ? youtubePlayer.getVideoData() : null; } catch(e){}
@@ -6540,227 +6286,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 </style>
-<script>
-/* ═══════════════════════════════════════════════════════════════
-   🎬 [CAST PATCH] Google Cast + Remote Playback
-   ═══════════════════════════════════════════════════════════════ */
-var castContext = null;
-var remotePlayer = null;
-var remotePlayerController = null;
-var castSessionActive = false;
-var _castOriginalPaused = false;
-var _castOriginalSrc = '';
-var _castCurrentIsHLS = false;
-
-function _initCast() {
-    try {
-        if (typeof cast === 'undefined' || !cast.framework) return false;
-        if (castContext) return true;
-
-        var context = cast.framework.CastContext.getInstance();
-        context.setOptions({
-            receiverApplicationId: 'CC1AD845',
-            autoJoinPolicy: chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED
-        });
-
-        remotePlayer = new cast.framework.RemotePlayer();
-        remotePlayerController = new cast.framework.RemotePlayerController(remotePlayer);
-
-        remotePlayerController.addEventListener(
-            cast.framework.RemotePlayerEventType.IS_CONNECTED_CHANGED,
-            function(e) {
-                castSessionActive = e.value;
-                console.log('[CAST] Sessão ' + (e.value ? 'conectada' : 'desconectada'));
-                if (e.value) {
-                    _pauseLocalForCast();
-                } else {
-                    _resumeLocalAfterCast();
-                }
-            }
-        );
-
-        console.log('[CAST] Google Cast inicializado');
-        return true;
-    } catch(e) {
-        console.warn('[CAST] init falhou:', e);
-        return false;
-    }
-}
-
-function _pauseLocalForCast() {
-    if (typeof videoElement !== 'undefined' && videoElement && !videoElement.paused) {
-        _castOriginalPaused = false;
-        videoElement.pause();
-    }
-    if (typeof youtubePlayer !== 'undefined' && youtubePlayer && playerReady) {
-        try { youtubePlayer.pauseVideo(); } catch(e){}
-    }
-}
-
-function _resumeLocalAfterCast() {
-    if (!_castOriginalPaused && typeof videoElement !== 'undefined' && videoElement) {
-        videoElement.play().catch(function(){});
-    }
-    if (typeof youtubePlayer !== 'undefined' && youtubePlayer && playerReady && userStartedPlayback) {
-        try { youtubePlayer.playVideo(); } catch(e){}
-    }
-}
-
-function _getCastMediaInfo() {
-    if (typeof isYoutubeVideo !== 'undefined' && isYoutubeVideo && youtubePlayer && playerReady) {
-        try {
-            var vd = youtubePlayer.getVideoData();
-            if (vd && vd.video_id) {
-                return {
-                    type: 'youtube',
-                    videoId: vd.video_id,
-                    title: vd.title || 'YouTube',
-                    url: 'https://www.youtube.com/watch?v=' + vd.video_id
-                };
-            }
-        } catch(e){}
-        return null;
-    }
-
-    if (typeof videoElement !== 'undefined' && videoElement && videoElement.src) {
-        var src = videoElement.src;
-        var isHLS = /.m3u8(?|$|#)/i.test(src);
-        return {
-            type: 'html5',
-            url: src,
-            isHLS: isHLS,
-            contentType: isHLS ? 'application/x-mpegurl' : 'video/mp4',
-            title: document.getElementById('currentProgram')
-                ? document.getElementById('currentProgram').textContent
-                : 'Transmissão'
-        };
-    }
-
-    return null;
-}
-
-function _castHTML5(media) {
-    var session = castContext.getCurrentSession();
-    if (!session) {
-        castContext.requestSession().then(function() {
-            _castHTML5(media);
-        }).catch(function(err) {
-            console.warn('[CAST] requestSession falhou:', err);
-        });
-        return;
-    }
-
-    var mediaInfo = new chrome.cast.media.MediaInfo(media.url, media.contentType);
-    mediaInfo.metadata = new chrome.cast.media.GenericMediaMetadata();
-    mediaInfo.metadata.title = media.title;
-
-    if (media.isHLS) {
-        mediaInfo.hlsSegmentFormat = 'TS';
-        mediaInfo.hlsVideoSegmentFormat = 'TS';
-    }
-
-    var request = new chrome.cast.media.LoadRequest(mediaInfo);
-    request.autoplay = true;
-    request.currentTime = (typeof videoElement !== 'undefined' && videoElement)
-        ? videoElement.currentTime : 0;
-
-    session.loadMedia(request).then(function() {
-        console.log('[CAST] Mídia carregada no receptor');
-        _pauseLocalForCast();
-    }).catch(function(err) {
-        console.error('[CAST] loadMedia falhou:', err);
-        alert('Não foi possível transmitir.
-
-Causa provável: CORS no servidor do vídeo.
-O Chromecast exige Access-Control-Allow-Origin no m3u8 e nos segmentos.');
-    });
-}
-
-function _castYouTube(media) {
-    var deepLink = 'youtube://watch?v=' + media.videoId;
-    var webLink = 'https://www.youtube.com/watch?v=' + media.videoId;
-
-    try {
-        window.open(deepLink, '_blank');
-        setTimeout(function() {
-            window.open(webLink, '_blank');
-        }, 800);
-    } catch(e) {
-        window.open(webLink, '_blank');
-    }
-}
-
-function _initRemotePlayback() {
-    if (typeof videoElement === 'undefined' || !videoElement) return;
-    if (!('remote' in videoElement)) return;
-    if (!videoElement.remote) return;
-
-    var airplayBtn = document.getElementById('airplayBtn');
-    if (!airplayBtn) return;
-
-    videoElement.remote.watchAvailability(function(available) {
-        airplayBtn.style.display = available ? 'inline-flex' : 'none';
-    }).catch(function(){});
-
-    airplayBtn.addEventListener('click', function() {
-        if (videoElement.remote.state === 'disconnected') {
-            videoElement.remote.prompt().catch(function(err) {
-                console.warn('[CAST] Remote Playback prompt falhou:', err);
-            });
-        } else {
-            videoElement.remote.cancelWatchAvailability().catch(function(){});
-        }
-    });
-}
-
-function _setupCastButtons() {
-    if (!_initCast()) {
-        setTimeout(_setupCastButtons, 1000);
-        return;
-    }
-
-    var castBtn = document.getElementById('castBtn');
-    if (!castBtn) return;
-
-    try {
-        castContext.addEventListener(
-            cast.framework.CastContextEventType.CAST_STATE_CHANGED,
-            function(e) {
-                if (e.castState === cast.framework.CastState.NO_DEVICES_AVAILABLE) {
-                    castBtn.style.display = 'none';
-                } else {
-                    castBtn.style.display = 'inline-flex';
-                }
-            }
-        );
-    } catch(e) {
-        castBtn.style.display = 'inline-flex';
-    }
-
-    castBtn.addEventListener('click', function() {
-        var media = _getCastMediaInfo();
-        if (!media) {
-            alert('Nenhuma mídia carregada para transmitir.');
-            return;
-        }
-        if (media.type === 'youtube') {
-            _castYouTube(media);
-        } else {
-            _castHTML5(media);
-        }
-    });
-
-    _initRemotePlayback();
-}
-
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function() {
-        setTimeout(_setupCastButtons, 1500);
-    });
-} else {
-    setTimeout(_setupCastButtons, 1500);
-}
-</script>
 <script id="__mobile_fix_js__">
 (function(){
   function initTVStateObserver(){
