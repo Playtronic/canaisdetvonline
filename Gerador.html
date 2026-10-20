@@ -5775,6 +5775,7 @@ if (slotIndex === currentPlayingSlot) {
 
         // VARIÁVEIS PARA YOUTUBE API
         let youtubePlayer = null;
+        let currentHlsInstance = null;
         let isYoutubeVideo = false;
         let playerReady = false;
         
@@ -6150,6 +6151,12 @@ function criarPlayerYouTube(videoId, startSeconds = 0, autoplay = true) {
         youtubePlayer = null;
     }
     
+    // 🎬 [HLS-CLEANUP-YT] Destruir hls.js anterior
+    if (typeof currentHlsInstance !== 'undefined' && currentHlsInstance) {
+        try { currentHlsInstance.destroy(); } catch(e){}
+        currentHlsInstance = null;
+    }
+    
     // Esconder vídeo HTML5
     if (videoElement) {
         videoElement.style.display = 'none';
@@ -6470,6 +6477,16 @@ function configurarControlesYouTube() {
             window.__lastLiveBtnClick = now;
             console.log('[BTN] AO VIVO clicado');
             try {
+                // 🎬 [HLS-LIVE-EDGE] Pular para borda ao vivo se for HLS live
+                if (typeof currentHlsInstance !== 'undefined' && currentHlsInstance) {
+                    var _hlsLivePos = currentHlsInstance.liveSyncPosition;
+                    if (typeof _hlsLivePos === 'number' && isFinite(_hlsLivePos)) {
+                        videoElement.currentTime = _hlsLivePos;
+                        showControls();
+                        resetControlsTimer();
+                        return;
+                    }
+                }
                 if (isYoutubeVideo && youtubePlayer && playerReady) {
                     var vd = null;
                     try { vd = youtubePlayer.getVideoData ? youtubePlayer.getVideoData() : null; } catch(e){}
@@ -6628,6 +6645,11 @@ function atualizarIconeVolume(volume) {
         }
     }
     
+    // 🎬 HLS (m3u8) — suporte a streams
+    if (url && typeof url === 'string' && /\.m3u8(\?|$|#)/i.test(url)) {
+        return carregarVideoHLS(url, iniciarNoPercentual, autoplay);
+    }
+    
     // 🎥 YouTube delega
     if (url && (url.indexOf('youtube.com') !== -1 || url.indexOf('youtu.be') !== -1)) {
         return _carregarVideoYouTube_raw(url, iniciarNoPercentual, autoplay);
@@ -6635,6 +6657,210 @@ function atualizarIconeVolume(volume) {
     
     // ▶️ HTML5 direto
     return _carregarVideoHTML5_raw(url, iniciarNoPercentual, autoplay);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   🎬 [HLS FUNCTIONS INSERT] Suporte a streams m3u8 (HLS)
+   ═══════════════════════════════════════════════════════════════ */
+var HLS_CDN_URLS = [
+    'https://cdn.jsdelivr.net/npm/hls.js@1/dist/hls.min.js',
+    'https://unpkg.com/hls.js@1/dist/hls.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.5.17/hls.min.js'
+];
+
+var _hlsJsLoadingPromise = null;
+function _loadHlsJs() {
+    if (typeof Hls !== 'undefined') return Promise.resolve(true);
+    if (_hlsJsLoadingPromise) return _hlsJsLoadingPromise;
+
+    _hlsJsLoadingPromise = (async function() {
+        for (var i = 0; i < HLS_CDN_URLS.length; i++) {
+            var cdnUrl = HLS_CDN_URLS[i];
+            try {
+                await new Promise(function(resolve, reject) {
+                    var s = document.createElement('script');
+                    s.src = cdnUrl;
+                    s.async = true;
+                    s.onload = resolve;
+                    s.onerror = function() { reject(new Error('load failed')); };
+                    document.head.appendChild(s);
+                });
+                if (typeof Hls !== 'undefined') {
+                    console.log('[HLS] hls.js carregado de:', cdnUrl);
+                    return true;
+                }
+            } catch(e) {
+                console.warn('[HLS] CDN falhou:', cdnUrl);
+            }
+        }
+        console.error('[HLS] Todas as CDNs falharam');
+        return false;
+    })();
+
+    return _hlsJsLoadingPromise;
+}
+
+async function carregarVideoHLS(url, iniciarNoPercentual, autoplay) {
+    if (typeof iniciarNoPercentual === 'undefined') iniciarNoPercentual = 0;
+    if (typeof autoplay === 'undefined') autoplay = true;
+
+    console.log('[HLS] Carregando m3u8:', (url || '').substring(0, 100));
+
+    // 1. Destruir YouTube se ativo
+    if (typeof youtubePlayer !== 'undefined' && youtubePlayer) {
+        try { youtubePlayer.destroy(); } catch(e){}
+        youtubePlayer = null;
+        playerReady = false;
+    }
+    isYoutubeVideo = false;
+    if (youtubeContainer) youtubeContainer.style.display = 'none';
+
+    // 2. Destruir instância hls anterior
+    if (typeof currentHlsInstance !== 'undefined' && currentHlsInstance) {
+        try { currentHlsInstance.destroy(); } catch(e){}
+        currentHlsInstance = null;
+    }
+
+    // 3. Reset vídeo
+    if (!videoElement) {
+        console.error('[HLS] videoElement null');
+        return;
+    }
+
+    try {
+        videoElement.pause();
+        videoElement.removeAttribute('src');
+        videoElement.load();
+    } catch(e){}
+
+    videoElement.playsInline = true;
+    videoElement.setAttribute('playsinline', '');
+    videoElement.setAttribute('webkit-playsinline', '');
+    videoElement.style.display = 'block';
+
+    // 4. Callback comum de início
+    function _startPlayback() {
+        if (iniciarNoPercentual > 0 && iniciarNoPercentual < 1) {
+            var dur = videoElement.duration;
+            if (dur && isFinite(dur) && dur > 0) {
+                var startTime = dur * iniciarNoPercentual;
+                if (startTime < dur - 1) {
+                    try { videoElement.currentTime = startTime; } catch(e){}
+                }
+            }
+        }
+
+        if (autoplay && typeof userStartedPlayback !== 'undefined' && userStartedPlayback) {
+            videoElement.muted = (typeof userMuted !== 'undefined') ? userMuted : false;
+            videoElement.volume = videoElement.muted ? 0 : ((typeof userVolume !== 'undefined' && userVolume > 0) ? userVolume : 1.0);
+            var pp = videoElement.play();
+            if (pp && pp.catch) {
+                pp.catch(function(err) {
+                    console.warn('[HLS] play() falhou:', err.name);
+                    if (err.name === 'NotAllowedError') {
+                        videoElement.muted = true;
+                        videoElement.play().catch(function(){});
+                    }
+                });
+            }
+        }
+    }
+
+    // 5. Suporte nativo (Safari / iOS)
+    var canPlayNative = '';
+    try { canPlayNative = videoElement.canPlayType('application/vnd.apple.mpegurl'); } catch(e){}
+    var isAppleDevice = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+        (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+    if (canPlayNative === 'probably' || (canPlayNative === 'maybe' && (isSafari || isAppleDevice))) {
+        console.log('[HLS] Suporte nativo — usando src direto');
+        videoElement.addEventListener('loadedmetadata', _startPlayback, { once: true });
+        videoElement.src = url;
+        videoElement.load();
+        return;
+    }
+
+    // 6. Precisa de hls.js
+    console.log('[HLS] Navegador sem suporte nativo — usando hls.js');
+    var loaded = await _loadHlsJs();
+    if (!loaded || typeof Hls === 'undefined') {
+        console.error('[HLS] hls.js não carregou — tentando fallback nativo');
+        videoElement.addEventListener('loadedmetadata', _startPlayback, { once: true });
+        videoElement.addEventListener('error', function() {
+            console.error('[HLS] Fallback nativo também falhou');
+            setTimeout(function() {
+                if (typeof currentState !== 'undefined' && currentState === 'program') {
+                    var proximoSlot = getNextSlot();
+                    reproduzirPrograma(proximoSlot, 0);
+                }
+            }, 3000);
+        }, { once: true });
+        videoElement.src = url;
+        videoElement.load();
+        return;
+    }
+
+    if (!Hls.isSupported()) {
+        console.error('[HLS] Hls.isSupported() = false');
+        videoElement.addEventListener('loadedmetadata', _startPlayback, { once: true });
+        videoElement.src = url;
+        videoElement.load();
+        return;
+    }
+
+    // 7. Criar instância hls.js
+    console.log('[HLS] Criando instância hls.js');
+    try {
+        currentHlsInstance = new Hls({
+            enableWorker: true,
+            backBufferLength: 90,
+            maxBufferLength: 30,
+            maxMaxBufferLength: 60,
+            startLevel: -1,
+            capLevelToPlayerSize: false
+        });
+    } catch(e) {
+        console.error('[HLS] Erro ao criar instância:', e);
+        return;
+    }
+
+    currentHlsInstance.on(Hls.Events.MANIFEST_PARSED, function(event, data) {
+        console.log('[HLS] Manifest parsed. Níveis:', data.levels ? data.levels.length : 0);
+        _startPlayback();
+    });
+
+    currentHlsInstance.on(Hls.Events.ERROR, function(event, data) {
+        console.error('[HLS] Erro:', data.type, data.details, data.fatal ? 'FATAL' : '');
+        if (!data.fatal) return;
+
+        if (data.type === Hls.ErrorTypes.NETWORK_ERROR) {
+            console.log('[HLS] Recuperando de erro de rede...');
+            try { currentHlsInstance.startLoad(); } catch(e){}
+        } else if (data.type === Hls.ErrorTypes.MEDIA_ERROR) {
+            console.log('[HLS] Recuperando de erro de mídia...');
+            try { currentHlsInstance.recoverMediaError(); } catch(e){}
+        } else {
+            console.error('[HLS] Erro fatal — destruindo e pulando');
+            try { currentHlsInstance.destroy(); } catch(e){}
+            currentHlsInstance = null;
+            setTimeout(function() {
+                if (typeof currentState !== 'undefined' && currentState === 'program') {
+                    var proximoSlot = getNextSlot();
+                    reproduzirPrograma(proximoSlot, 0);
+                }
+            }, 3000);
+        }
+    });
+
+    try {
+        currentHlsInstance.loadSource(url);
+        currentHlsInstance.attachMedia(videoElement);
+    } catch(e) {
+        console.error('[HLS] Erro ao carregar source:', e);
+        try { currentHlsInstance.destroy(); } catch(_e){}
+        currentHlsInstance = null;
+    }
 }
 
 function _carregarVideoHTML5_raw(url, iniciarNoPercentual = 0, autoplay = true) {
@@ -6648,6 +6874,12 @@ function _carregarVideoHTML5_raw(url, iniciarNoPercentual = 0, autoplay = true) 
         youtubeContainer.style.display = 'none';
     }
     isYoutubeVideo = false;
+    
+    // 🎬 [HLS-CLEANUP-HTML5] Destruir hls.js anterior
+    if (typeof currentHlsInstance !== 'undefined' && currentHlsInstance) {
+        try { currentHlsInstance.destroy(); } catch(e){}
+        currentHlsInstance = null;
+    }
     
     // 2. Verificar se elemento de vídeo existe
     if (!videoElement) {
@@ -7435,6 +7667,16 @@ var _ocultarYtInterval = setInterval(function() {
             window.__lastLiveBtnClick = now;
             console.log('[BTN] AO VIVO clicado');
             try {
+                // 🎬 [HLS-LIVE-EDGE] Pular para borda ao vivo se for HLS live
+                if (typeof currentHlsInstance !== 'undefined' && currentHlsInstance) {
+                    var _hlsLivePos = currentHlsInstance.liveSyncPosition;
+                    if (typeof _hlsLivePos === 'number' && isFinite(_hlsLivePos)) {
+                        videoElement.currentTime = _hlsLivePos;
+                        showControls();
+                        resetControlsTimer();
+                        return;
+                    }
+                }
                 if (isYoutubeVideo && youtubePlayer && playerReady) {
                     var vd = null;
                     try { vd = youtubePlayer.getVideoData ? youtubePlayer.getVideoData() : null; } catch(e){}
@@ -10946,7 +11188,7 @@ showScreen('screen6');
                         <label>Episódios (Dias):</label>
                         <ul class="video-list" id="${programId}-videos"></ul>
                         <div class="add-video-form">
-                            <input type="url" id="${programId}-new-video" placeholder="URL do vídeo (ex: https://exemplo.com/video.mp4 ou YouTube)">
+                            <input type="url" id="${programId}-new-video" placeholder="URL do vídeo (mp4, YouTube ou .m3u8)">
                             <button type="button" class="add-episode-btn" data-program="${programId}">Adicionar Episódio</button>
                         </div>
                         <div class="error-message" id="${programId}-videos-error" style="display: none;">Pelo menos um vídeo é obrigatório para cada programa.</div>
@@ -11113,7 +11355,7 @@ showScreen('screen6');
                 </div>
                 <div class="form-group">
                     <label for="${videoId}-url">URL do Vídeo:</label>
-                    <input type="url" id="${videoId}-url" value="${video.url || ''}" placeholder="URL do vídeo (ex: https://exemplo.com/video.mp4 ou YouTube)" required>
+                    <input type="url" id="${videoId}-url" value="${video.url || ''}" placeholder="URL do vídeo (mp4, YouTube ou .m3u8)" required>
                     <div class="error-message" id="${videoId}-url-error" style="display: none;">A URL do vídeo é obrigatória.</div>
                 </div>
             `;
@@ -11470,7 +11712,7 @@ showScreen('screen6');
                 </div>
                 <div class="form-group">
                     <label for="${commercialId}-url">URL do comercial:</label>
-                    <input type="url" id="${commercialId}-url" value="${commercialObj.url || ''}" placeholder="URL do comercial" required>
+                    <input type="url" id="${commercialId}-url" value="${commercialObj.url || ''}" placeholder="URL do comercial (mp4, YouTube ou .m3u8)" required>
                     <div class="error-message" id="${commercialId}-url-error" style="display: none;">URL do comercial é obrigatória.</div>
                 </div>
             `;
