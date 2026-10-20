@@ -4386,6 +4386,9 @@ if (slotIndex === currentPlayingSlot) {
     <!-- [HLS-v1] HLS.js para URLs .m3u8 -->
     <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.7/dist/hls.min.js"><\/script>
 
+    <!-- [HLS-v1] HLS.js para URLs .m3u8 -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.7/dist/hls.min.js"><\/script>
+
 
  <!-- METADADOS DE VERSÃO E CONTEÚDO ADULTO -->
     <meta name="version" content="${version}">
@@ -8797,18 +8800,26 @@ adLog('API: window.__ads.diag()');
             if (!slLightbox) {
                 slLightbox = document.createElement('div');
                 slLightbox.id = 'smartlinkIframeOverlay';
-                slLightbox.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:2147483200;display:none;flex-direction:column;';
+                slLightbox.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.92);z-index:2147483200;display:none;align-items:center;justify-content:center;padding:20px;font-family:Arial,sans-serif;';
                 slLightbox.innerHTML =
-                    '<div style="display:flex;justify-content:space-between;align-items:center;padding:12px 18px;background:#111;border-bottom:2px solid #fdbb2d;font-family:Arial,sans-serif;">' +
-                        '<span style="color:#fdbb2d;font-weight:bold;font-size:1rem;">🔓 Liberando canal...</span>' +
-                        '<button id="slCloseBtn" disabled style="background:#555;color:#fff;border:none;padding:10px 22px;border-radius:8px;font-weight:bold;cursor:not-allowed;font-size:0.95rem;">Fechar (5)</button>' +
-                    '</div>' +
-                    '<iframe id="slIframe" src="about:blank" style="flex:1;width:100%;border:none;background:#fff;" allow="autoplay; encrypted-media; fullscreen" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+                    '<div style="background:#1a1d24;border:2px solid #fdbb2d;border-radius:12px;width:100%;max-width:780px;height:85vh;max-height:700px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.7);">' +
+                        '<div style="display:flex;justify-content:space-between;align-items:center;padding:14px 18px;background:#111;border-bottom:2px solid #fdbb2d;gap:10px;flex-wrap:wrap;">' +
+                            '<span id="slStatusText" style="color:#fdbb2d;font-weight:bold;font-size:1.05rem;">🔓 Liberando canal...</span>' +
+                            '<div style="display:flex;gap:8px;">' +
+                                '<button id="slOpenTabBtn" style="background:#3498db;color:#fff;border:none;padding:8px 16px;border-radius:8px;font-weight:bold;cursor:pointer;font-size:0.85rem;">Abrir em nova aba</button>' +
+                                '<button id="slCloseBtn" disabled style="background:#555;color:#fff;border:none;padding:8px 20px;border-radius:8px;font-weight:bold;cursor:not-allowed;font-size:0.85rem;">Fechar (5)</button>' +
+                            '</div>' +
+                        '</div>' +
+                        '<iframe id="slIframe" src="about:blank" style="flex:1;width:100%;border:none;background:#fff;" allow="autoplay; encrypted-media; fullscreen" referrerpolicy="no-referrer-when-downgrade"></iframe>' +
+                        '<div style="padding:8px 16px;background:#111;color:#888;font-size:0.75rem;text-align:center;">Se o conteúdo não carregar aqui, use "Abrir em nova aba"</div>' +
+                    '</div>';
                 document.body.appendChild(slLightbox);
             }
 
             const slCloseBtn = document.getElementById('slCloseBtn');
+            const slOpenTabBtn = document.getElementById('slOpenTabBtn');
             const slIframe = document.getElementById('slIframe');
+            const slStatusText = document.getElementById('slStatusText');
 
             if (smartlinkOverlay && unlockBtn && mainContent) {
                 smartlinkOverlay.style.display = 'flex';
@@ -8824,6 +8835,8 @@ adLog('API: window.__ads.diag()');
                     slCloseBtn.textContent = 'Fechar (' + seg + ')';
                     slCloseBtn.style.background = '#555';
                     slCloseBtn.style.cursor = 'not-allowed';
+                    slStatusText.textContent = '🔓 Liberando canal...';
+                    slStatusText.style.color = '#fdbb2d';
 
                     const __slTimer = setInterval(function() {
                         seg--;
@@ -8835,8 +8848,14 @@ adLog('API: window.__ads.diag()');
                             slCloseBtn.textContent = 'Fechar';
                             slCloseBtn.style.background = '#e74c3c';
                             slCloseBtn.style.cursor = 'pointer';
+                            slStatusText.textContent = '✅ Canal Liberado';
+                            slStatusText.style.color = '#2ecc71';
                         }
                     }, 1000);
+                });
+
+                slOpenTabBtn.addEventListener('click', function() {
+                    window.open(smartlinkUrl, '_blank');
                 });
 
                 slCloseBtn.addEventListener('click', function() {
