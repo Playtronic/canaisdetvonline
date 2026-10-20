@@ -13,10 +13,12 @@
    
     <!-- YouTube IFrame API -->
     <script src="https://www.youtube.com/iframe_api"></script>
+<!-- Google Cast SDK -->
+<script src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
 
 
  <!-- METADADOS DE VERSÃO E CONTEÚDO ADULTO -->
-    <meta name="version" content="1.0.0.9">
+    <meta name="version" content="1.0.1.0">
     <meta name="channel-category" content="infantil">
     <meta name="channel-id" content="mFHMO49mE2KdEiXFtIUG">
     <meta name="channel-name" content="Nick Jr">
@@ -1140,7 +1142,7 @@
         <div class="container" style="position: relative; z-index: 1;">
 
 <div class="channel-header" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 20px;">
-    <img src="https://yt3.googleusercontent.com/xs_NHPdUbCntjif-I2CrITeu-voAwG3Gpn04MluTh3NlPBdNmvMUFq4_wzPU5jgYWNl_zK_OEA=s160-c-k-c0x00ffffff-no-rj" class="channel-logo-main">
+    <img src="https://yt3.googleusercontent.com/xs_NHPdUbCntjif-I2CrITeu-voAwG3Gpn04MluTh3NlPBdNmvMUFq4_wzPU5jgYWNl_zK_OEA=s160-c-k-c0x00ffffff-no-rj" class="channel-logo-main" style="cursor:pointer;" title="Clique para atualizar o canal" onclick="location.reload()" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/Playtronic/tv/refs/heads/main/template/logotv.png';">
     
 </div>
 
@@ -1183,7 +1185,17 @@
                     <button class="volume-btn" id="volumeBtn">🔊</button>
                     <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.1" value="1">
                 </div>
-                <button class="fullscreen-btn" id="fullscreenBtn">⛶</button>
+                <button id="castBtn" class="control-btn" title="Transmitir para TV" style="display:none;">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;">
+        <path d="M1 18v3h3c0-1.66-1.34-3-3-3zm0-4v2c2.76 0 5 2.24 5 5h2c0-3.87-3.13-7-7-7zm0-4v2c4.97 0 9 4.03 9 9h2c0-6.08-4.93-11-11-11zm20-7H3c-1.1 0-2 .9-2 2v3h2V5h18v14h-7v2h7c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
+    </svg>
+</button>
+<button id="airplayBtn" class="control-btn" title="Transmitir (AirPlay/Smart TV)" style="display:none;">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;">
+        <path d="M6 22h12l-6-7-6 7zM21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4v-2H3V5h18v12h-4v2h4c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
+    </svg>
+</button>
+<button class="fullscreen-btn" id="fullscreenBtn">⛶</button>
             </div>
             
         </div>        
@@ -1277,7 +1289,7 @@
         
  <div class="contact-info">Contato: acmebrasil@mail.com</div>
         <div style="text-align: center; margin-top: 5px; font-size: 0.75rem; opacity: 0.5;">
-            Versão 1.0.0.9
+            Versão 1.0.1.0
         </div>
     </div> <!-- Fecha container -->
 </div> <!-- Fecha mainContent -->
@@ -1605,7 +1617,7 @@ function cleanupInactiveViewers() {
     
     // Função para calcular dias desde a estreia (PARA TODOS OS MODOS)
     function calcularDiasDesdeEstreiaCanal() {
-        const RELEASE_DATE = "2026-10-09";
+        const RELEASE_DATE = "2026-10-20";
         
         if (!RELEASE_DATE) {
             return 1;
@@ -2461,9 +2473,9 @@ function calculateExpectedTime(duration) {
         const ENABLE_DEBUG = true;
         const IS_ADULT_CONTENT = false;
         
-        const RELEASE_DATE = "2026-10-09";
+        const RELEASE_DATE = "2026-10-20";
         const IS_OFFLINE = false;
-        const CHANNEL_VERSION = "1.0.0.9";
+        const CHANNEL_VERSION = "1.0.1.0";
         const CHANNEL_ID = "mFHMO49mE2KdEiXFtIUG";
         // --- Subscription ---
         const SUBSCRIPTION_ENABLED = false;
@@ -2475,7 +2487,7 @@ function calculateExpectedTime(duration) {
         const SUBSCRIPTION_TRIAL_DAYS = 0;
         const SUBSCRIPTION_PLAN_ID = "";
         const CHANNEL_NAME_STR = "Nick Jr";
-        const OWNER_UID = "";
+        const OWNER_UID = "1lwVn0KpTJYlW3ZSNKGpwSGHhuj1";
         
         // ==================== CONFIGURAÇÃO DO FIREBASE ====================
         const firebaseConfig = {
@@ -2605,6 +2617,7 @@ function calculateExpectedTime(duration) {
 
         // VARIÁVEIS PARA YOUTUBE API
         let youtubePlayer = null;
+        let currentHlsInstance = null;
         let isYoutubeVideo = false;
         let playerReady = false;
         
@@ -2980,6 +2993,12 @@ function criarPlayerYouTube(videoId, startSeconds = 0, autoplay = true) {
         youtubePlayer = null;
     }
     
+    // 🎬 [HLS-CLEANUP-YT] Destruir hls.js anterior
+    if (typeof currentHlsInstance !== 'undefined' && currentHlsInstance) {
+        try { currentHlsInstance.destroy(); } catch(e){}
+        currentHlsInstance = null;
+    }
+    
     // Esconder vídeo HTML5
     if (videoElement) {
         videoElement.style.display = 'none';
@@ -3300,6 +3319,16 @@ function configurarControlesYouTube() {
             window.__lastLiveBtnClick = now;
             console.log('[BTN] AO VIVO clicado');
             try {
+                // 🎬 [HLS-LIVE-EDGE] Pular para borda ao vivo se for HLS live
+                if (typeof currentHlsInstance !== 'undefined' && currentHlsInstance) {
+                    var _hlsLivePos = currentHlsInstance.liveSyncPosition;
+                    if (typeof _hlsLivePos === 'number' && isFinite(_hlsLivePos)) {
+                        videoElement.currentTime = _hlsLivePos;
+                        showControls();
+                        resetControlsTimer();
+                        return;
+                    }
+                }
                 if (isYoutubeVideo && youtubePlayer && playerReady) {
                     var vd = null;
                     try { vd = youtubePlayer.getVideoData ? youtubePlayer.getVideoData() : null; } catch(e){}
@@ -3458,6 +3487,11 @@ function atualizarIconeVolume(volume) {
         }
     }
     
+    // 🎬 HLS (m3u8) — suporte a streams
+    if (url && typeof url === 'string' && /\.m3u8(\?|$|#)/i.test(url)) {
+        return carregarVideoHLS(url, iniciarNoPercentual, autoplay);
+    }
+    
     // 🎥 YouTube delega
     if (url && (url.indexOf('youtube.com') !== -1 || url.indexOf('youtu.be') !== -1)) {
         return _carregarVideoYouTube_raw(url, iniciarNoPercentual, autoplay);
@@ -3465,6 +3499,210 @@ function atualizarIconeVolume(volume) {
     
     // ▶️ HTML5 direto
     return _carregarVideoHTML5_raw(url, iniciarNoPercentual, autoplay);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   🎬 [HLS FUNCTIONS INSERT] Suporte a streams m3u8 (HLS)
+   ═══════════════════════════════════════════════════════════════ */
+var HLS_CDN_URLS = [
+    'https://cdn.jsdelivr.net/npm/hls.js@1/dist/hls.min.js',
+    'https://unpkg.com/hls.js@1/dist/hls.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.5.17/hls.min.js'
+];
+
+var _hlsJsLoadingPromise = null;
+function _loadHlsJs() {
+    if (typeof Hls !== 'undefined') return Promise.resolve(true);
+    if (_hlsJsLoadingPromise) return _hlsJsLoadingPromise;
+
+    _hlsJsLoadingPromise = (async function() {
+        for (var i = 0; i < HLS_CDN_URLS.length; i++) {
+            var cdnUrl = HLS_CDN_URLS[i];
+            try {
+                await new Promise(function(resolve, reject) {
+                    var s = document.createElement('script');
+                    s.src = cdnUrl;
+                    s.async = true;
+                    s.onload = resolve;
+                    s.onerror = function() { reject(new Error('load failed')); };
+                    document.head.appendChild(s);
+                });
+                if (typeof Hls !== 'undefined') {
+                    console.log('[HLS] hls.js carregado de:', cdnUrl);
+                    return true;
+                }
+            } catch(e) {
+                console.warn('[HLS] CDN falhou:', cdnUrl);
+            }
+        }
+        console.error('[HLS] Todas as CDNs falharam');
+        return false;
+    })();
+
+    return _hlsJsLoadingPromise;
+}
+
+async function carregarVideoHLS(url, iniciarNoPercentual, autoplay) {
+    if (typeof iniciarNoPercentual === 'undefined') iniciarNoPercentual = 0;
+    if (typeof autoplay === 'undefined') autoplay = true;
+
+    console.log('[HLS] Carregando m3u8:', (url || '').substring(0, 100));
+
+    // 1. Destruir YouTube se ativo
+    if (typeof youtubePlayer !== 'undefined' && youtubePlayer) {
+        try { youtubePlayer.destroy(); } catch(e){}
+        youtubePlayer = null;
+        playerReady = false;
+    }
+    isYoutubeVideo = false;
+    if (youtubeContainer) youtubeContainer.style.display = 'none';
+
+    // 2. Destruir instância hls anterior
+    if (typeof currentHlsInstance !== 'undefined' && currentHlsInstance) {
+        try { currentHlsInstance.destroy(); } catch(e){}
+        currentHlsInstance = null;
+    }
+
+    // 3. Reset vídeo
+    if (!videoElement) {
+        console.error('[HLS] videoElement null');
+        return;
+    }
+
+    try {
+        videoElement.pause();
+        videoElement.removeAttribute('src');
+        videoElement.load();
+    } catch(e){}
+
+    videoElement.playsInline = true;
+    videoElement.setAttribute('playsinline', '');
+    videoElement.setAttribute('webkit-playsinline', '');
+    videoElement.style.display = 'block';
+
+    // 4. Callback comum de início
+    function _startPlayback() {
+        if (iniciarNoPercentual > 0 && iniciarNoPercentual < 1) {
+            var dur = videoElement.duration;
+            if (dur && isFinite(dur) && dur > 0) {
+                var startTime = dur * iniciarNoPercentual;
+                if (startTime < dur - 1) {
+                    try { videoElement.currentTime = startTime; } catch(e){}
+                }
+            }
+        }
+
+        if (autoplay && typeof userStartedPlayback !== 'undefined' && userStartedPlayback) {
+            videoElement.muted = (typeof userMuted !== 'undefined') ? userMuted : false;
+            videoElement.volume = videoElement.muted ? 0 : ((typeof userVolume !== 'undefined' && userVolume > 0) ? userVolume : 1.0);
+            var pp = videoElement.play();
+            if (pp && pp.catch) {
+                pp.catch(function(err) {
+                    console.warn('[HLS] play() falhou:', err.name);
+                    if (err.name === 'NotAllowedError') {
+                        videoElement.muted = true;
+                        videoElement.play().catch(function(){});
+                    }
+                });
+            }
+        }
+    }
+
+    // 5. Suporte nativo (Safari / iOS)
+    var canPlayNative = '';
+    try { canPlayNative = videoElement.canPlayType('application/vnd.apple.mpegurl'); } catch(e){}
+    var isAppleDevice = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+        (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+    if (canPlayNative === 'probably' || (canPlayNative === 'maybe' && (isSafari || isAppleDevice))) {
+        console.log('[HLS] Suporte nativo — usando src direto');
+        videoElement.addEventListener('loadedmetadata', _startPlayback, { once: true });
+        videoElement.src = url;
+        videoElement.load();
+        return;
+    }
+
+    // 6. Precisa de hls.js
+    console.log('[HLS] Navegador sem suporte nativo — usando hls.js');
+    var loaded = await _loadHlsJs();
+    if (!loaded || typeof Hls === 'undefined') {
+        console.error('[HLS] hls.js não carregou — tentando fallback nativo');
+        videoElement.addEventListener('loadedmetadata', _startPlayback, { once: true });
+        videoElement.addEventListener('error', function() {
+            console.error('[HLS] Fallback nativo também falhou');
+            setTimeout(function() {
+                if (typeof currentState !== 'undefined' && currentState === 'program') {
+                    var proximoSlot = getNextSlot();
+                    reproduzirPrograma(proximoSlot, 0);
+                }
+            }, 3000);
+        }, { once: true });
+        videoElement.src = url;
+        videoElement.load();
+        return;
+    }
+
+    if (!Hls.isSupported()) {
+        console.error('[HLS] Hls.isSupported() = false');
+        videoElement.addEventListener('loadedmetadata', _startPlayback, { once: true });
+        videoElement.src = url;
+        videoElement.load();
+        return;
+    }
+
+    // 7. Criar instância hls.js
+    console.log('[HLS] Criando instância hls.js');
+    try {
+        currentHlsInstance = new Hls({
+            enableWorker: true,
+            backBufferLength: 90,
+            maxBufferLength: 30,
+            maxMaxBufferLength: 60,
+            startLevel: -1,
+            capLevelToPlayerSize: false
+        });
+    } catch(e) {
+        console.error('[HLS] Erro ao criar instância:', e);
+        return;
+    }
+
+    currentHlsInstance.on(Hls.Events.MANIFEST_PARSED, function(event, data) {
+        console.log('[HLS] Manifest parsed. Níveis:', data.levels ? data.levels.length : 0);
+        _startPlayback();
+    });
+
+    currentHlsInstance.on(Hls.Events.ERROR, function(event, data) {
+        console.error('[HLS] Erro:', data.type, data.details, data.fatal ? 'FATAL' : '');
+        if (!data.fatal) return;
+
+        if (data.type === Hls.ErrorTypes.NETWORK_ERROR) {
+            console.log('[HLS] Recuperando de erro de rede...');
+            try { currentHlsInstance.startLoad(); } catch(e){}
+        } else if (data.type === Hls.ErrorTypes.MEDIA_ERROR) {
+            console.log('[HLS] Recuperando de erro de mídia...');
+            try { currentHlsInstance.recoverMediaError(); } catch(e){}
+        } else {
+            console.error('[HLS] Erro fatal — destruindo e pulando');
+            try { currentHlsInstance.destroy(); } catch(e){}
+            currentHlsInstance = null;
+            setTimeout(function() {
+                if (typeof currentState !== 'undefined' && currentState === 'program') {
+                    var proximoSlot = getNextSlot();
+                    reproduzirPrograma(proximoSlot, 0);
+                }
+            }, 3000);
+        }
+    });
+
+    try {
+        currentHlsInstance.loadSource(url);
+        currentHlsInstance.attachMedia(videoElement);
+    } catch(e) {
+        console.error('[HLS] Erro ao carregar source:', e);
+        try { currentHlsInstance.destroy(); } catch(_e){}
+        currentHlsInstance = null;
+    }
 }
 
 function _carregarVideoHTML5_raw(url, iniciarNoPercentual = 0, autoplay = true) {
@@ -3478,6 +3716,12 @@ function _carregarVideoHTML5_raw(url, iniciarNoPercentual = 0, autoplay = true) 
         youtubeContainer.style.display = 'none';
     }
     isYoutubeVideo = false;
+    
+    // 🎬 [HLS-CLEANUP-HTML5] Destruir hls.js anterior
+    if (typeof currentHlsInstance !== 'undefined' && currentHlsInstance) {
+        try { currentHlsInstance.destroy(); } catch(e){}
+        currentHlsInstance = null;
+    }
     
     // 2. Verificar se elemento de vídeo existe
     if (!videoElement) {
@@ -4265,6 +4509,16 @@ var _ocultarYtInterval = setInterval(function() {
             window.__lastLiveBtnClick = now;
             console.log('[BTN] AO VIVO clicado');
             try {
+                // 🎬 [HLS-LIVE-EDGE] Pular para borda ao vivo se for HLS live
+                if (typeof currentHlsInstance !== 'undefined' && currentHlsInstance) {
+                    var _hlsLivePos = currentHlsInstance.liveSyncPosition;
+                    if (typeof _hlsLivePos === 'number' && isFinite(_hlsLivePos)) {
+                        videoElement.currentTime = _hlsLivePos;
+                        showControls();
+                        resetControlsTimer();
+                        return;
+                    }
+                }
                 if (isYoutubeVideo && youtubePlayer && playerReady) {
                     var vd = null;
                     try { vd = youtubePlayer.getVideoData ? youtubePlayer.getVideoData() : null; } catch(e){}
@@ -6254,6 +6508,227 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 </style>
+<script>
+/* ═══════════════════════════════════════════════════════════════
+   🎬 [CAST PATCH] Google Cast + Remote Playback
+   ═══════════════════════════════════════════════════════════════ */
+var castContext = null;
+var remotePlayer = null;
+var remotePlayerController = null;
+var castSessionActive = false;
+var _castOriginalPaused = false;
+var _castOriginalSrc = '';
+var _castCurrentIsHLS = false;
+
+function _initCast() {
+    try {
+        if (typeof cast === 'undefined' || !cast.framework) return false;
+        if (castContext) return true;
+
+        var context = cast.framework.CastContext.getInstance();
+        context.setOptions({
+            receiverApplicationId: 'CC1AD845',
+            autoJoinPolicy: chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED
+        });
+
+        remotePlayer = new cast.framework.RemotePlayer();
+        remotePlayerController = new cast.framework.RemotePlayerController(remotePlayer);
+
+        remotePlayerController.addEventListener(
+            cast.framework.RemotePlayerEventType.IS_CONNECTED_CHANGED,
+            function(e) {
+                castSessionActive = e.value;
+                console.log('[CAST] Sessão ' + (e.value ? 'conectada' : 'desconectada'));
+                if (e.value) {
+                    _pauseLocalForCast();
+                } else {
+                    _resumeLocalAfterCast();
+                }
+            }
+        );
+
+        console.log('[CAST] Google Cast inicializado');
+        return true;
+    } catch(e) {
+        console.warn('[CAST] init falhou:', e);
+        return false;
+    }
+}
+
+function _pauseLocalForCast() {
+    if (typeof videoElement !== 'undefined' && videoElement && !videoElement.paused) {
+        _castOriginalPaused = false;
+        videoElement.pause();
+    }
+    if (typeof youtubePlayer !== 'undefined' && youtubePlayer && playerReady) {
+        try { youtubePlayer.pauseVideo(); } catch(e){}
+    }
+}
+
+function _resumeLocalAfterCast() {
+    if (!_castOriginalPaused && typeof videoElement !== 'undefined' && videoElement) {
+        videoElement.play().catch(function(){});
+    }
+    if (typeof youtubePlayer !== 'undefined' && youtubePlayer && playerReady && userStartedPlayback) {
+        try { youtubePlayer.playVideo(); } catch(e){}
+    }
+}
+
+function _getCastMediaInfo() {
+    if (typeof isYoutubeVideo !== 'undefined' && isYoutubeVideo && youtubePlayer && playerReady) {
+        try {
+            var vd = youtubePlayer.getVideoData();
+            if (vd && vd.video_id) {
+                return {
+                    type: 'youtube',
+                    videoId: vd.video_id,
+                    title: vd.title || 'YouTube',
+                    url: 'https://www.youtube.com/watch?v=' + vd.video_id
+                };
+            }
+        } catch(e){}
+        return null;
+    }
+
+    if (typeof videoElement !== 'undefined' && videoElement && videoElement.src) {
+        var src = videoElement.src;
+        var isHLS = /.m3u8(?|$|#)/i.test(src);
+        return {
+            type: 'html5',
+            url: src,
+            isHLS: isHLS,
+            contentType: isHLS ? 'application/x-mpegurl' : 'video/mp4',
+            title: document.getElementById('currentProgram')
+                ? document.getElementById('currentProgram').textContent
+                : 'Transmissão'
+        };
+    }
+
+    return null;
+}
+
+function _castHTML5(media) {
+    var session = castContext.getCurrentSession();
+    if (!session) {
+        castContext.requestSession().then(function() {
+            _castHTML5(media);
+        }).catch(function(err) {
+            console.warn('[CAST] requestSession falhou:', err);
+        });
+        return;
+    }
+
+    var mediaInfo = new chrome.cast.media.MediaInfo(media.url, media.contentType);
+    mediaInfo.metadata = new chrome.cast.media.GenericMediaMetadata();
+    mediaInfo.metadata.title = media.title;
+
+    if (media.isHLS) {
+        mediaInfo.hlsSegmentFormat = 'TS';
+        mediaInfo.hlsVideoSegmentFormat = 'TS';
+    }
+
+    var request = new chrome.cast.media.LoadRequest(mediaInfo);
+    request.autoplay = true;
+    request.currentTime = (typeof videoElement !== 'undefined' && videoElement)
+        ? videoElement.currentTime : 0;
+
+    session.loadMedia(request).then(function() {
+        console.log('[CAST] Mídia carregada no receptor');
+        _pauseLocalForCast();
+    }).catch(function(err) {
+        console.error('[CAST] loadMedia falhou:', err);
+        alert('Não foi possível transmitir.
+
+Causa provável: CORS no servidor do vídeo.
+O Chromecast exige Access-Control-Allow-Origin no m3u8 e nos segmentos.');
+    });
+}
+
+function _castYouTube(media) {
+    var deepLink = 'youtube://watch?v=' + media.videoId;
+    var webLink = 'https://www.youtube.com/watch?v=' + media.videoId;
+
+    try {
+        window.open(deepLink, '_blank');
+        setTimeout(function() {
+            window.open(webLink, '_blank');
+        }, 800);
+    } catch(e) {
+        window.open(webLink, '_blank');
+    }
+}
+
+function _initRemotePlayback() {
+    if (typeof videoElement === 'undefined' || !videoElement) return;
+    if (!('remote' in videoElement)) return;
+    if (!videoElement.remote) return;
+
+    var airplayBtn = document.getElementById('airplayBtn');
+    if (!airplayBtn) return;
+
+    videoElement.remote.watchAvailability(function(available) {
+        airplayBtn.style.display = available ? 'inline-flex' : 'none';
+    }).catch(function(){});
+
+    airplayBtn.addEventListener('click', function() {
+        if (videoElement.remote.state === 'disconnected') {
+            videoElement.remote.prompt().catch(function(err) {
+                console.warn('[CAST] Remote Playback prompt falhou:', err);
+            });
+        } else {
+            videoElement.remote.cancelWatchAvailability().catch(function(){});
+        }
+    });
+}
+
+function _setupCastButtons() {
+    if (!_initCast()) {
+        setTimeout(_setupCastButtons, 1000);
+        return;
+    }
+
+    var castBtn = document.getElementById('castBtn');
+    if (!castBtn) return;
+
+    try {
+        castContext.addEventListener(
+            cast.framework.CastContextEventType.CAST_STATE_CHANGED,
+            function(e) {
+                if (e.castState === cast.framework.CastState.NO_DEVICES_AVAILABLE) {
+                    castBtn.style.display = 'none';
+                } else {
+                    castBtn.style.display = 'inline-flex';
+                }
+            }
+        );
+    } catch(e) {
+        castBtn.style.display = 'inline-flex';
+    }
+
+    castBtn.addEventListener('click', function() {
+        var media = _getCastMediaInfo();
+        if (!media) {
+            alert('Nenhuma mídia carregada para transmitir.');
+            return;
+        }
+        if (media.type === 'youtube') {
+            _castYouTube(media);
+        } else {
+            _castHTML5(media);
+        }
+    });
+
+    _initRemotePlayback();
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(_setupCastButtons, 1500);
+    });
+} else {
+    setTimeout(_setupCastButtons, 1500);
+}
+</script>
 <script id="__mobile_fix_js__">
 (function(){
   function initTVStateObserver(){
