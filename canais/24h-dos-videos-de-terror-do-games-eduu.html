@@ -16,7 +16,7 @@
 
 
  <!-- METADADOS DE VERSÃO E CONTEÚDO ADULTO -->
-    <meta name="version" content="1.0.0.3">
+    <meta name="version" content="1.0.0.4">
     <meta name="channel-category" content="humor">
     <meta name="channel-id" content="dqygiH578SNKUE8hrZcn">
     <meta name="channel-name" content="24H dos Videos de Terror do Games Eduu">
@@ -1161,7 +1161,16 @@
 
 <div class="action-buttons-wrapper" style="text-align: center; margin: 20px 0; padding: 10px;">
     
+    <button id="paidCommercialBtn" type="button" style="display: inline-block; background: linear-gradient(135deg, #9b59b6, #8e44ad); color: white; padding: 12px 24px; border-radius: 8px; font-weight: bold; font-size: 1.1rem; margin: 5px; border: 2px solid #8e44ad; min-height: 46px; line-height: 22px; vertical-align: middle; box-sizing: border-box; cursor: pointer; font-family: inherit;">
+        Inserir comercial
+    </button>
     
+    
+    
+    <button id="supportButton" 
+       style="display: inline-block; background: linear-gradient(135deg, #2ecc71, #27ae60); color: white; border: none; padding: 12px 24px; border-radius: 8px; font-weight: bold; font-size: 1.1rem; cursor: pointer; margin: 5px; border: 2px solid #27ae60; min-height: 46px; line-height: 22px; vertical-align: middle; box-sizing: border-box;">
+        ❤️ Apoiar
+    </button>
     
     
     
@@ -1213,7 +1222,7 @@
         
  <div class="contact-info">Contato: yago.mattoso.bispo.ramalho@gmail.com</div>
         <div style="text-align: center; margin-top: 5px; font-size: 0.75rem; opacity: 0.5;">
-            Versão 1.0.0.3
+            Versão 1.0.0.4
         </div>
     </div> <!-- Fecha container -->
 </div> <!-- Fecha mainContent -->
@@ -2396,7 +2405,7 @@ function calculateExpectedTime(duration) {
         // CONFIGURAÇÕES DO CANAL
 
         const TV_PROGRAMS = [{"id":0,"name":"","totalVideos":0,"videos":[]}];
-        const TV_PLAYLIST = [{"id":0,"name":"1","url":"PTVX::1CbAQ1DCJnzNgdXQUdSfwL12ov3Zfo70i7EFem845wXMqOPITeX5r7AIfKsVBh5Mr2X5uGHRliS3Fy3TYP0cT738W9vwYy4EADSFyg=="},{"id":1,"name":"2","url":"PTVX::pM0ehBB10Is+Oz7feAPynwWabfQ4eSBnGdsAx/7rktxUGs9mOKYsZaUZDj5dAJPMd7pEUNukXUXd2eDWc9KY4+H+TKph6mCdikEaoQ=="},{"id":2,"name":"3","url":"PTVX::On2ZPJ0GUzuBfYS7RfKyHbqvgu4zmoTcFuijX2lE9NaQri5LlBOMMaqBwysfHNFbGVB/jHftgJbbKMB+xIFidAgTJ1ZLYyzKvCStjg=="},{"id":3,"name":"4","url":"PTVX::1j2zCtMLuF5zAIpiHQH1dhq9JEHu408YnpXZVCD6DhG2YTwFlfykVeSE7DraIXLFrgX3oUSVM7nYqlq3ZBn6p9YtT403iLxK/uCnuw=="},{"id":4,"name":"5","url":"PTVX::b2R1XfeudfFBXc5ZZ9s4okCFGNCIoCf3VWOz/dA5xcoIf8/OzHOsrgYlemMoJMgn2ifBJWWve5V36pWDb/5MPZMyatX39GfWHoyYmA=="},{"id":5,"name":"6","url":"PTVX::BWaAnw3uGXSz/E8oda0K+gUWKHFhSSV61RVKCZq1WWLRpG+BcXnt2YUkNHQuj5jXbD2UjB7ogPxH6LtvrgVtTm7qaJvfdINzahb2xw=="},{"id":6,"name":"7","url":"PTVX::uVI9kFn+p6P6J9mnCvTqerK6WTr6c/7Q2VoDGO/WG4mZBXUZbXazHbuT6OWJtd7rcHGp6l9lDXWXncv209BScWkfhDaS4jKLDpyhoQ=="},{"id":7,"name":"8","url":"PTVX::lpZ26IA77f5uh26vwOVyaMJyWcAZ0u6/4ESBFepfaKPzz4HA0YzZYHtUFP+80SNaF0+omjl3K5pWXh7H9bOYKovWz3v/Su+Btpd0Ow=="},{"id":8,"name":"9","url":"PTVX::l+v9fTwcYdi+DIqIE2bOZYZSZM8/Mv6f5/Gl1tOYwHWeZYQEuJk+Fj55pZFPNpS++HczGo0Q3+V0U1auq5xzboUQwg1OYjpgjfp93w=="},{"id":9,"name":"10","url":"PTVX::TqMY11v4qvdfM5mAUgepxmyErYXOhCh7rxdlcsz6Lq3S6IQ+maVO4zn2hbiw6bCUy87KSsze8wq7xF0rVvHZ+svMJPPRZCmbXbw5KA=="}];
+        const TV_PLAYLIST = [{"id":0,"name":"1","url":"PTVX::xbOPa+jRB4Tpe+/anJQav965+JHTR5T4QykId9ndhEH8gRRag2kff8vQkre8JnfWfdbFquaFx3297qQ9ztiWVCeclhd/jCq+MdHFxg=="},{"id":1,"name":"2","url":"PTVX::YnVmxZeAxJgckT/Wz40sygb2CkVIfeD6rUpAl5dmPGfo8IyCQybKPcI8sW8X/VUUh2SC+IOZBKfES2CDK48qsu8/4D+SjmTm7n2tiA=="},{"id":2,"name":"3","url":"PTVX::ufHGK+m25tgdJfcctKNyNE+ZymlHLUK+vJ5ivRNLnVexz69DGjUznqKCZTG8Ts1jXA31inh2sq/BV7ZahxJ1v/KuMI4oeTreowsnXg=="},{"id":3,"name":"4","url":"PTVX::X/nlKwSG0wFgRimeJvRS4rejVSlzlBWGKwWT/x2nELgZp0UGlylUDfOjaUpIy8W9AOtSKCK06nFOVSA6ElBCjie8qxeSgyo169zDjg=="},{"id":4,"name":"5","url":"PTVX::qcalgcTVaZoCdB529xBa2IgLaRnsWK/ZMrjgt9Ha/DE1ytgPN8JSS+L1lyhlfwD9IiE3cTh0WrNt4bD8lRms17WFOdG1vT0jAne/Fw=="},{"id":5,"name":"6","url":"PTVX::Qsb5ifAQpfOOKu5DbbzzHMlgRJ+bNpUuxRvmcm9x1WDyvb1er3vboUpSnpHjIsvQnN2CrSBqnbbrUdlmnlGMYh6+C0cJLCYjH0PZIw=="},{"id":6,"name":"7","url":"PTVX::kDwldc9Bp/u3pdE6/yv4VOKdPCMfb7INB3eYvo+Ep7n7u7TeZUWtUqJ/k1gB+i/A23/bt4wGxw0QU5ePrQgn8CY/9SYiMhji3mx7NA=="},{"id":7,"name":"8","url":"PTVX::BjoYTkBZNaVQSts2LHF/9ec6ZBsIQoEIQEwjXkF/RbuesoaosDWxZvh0Jtg8WOmnKgd04HXvzZtJMiXEQyIY5hTOcpa9Isw5XG3BZQ=="},{"id":8,"name":"9","url":"PTVX::JXY1yZIzqCB2GiAT5TTbIiEJR5vaIyQmonF/UzXHbtKe4jSIEhEsMlqH7NOiEh+V2/dIhz2DV81LZ/zaGJ81CZcIsMgs2fXc3jW5ZQ=="},{"id":9,"name":"10","url":"PTVX::JelLEuQNVK6DqrjQ18frgmFndE8kxQ5wfKw6rUNhv66j21Cireh/L99Piy9gIZ1EW8nDy33COdY/Vxe8ZTLxVpFlhmni4UkrcyYXbA=="}];
         const PROGRAMMING_MODE = "playlist";const TOTAL_PROGRAMS = 1;
         const TOTAL_PLAYLIST_VIDEOS = 10;
         const PROGRAM_VIDEO_COUNTS = [0];
@@ -2416,7 +2425,7 @@ function calculateExpectedTime(duration) {
         
         const RELEASE_DATE = "2026-10-31";
         const IS_OFFLINE = false;
-        const CHANNEL_VERSION = "1.0.0.3";
+        const CHANNEL_VERSION = "1.0.0.4";
         const CHANNEL_ID = "dqygiH578SNKUE8hrZcn";
         // --- Subscription ---
         const SUBSCRIPTION_ENABLED = false;
@@ -2424,7 +2433,7 @@ function calculateExpectedTime(duration) {
             console.log('[gerarHTML] SUBSCRIPTION_ENABLED =', SUBSCRIPTION_ENABLED,
                 '| dados.monetization =', JSON.stringify(dados.monetization || null));
         } catch(_e) {}
-        const SUBSCRIPTION_PRICE = 0;
+        const SUBSCRIPTION_PRICE = 3.99;
         const SUBSCRIPTION_TRIAL_DAYS = 0;
         const SUBSCRIPTION_PLAN_ID = "";
         const CHANNEL_NAME_STR = "24H dos Videos de Terror do Games Eduu";
