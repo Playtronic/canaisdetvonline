@@ -16,7 +16,7 @@
 
 
  <!-- METADADOS DE VERSÃO E CONTEÚDO ADULTO -->
-    <meta name="version" content="1.0.0.1">
+    <meta name="version" content="1.0.0.2">
     <meta name="channel-category" content="desenhos">
     <meta name="channel-id" content="NQnp6C2Z7cgEjGSgNSqp">
     <meta name="channel-name" content="Desenhos antigos">
@@ -25,7 +25,7 @@
     <meta name="channel-adult" content="false">
     <meta name="generator" content="Gerador de TV Online">
     <meta name="adult-content" content="false">
-    <meta name="programming-mode" content="playlist">
+    <meta name="programming-mode" content="youtube_live">
     <style>
         * {
             margin: 0;
@@ -1186,7 +1186,7 @@
     <div class="debug-info">
         <div class="program-item">
             <div class="program-label">Modo de Programação:</div>
-            <div class="program-name" id="programmingModeDisplay">Playlist</div>
+            <div class="program-name" id="programmingModeDisplay">Live do YouTube</div>
         </div>
         <div class="program-item">
             <div class="program-label">Comerciais por intervalo:</div>
@@ -1239,7 +1239,7 @@
         
  <div class="contact-info">Contato: Desenhosantigos@gmail.com</div>
         <div style="text-align: center; margin-top: 5px; font-size: 0.75rem; opacity: 0.5;">
-            Versão 1.0.0.1
+            Versão 1.0.0.2
         </div>
     </div> <!-- Fecha container -->
 </div> <!-- Fecha mainContent -->
@@ -2422,8 +2422,8 @@ function calculateExpectedTime(duration) {
         // CONFIGURAÇÕES DO CANAL
 
         const TV_PROGRAMS = [];
-        const TV_PLAYLIST = [{"id":0,"name":"A nossa turma","url":"PTVX::F9J/25WGbNr8tts1UcmZeQyCXoubp8dGoJrmzrh7XHGkVia2V9cQhMezqjrc9l9Guud7Nf2I2iT4uglpZzk9C8jkYWNCzQ=="},{"id":1,"name":"Ursinhos carinhosos diversos episodios","url":"PTVX::70uN1SwsVk23VHEyO3mzqDkTM5ROZtPTNp46i98UpLMDh4zL2O/BkMpVyt9Phfm4/Rz4H0cOClgNOOc4ogYRkfpHWzzzpg=="},{"id":2,"name":"Supeman e o cientista maluco","url":"PTVX::909mXurY7rzyNQJ/B7aJxFl4dUWcSzOXupOwAqrbh+lEOiPu1ESJEv2h6BIik0XComLEFmFVqlDvcu7rB7jYiKJ0ps6yNg=="},{"id":3,"name":"Superman em os robôs assaltam a cidade","url":"PTVX::FtxT5sLv4EiArd+c9YrWTDTwju2oCAybOGPmTSrtLSPlZZ5tDmrAu/8nHAwGz30QkCMDEjHfRjk0mSNWXaQcwfU6GaffRw=="},{"id":4,"name":"Superman em o trem de 1 bilhão de dólares","url":"PTVX::CNHxQ5OQc+St0eq7pYsbwnEm3IVhs98QqVUEMQDBaM8ZBEmIAEQHmuE2HvKOHS5WOvTlR7uE6YUft+hAH/1ECpvg9gZQvw=="},{"id":5,"name":"Superman em o gigante do ártico","url":"PTVX::F5446gvnMEp8qymGtmX3I9C0sAWqWPT+pegSnnUK0ybN6mmdcQTruVF8mx5Cr7gmpw5MHG4Pa/G3YsZRLM+2fH1mk2Dz/g=="},{"id":6,"name":"Superman e os lança balas","url":"PTVX::KZQokpBtPI/5/f17jaoT6orU+7Qsel60pb5I2LBCSMwJtlZVydOEXpLYNNBwnN6PkNmEkkyCfNjWu+aAQtG/px4+6Doa5w=="},{"id":7,"name":"Superman e o telescópio magnético","url":"PTVX::doFMxX+pOBDgJNYLihZI9fn8duUX98jldf9yiyyU9WyUPRkHPkI+/e8/7qSc/leHqmDHQ9u52KOJNf2h0t1b0nMCYhtkdQ=="},{"id":8,"name":"Superman e o terremoto elétrico","url":"PTVX::9PIgyWGYQCJZMzJO8WhHzgS/F1M/JDPdBDnNT8aC0+V5GMwqSF7cDYMfGNGzzOxYascFsHdg3U1e/krNQQj6JwfAOJZUhg=="},{"id":9,"name":"Superman e o vulcão","url":"PTVX::y0hDbV+PprfqBHIjHzAGUyw8rJn+X7MNjYZoowau4Q4hGAc5avydbffCTVgJc4vbimv4+KfpIbT1dgVVp0a6SoYtxRmcQg=="},{"id":10,"name":"Superman e o terror do circo","url":"PTVX::LSmbd5tVPhrn1hfzWrbHKNhLGljHgKTUwfGdnl8VpJQ1/8EL0nmI14U88hmiVUSDukNBnvphqSxkVXPP0ch8SvyyXHOKDw=="},{"id":11,"name":"Superman e os sequestradores japoneses","url":"PTVX::DcvFa+F9TZ//f7UJ4rmE21HN0BNSN3PyxXjxasJsawrQhFBw0ZP4V96MFG4Y/yMUSxVBJDzobVaQ6AQkxkuGkNl6D3Hc+w=="},{"id":12,"name":"Superman e o falso super man","url":"PTVX::RtTKxc/lWFZnzZdVY57z/f32u/Ymn49/W2AfGe5pXfH7zWeh3bjSdIj61xbbMTDkCOzMznUqmom6hO3MbOsRQJWYEX+LgQ=="},{"id":13,"name":"Superman e o decimo primeiro dia","url":"PTVX::lVMzgGinIdf/+i4eI39W5yRLH+0gVRrydMXFx7fjrKQ6J6Eb1W3ubBzIZcmuvLsPQmPcKz2Cc4FWT2DOWYBv+hP19dN79Q=="},{"id":14,"name":"Superman e a companhia da destruição","url":"PTVX::bPV31Mh0Rd+xuaezeXAXTlpW7JfYwWFXQoV/TqERNJsC4wjN8yRGLeSQ1w5DdefKJ6IIddLDsvkoPN8hU0fq2fRzflidhQ=="},{"id":15,"name":"Superman em a múmia ataca","url":"PTVX::MWZN03dFOvSU8/Rmq3MzIUW+FSB9X/wiOtIWcu7+iGFfqtmJCgfRKea4vsdmyBaY3jkcCyknSisEskqiXWI6HVaily3/oA=="},{"id":16,"name":"Superman e os tambores da selva ","url":"PTVX::1AZt5zLbBuRQC91Zua8fZ18WIQMY2J0WZzWU6EUqTA/7kEt19UypKUuzFRhXmukLmPiP80lyIFi952Nsh55+4NU7NrjNIw=="},{"id":17,"name":"Superman e o mundo subterrâneo","url":"PTVX::Wx2MouEuUxEO1t+fd9yOvoAPb19ErfhEo1dnSIu4SVtaotfBX7o5o9mttSSGu404txDrjMeCQBDTkaPZBwLpVqEEaUyEeA=="},{"id":18,"name":"Superman e o agente secreto ","url":"PTVX::jcT35CUBhRwV88HDdVTahlFFvLMzZbvusK0ysQg2IYuc9ErhZ/2W0IKbV8bVvXyJzebLFVGeTJkoSeoCGcLzM9KZbkkRMw=="},{"id":19,"name":"Fantasia 1940","url":"PTVX::vw24xmMn2OYp6i8QaWDM95PB/p1CTiOQytBJeBBgy6pw8CXrx1RRhNEcvuphnCiR7yZqJY85WfXt6aZGCm/WPHz8y8SZlg=="},{"id":20,"name":"O antílope dourado","url":"PTVX::xEPQdMDzTQRHoV1W4Nm2+C5XsaOHJLzeP/jyfOnyqlSmU8sS4aFWkKQpCxXDef6L5aBudF/OucZ3S1Zf/nFmVDALQDuCww=="},{"id":21,"name":"Dumbo 1941","url":"PTVX::wUTTgIHTRSNPKN69kvi0ngU19i2nzs+QSGMfwCPZNaPGcCd3S4NxK5Kr2bnq5fQ2cydCHv/W34C1tI7OIibRjO82VQVWww=="},{"id":22,"name":"Looney tunes mega compilação","url":"PTVX::eDgK4Ei/mQOlPxbsPbgDMorbtwd29k83LRxe48IgoCKXVXph+vjrVW2UgIr0jtXBtzAqZd3/eAjVi3uTd/u/3kimu7vRFw=="},{"id":23,"name":"Bambi","url":"PTVX::kOq2tWWKUeIfBF99C+Vv2UW4wqq11NQ6WXhFfrK7RwvYg8kaRnhl81vI+P+5Gx3C4pCQAprib+D5TizXQPzq9s0YCmXEkw=="},{"id":24,"name":"Tom e Jerry: Coletânea 1","url":"PTVX::R/ya0/4bdVNJvCr1VU25ZOY+uSpMxREBeoKCtbJNeI32aLwDtzz/tp4z919WMXUfGqQ5D/OeSNxFO0H5aYYis19nqNSW/A=="},{"id":25,"name":"Tom e Jerry: Coletânea 2","url":"PTVX::3xhsFWqsTJdwQLuqstn9m1q07WdXOgCcjZWDnxs6rRMgeCIL7r86sb6AKnrmhRGU1N39+XILToDuvVHn/0HjjOaCvjNcGw=="},{"id":26,"name":"Coletânea Disney 1","url":"PTVX::Y6pMQlNhsYAEDLQoTtHrBdfEuyP30aTIK7RdBN0RliPXFwKSUvSqQ4fnKjrnB9jVTQ+ic7t4S8Vg6gIzV6EL0B5jIP2ZWw=="},{"id":27,"name":"Coletânea Disney 2","url":"PTVX::uwKsw5cBQuonzsB1f/KHm9Bsf75VhNIvKkuTuaAgHv/z66OecUWILxSqpPe1QhEUFyWw4Up3O/8mrfH8Drg/8PpIBE8H8Q=="},{"id":28,"name":"Lobo pateta","url":"PTVX::fnecQYWy1lL6nhcbwmY5uLt8jMKh2KDDvO4oCX5yYAw67qN7wN4oo8RJYR1Ge3eaYP+9OAfGvXOibV4j9mj6vcVABuZ5tQ=="},{"id":29,"name":"Coletânea Popeye 1 ","url":"PTVX::KaaIbZl3LSBPuAQvVHnHzygOeatcQPwukCzYtdy6LMmss9uFEi0hNfXnJAiLVMirmL4WP5SNn5yy8OgiGerHKMAoYKxjuw=="},{"id":30,"name":"Coletânea Popeye 2","url":"PTVX::nZtnKtDBatmk+Y2LRbpLR/2eH+vZlV5mLjdn8FwiTqyuchxkzQolg6n7yv/etfAYYFkY3ZlnObkNqy7Mhn/HTiZNmhal6g=="},{"id":31,"name":"Coletânea Gato Felix 1","url":"PTVX::eDN2dYiEExlsxiSJCenlH8H7T9eFrPvopkgBaAIP+l3PMq9wtYeipc4OBu0TiW+P2z5H6+OKCHepBRtDwxazjmz90VKILg=="},{"id":32,"name":"Coletânea Gato Felix 2","url":"PTVX::9/uUQHfhQvmmq6+EJxII1R1sN+wMcvTkzykjalMVIv5cDgrOmi7G7ynvKj1JPqdRiGhnDsKcT0NemIDXMudibSBp+6HFHA=="},{"id":33,"name":"A viagem de Gulliver 1939","url":"PTVX::nuu+BHoWLI8QnCRddpGZxxUNevcMG7VBd0XjvYo7DHSo5OE3XUDOFWEppvzj+ZLJ8Y47U7cM+RJOYe/DVdK+K7XqmWD5mQ=="},{"id":34,"name":"Pantera cor de rosa","url":"PTVX::q1PWX6Rs3GNLzzfEXzw4y2wfk4Be+OI9dR6OH/FWtVD8SaMq6mKqb7FyU7TntT9RF7KCpsvyBmuovBDb4XqphMHQzNQHjA=="},{"id":35,"name":"Branca de neve 1937","url":"PTVX::AoK669swwT5QXOxd6jJPEpAE7ozcqE+zKmpfUqMRaIXsg+6Dn2yJWJkYm0L44rBkwVaqnrn8NmLLvt9JD5UpZUdPVNb3cg=="},{"id":36,"name":"Pica pau","url":"PTVX::yLFBHichTLaccFmM2R7kxuyXm+BfIa9Yc4GA3+DInYA/zFgcsFV+PYEnNStjZV90Zgu0UGyipm1Nwn8Dj5L7bvIDjuDg7A=="},{"id":37,"name":"Mega Coletânea de desenhos animados ","url":"PTVX::20rqDHslqpkCAvhEwaeWr568wJrQ2FAz3MJtMKL937O0SYQtqkQ8UFfwjNjcEXgdiRAATxJPuMrRJrT1v1tDR9QV3Ob0jCg="},{"id":38,"name":"Peter Pan 1953","url":"PTVX::IU34mMyn/w5m40/MCx2rUroI2QCeTehgCtFoZ6Z8TNxHtXr2NSpT4x/a2jgmS7hGLZcO7H9xd/hOPgFd5RxP1MDY2pfR3w=="},{"id":39,"name":"Clássicos Disney 1","url":"PTVX::1Lm0kRfUzO0LtAThGSMrRTxcuqEVu/uCQG/jIEXtttD037cAcPX14lWtfKwCqsb84HPxARAVmRzTcPijPH3uRQ9Azx2TpA=="},{"id":40,"name":"Clássicos Disney 2","url":"PTVX::xGGYpF7pzeEfOBgVdPuhr2RY75aPrwPJ3ePiK8pdaBb+SA/GPyv+lqLTCpsVHqvNtX4ZiQXMJKrw4pthbW+boNSHP/irF9MQFfV6qjPVC6Xwb5pcdCCY4mBs9VQ7gi9/LDJBI6eA"},{"id":41,"name":"Clássicos MGM","url":"PTVX::hVhW9KOjjdnQ4MZ9hnYhRX5LOeG302MMrZcSFTEXTdmSSR80jZvyBx4ZO4uJf8OkJeJCn8cNNnVBRQzgY6ZTj/5//dWaWQ=="},{"id":42,"name":"Clássicos Disney Dia das bruxas ","url":"PTVX::taEqHHWe5iZJ5xQYCkG5ZDZIw/TpXszoVW/8FiP9UcgIAeIISsf8n8uxZKZ2AxFugaYEP0yWlr87w15KQQBXYCECHIYCxg=="},{"id":43,"name":"O touro Ferdinando","url":"PTVX::78xKnL0tDUarfjsvRH6rGZJeO9zU3v814WY9cbruvCYKQ57z0x2U13m/G1azqtPqHhYdVjj2mgASLgF6TAN6OYiwRhcziw=="},{"id":44,"name":"Rindo com o Pato Donald","url":"PTVX::qDMQogaBZzWcOjK+/NYcmj5EwN6aIVt0ZtOwGPlOILr1g2pXfVSmOwQI5luv6pcLq4IJFCaeODQxnDOShMjw09eSlMwtIQ=="},{"id":45,"name":"As aventuras de Ichabod e o Senhor sapo","url":"PTVX::0wZb2oKyCLJPEa/nF7fV3Fs3xP386KE5qRQYDZjq33ZKPw988CDXtn7KD5+cLPy0r1EyKoM8j9P+uqmqBrUGfT781H7i9g=="},{"id":46,"name":"Os vilões da disney","url":"PTVX::hGrEffhuFebZsdNGR9KE3apnEOcyJGy2m7W+lsyRMgAn7wSucEpuZc+JGEx5DSwOhIj9t0hYLo7+8sMHWxRV3gNwu5LBpw=="},{"id":47,"name":"O cavalinho corcunda","url":"PTVX::XnKHc1fnhVZy0a5MUXYiobp/3U0DJHhbLihJHm4mCgwz6vWOuevR2oi2oPQC48dLmhE9IiF09NZ6kg3t4le0I0IzwAmLRA=="},{"id":48,"name":"Coletânea Faísca e Fumaça","url":"PTVX::U81pB2wQ96zK8MGtG13Q6yiA6tbGmyM9qie7kebaSE6S/K6eLJ8vwY8KQ4flG9xePWOD3G3laf5+BGhLcF9oy+Nh6G72fw=="},{"id":49,"name":"Coletânea Bom Bom Mau Mau","url":"PTVX::LnXrDafpqphRmXb7bsxfYIrHjsiBnFWc9mujNjAMuqZ+hvy9dBcI1H0GyGLj4Q1n4s7Tqu+HNZO6CGDZVtQz2t1FsUB/KA=="}];
-        const PROGRAMMING_MODE = "playlist";const TOTAL_PROGRAMS = 0;
+        const TV_PLAYLIST = [{"id":0,"name":"A nossa turma","url":"PTVX::fNgN1JvkXoksYYnSXwtQtO+ZiU5G2sbdPmJ4Iz0wiNHwZA0pYtdzsqZQVgmFhhzESTaDzNGLbfkPQrIbWs/QlK9gafpr+A=="},{"id":1,"name":"Ursinhos carinhosos diversos episodios","url":"PTVX::KrN8H7noC8p/iyNQloVTLP2hLPJJPuJ6WNzKWLlS/MbHQLk6nJVurHMddPYol5pXs7Ptsc6G5Z9K9V/nN+Jijbu+MWRFPg=="},{"id":2,"name":"Supeman e o cientista maluco","url":"PTVX::DNHJzChBxH2HDWAlanRLGR23DyNdnFpbr4bZrYCUJaRZjyGSzY+DvfBj53RbOhgbJKreKgYr3L93Phht3cedLH3E4dm8uQ=="},{"id":3,"name":"Superman em os robôs assaltam a cidade","url":"PTVX::gXVCmcHhnvUjtyCc7SVYWMfwjVg0a8Wk3rMidNDXQ6WGyiHCP87uDW62fDAg7p/cnPrVPdlnK7fJHnzFC+k+YaneqBPkNA=="},{"id":4,"name":"Superman em o trem de 1 bilhão de dólares","url":"PTVX::kz7TyqfLzZSjee/ilawpeijB6NnJcUewBLkyoM0lJVmj0MLpa3KXDl7QrLKJR4eezUyIUqspCoUkbkbsbV1X9157meQcMg=="},{"id":5,"name":"Superman em o gigante do ártico","url":"PTVX::urSx3m+SXtsoSgWl+PaSADr3TpnZieRG2ps4pcv0w6X05IpvXc/9AlcLOsZ+7sDR5n2Qm1IJWdtSYm0xkusOdmFbfqPwnw=="},{"id":6,"name":"Superman e os lança balas","url":"PTVX::UOREu1RBd4rGmn+cm0vw9kdtF3OIUB0PJC+kMogxzM1LtZodD3uRKjkbubAn33t9H+cNkRwRUWUMIpHkVyDGrgvDgBQqHw=="},{"id":7,"name":"Superman e o telescópio magnético","url":"PTVX::3/E7dDNFuecBQHczav/aApAuAQSXBZxSahOD4RTBd2LeDgO0s3NDVP5d/qgryP3LM08Isgb3+J+nwHuV7db63as3ttDiYQ=="},{"id":8,"name":"Superman e o terremoto elétrico","url":"PTVX::K2HFy8TCuh4iCzEKTmUus51UT7y9o4BHN15HIS3KTEggWSsTkPFuAGy92xVRzNO4xm5F/f2gHrNK+fIP/ptVR8nFjR9rTg=="},{"id":9,"name":"Superman e o vulcão","url":"PTVX::G2q7ZMKxlMXYNoSuzb3fd6al59fUn9edlp6zUoQeAVrKGQs8kk+fXSIomYKythGC0e7n2iootZJpzXb1Qh0V0MqmwWuVsQ=="},{"id":10,"name":"Superman e o terror do circo","url":"PTVX::yJvrKGzY7WzBg6WmEAjgqV4batRt5o5IJzwi+N06X5T0UjqDGHUmmdj398Xfqu67k76QwaluDOdD9srg8+BIvvTMK50KWQ=="},{"id":11,"name":"Superman e os sequestradores japoneses","url":"PTVX::Qrlq9dElxLD2RiOlXFCN+yGIRJ0gtvx2t7p2dhjFQposk2kNdyqe8lA6WH+A4Mrc0ySQiLRM+7S+M5OmXdCTXZJjgUIRmg=="},{"id":12,"name":"Superman e o falso super man","url":"PTVX::qjreONrvL6ZtPsLkTj0SJvj0gMcjnLz85IqFKvcpc2NXAnL6ASbOJZLy4VQPU54/8rPV0BlrPu3GZ+tQxz9To9Rr21gIfw=="},{"id":13,"name":"Superman e o decimo primeiro dia","url":"PTVX::CpV3rTcG8tQdkgqktTytkJiJAz3S67/4ZQKdKIWRsis4LdH03RoCB+UNSPUNCY9vXk/IuzzIpNF8ZMs2c/nFrXwyB4uDDw=="},{"id":14,"name":"Superman e a companhia da destruição","url":"PTVX::J2E6UjReUZ6Ax+d5EzMJwt8hHDckccFRwvaAzqoNQy9nNhFUlNR2yQccyXPekf98CP/JnARPjinCWEGNJTfxHdCYJ1l88g=="},{"id":15,"name":"Superman em a múmia ataca","url":"PTVX::L4RfFArNUlJKybzYm/6yic0QH/zTTytGq9exYT8dbbmDtRcBjgCDdqX5eT0koCcCAWn0KeH2B8HMCll2P7uWVzSwGSfAAQ=="},{"id":16,"name":"Superman e os tambores da selva ","url":"PTVX::s4hDf5/ACdR1lqrOhxAZ2GpAbmibfBjR34x6zQs8NL4K5+2/xrvKPCZYKe8lddXRlKNP4B+2Wwl9xOQIPVcZ36Hh558I9w=="},{"id":17,"name":"Superman e o mundo subterrâneo","url":"PTVX::Zjeofk8jSuGTJ1UQANRZZDNB97v8JLMwkqaS8ilIxcILq06d9PDM6m5y18GsvqBEPeMA2Gs/jPq/1mxRhGRHo6cuV9TPGw=="},{"id":18,"name":"Superman e o agente secreto ","url":"PTVX::7mX1/aQuoZrEj4kDFoupRINMnI5PysbsigTCUVZgIACnWAxohd1OrBJyeZqMd9LBEEA8OhrsQh1pAAGKyPlNvZBAVeS3kw=="},{"id":19,"name":"Fantasia 1940","url":"PTVX::MpIPnHwMXtuqBvha0/Alh7Gcm7pbJTOG2NU0YP3bXHeGhAZE7m17FV0Mk2QttHKu4FCCV3RMFYirbaXRVdEXWdF6ykPkTA=="},{"id":20,"name":"O antílope dourado","url":"PTVX::NUaFafKATPYYAKfYEBw4dW8lltwimTV9FHb+JiJ81btretQNIqhw4pgpUNC+LyGpjitSCqmPzmGaBqq/FStktoUD9sw/Cg=="},{"id":21,"name":"Dumbo 1941","url":"PTVX::seARgLVy1RWAx+7WQz07RxXrqSpelVKTa5YDdESbTG5+l9e5/F4fxjwds8WnVeNqZfBL7mvduUMRrQ2OZyxwhBvuVnnnNQ=="},{"id":22,"name":"Looney tunes mega compilação","url":"PTVX::a7pFHv4mollTVBelfNCdtoZOgVRBlyb37ObgSPOAB+v36FhJ52LRuAJcJ4Ko13fDyIafU8KhEjHc22IUy1Zr9tJI23OcYw=="},{"id":23,"name":"Bambi","url":"PTVX::OUwfKljCRllYGdQYgEK20qLFxfW5LoYWhu3i4DEOGmySVvDktI4P1Mtt7D+PHS9Hb0gwTYKscKDZ5H8NKNbhgLJAbltCtQ=="},{"id":24,"name":"Tom e Jerry: Coletânea 1","url":"PTVX::5yZEqKEyp12SKTP0J/yY6uOMdm+AxGg4iUMKi+RT8jFV48ppZ2RcE1eB7ywqshw4+XbxlnMWN/DspHVreGRafuad6vDg2Q=="},{"id":25,"name":"Tom e Jerry: Coletânea 2","url":"PTVX::HP8j5NwyF67PW/4zNCx53t1GeiMwK1omr2YPZzD5S46AhwzsjI0qT8MJV+hEbYjs7RDXETTwWK66iOyRD3jy03EhsMzvDw=="},{"id":26,"name":"Coletânea Disney 1","url":"PTVX::udNjX3w9hKxiJZ3i6i6Xvw7jS60ewfkltk2gPixvy3tJzrFhF4WY0JDBHC4lSRWWpC8i4H/2wR+CoZ4GxO/82f7y3okWMA=="},{"id":27,"name":"Coletânea Disney 2","url":"PTVX::vUgaicr8buzHCvJFQWvcMMrq8tdkN1xVzUxx74GhiOS1Tr+bpQfxwHCP7HSmG+qriGwWnFea2CByiIrC2ZZjd36rR1sblA=="},{"id":28,"name":"Lobo pateta","url":"PTVX::xza8GmNzBWQO8Qy+93Dyq4Zqk1YdYqbuWPJ4EAmXstglk9JxzqQkOxLSn9bm11mjRZM8ZrpbaCD9OpR3PviKkxdEa3QAwg=="},{"id":29,"name":"Coletânea Popeye 1 ","url":"PTVX::OZ69mAF5cSKgsuchjYuCmnm2KIPbNOhuAoFdC9i3d1mh9HHk9OjvuKndeY8EFIDEK29XyaNnIgkxwUugHLwxu1vrsjTyXg=="},{"id":30,"name":"Coletânea Popeye 2","url":"PTVX::u5cAToDYHzxW3MOJU1ufjUB3f3nnw7kXnjlJ1RlOt7MawW7IKmQEZJV/cWSED9hG2wPa4vvMkkOlc1jKBoh2LuCcam5xdQ=="},{"id":31,"name":"Coletânea Gato Felix 1","url":"PTVX::BjcJCj+Zqjyl+/NQ1w7dS/mH0Ktt0ZjmlcVqmIn/dGJlJq7TbA3TU6aUStarO6GvdkLWGHMp6gplR7hh2Mxr4veQjJuC/Q=="},{"id":32,"name":"Coletânea Gato Felix 2","url":"PTVX::YaQ09PkJNUp+lOvb8HaON1sXDZzKvArKe8zgcAk4c26qjFIJKz3NR0CIDBrwEUMMidrklqma2Hw9w6rbfPJOh+FaOo1uog=="},{"id":33,"name":"A viagem de Gulliver 1939","url":"PTVX::Qw60AhTK80vsZ4fxSQhadpDG1+bWhkVhAU9I+uDyZN68/DAJsYm7T5rkXG86MusIzybvtAh5cHOrWIWDkfIAwgZ5bTQMxA=="},{"id":34,"name":"Pantera cor de rosa","url":"PTVX::WKi2maGidbIz9b5lJiScxzCIYQN9HYbaGFdoC+2ZAv0FHfkmEbD462fvbH/G+ucEfPYCiTW1V0/vhbTXgqW50Qd+xCWdKg=="},{"id":35,"name":"Branca de neve 1937","url":"PTVX::6BuRU3RpwRO77sq+AcHHuQvccjhYkkuVjiTMZXuCpJDf12Wr5vB7fySwXVQDa9jlJBJC96T3xL6lqVAL+C/tfB/ltRAJCg=="},{"id":36,"name":"Pica pau","url":"PTVX::g4fl8jkHpc6rsbOhDYge6UraMZ6aI0C51N0Ty/stBa0nTP6hpo1f1+B0um8wb6rFwQNPUClSoEq79C2tvYLODgluYKUAaw=="},{"id":37,"name":"Mega Coletânea de desenhos animados ","url":"PTVX::v2DDUK6y1nA2PyoUUENo2GGRcDm9QLDCbVxdzgMCi1SJEbj0y4MbFJ/xllRMEGMDVWR0HKm012rpXndcKf7A0zlDwVyTpRI="},{"id":38,"name":"Peter Pan 1953","url":"PTVX::8NRZ2hdoS/A7Rnzy3la3zipuIuDp3LfADOXvra0VYnbytV8nfg/Umyxv3v/u2u9+KVASbeFJ82ytZseOkFNZrf5JHJ8oRg=="},{"id":39,"name":"Clássicos Disney 1","url":"PTVX::rh/Py6Ku0oXVvjrPWTZgVGAifd4K7c75mbWHR6sB85jU4riDzJfJq46GC+cy5vT5Amqo/lw74URlyDiuxmqSO9OtY4wdfQ=="},{"id":40,"name":"Clássicos Disney 2","url":"PTVX::qrvnLKfUASEteE2huGfZcBl9li/jEAggQXmHqu8WTizxHq28XmosRDqvTg8GaxtTVhvsKIIHAbREgzzk9yz1nbbx0cuIamAM9yo1etM58SEdBP7Mo+AEHXtaY4nfMGJflVszyKgP"},{"id":41,"name":"Clássicos MGM","url":"PTVX::qIksUTpCL7r/uNwjacssF9L4UJ1I+ETCK4RsmszxBk6EhDjE5oYvNa/N6eUnlNONu/SliFTslQwQ39A0fTM9uZ8oZcj47w=="},{"id":42,"name":"Clássicos Disney Dia das bruxas ","url":"PTVX::UBtvcUtepGJIMpUYtCH8yLk4xiNmYOR/PJjtQVtQzri8WfvzvUM844oClcrS9nVKMMlaHqeW9kSCw2pLbHmdZp4p8Iw5uw=="},{"id":43,"name":"O touro Ferdinando","url":"PTVX::Tpi9YDamqTjfTF/u1w0PRkMcR7Cnsql3PRi3Xil/wFTaQhYfI71iA/oCPGOUUrkdsndMKfnx5GIr0cXsstTlS+hRT11opQ=="},{"id":44,"name":"Rindo com o Pato Donald","url":"PTVX::8NKUSQ2YAcQLrGQ1ZQYPHevoSwGVP79W+bvQqYvMaMU2sCu7ENcxezd3gfWivFDuYww1zMJBKygvdIYqWJn0klsY1vq6Qw=="},{"id":45,"name":"As aventuras de Ichabod e o Senhor sapo","url":"PTVX::AunB2xnTbfll3U5XaN56etCrEzezQ4aFJuut85rhdvGcaM4vX2/2uQsuP3qcdew/5WT5YafeWy7o5DXDAPfpNOXC/t/42Q=="},{"id":46,"name":"Os vilões da disney","url":"PTVX::xt0ssih3v+c02s4C0jovwE+25uy2GheqraNKZ4VRyEcmqsFOsdSmNlZolKA8HOtIuZ6y5omNr6sUYT9wsfOcKSGCdxbCZA=="},{"id":47,"name":"O cavalinho corcunda","url":"PTVX::RKvkZiLBrVUd0tiX00Ozv9WOtUUgpiulqd9MbHDp0RoR0s65CQ+MUY8mLGC9bNBewN7OME4umpkctI7x4DmfIzrv2jbRtQ=="},{"id":48,"name":"Coletânea Faísca e Fumaça","url":"PTVX::/vm4uXKSoXsVogyI3rSr/i+BgtpCaoOtpr0Vbq6CS6yYCQ4zbWSkOvdX+bKWEB7ePZ52WSmHIXmvOW8oCv4H7pbWTPSk1A=="},{"id":49,"name":"Coletânea Bom Bom Mau Mau","url":"PTVX::5llKad8JqkZ/4lSLfifse213s8PjI33V2FRr5c0uWdmeRnFUq764AKAOQQJLBy9KVuQFgdRKXf5BvsEAJolojmP6Qvs2bw=="}];
+        const PROGRAMMING_MODE = "youtube_live";const TOTAL_PROGRAMS = 0;
         const TOTAL_PLAYLIST_VIDEOS = 50;
         const PROGRAM_VIDEO_COUNTS = [];
         const TV_COMMERCIALS = [];
@@ -2442,7 +2442,7 @@ function calculateExpectedTime(duration) {
         
         const RELEASE_DATE = "2026-10-31";
         const IS_OFFLINE = false;
-        const CHANNEL_VERSION = "1.0.0.1";
+        const CHANNEL_VERSION = "1.0.0.2";
         const CHANNEL_ID = "NQnp6C2Z7cgEjGSgNSqp";
         // --- Subscription ---
         const SUBSCRIPTION_ENABLED = false;
@@ -6576,5 +6576,564 @@ init();
 })();
 </script>
 
+<script>
+(function(){
+  "use strict";
+  var REFRESH_CF = "https://us-central1-playtronic-tv.cloudfunctions.net/refreshLiveStatus";
+  var CH = "UC6L89skzQ3O2buNaVknVf1Q";
+  var FS_CHANNEL_ID = (document.querySelector('meta[name="channel-id"]') || {}).content || "";
+  var SLOT_SEC = 1500;
+  var TOTAL_SLOTS_DIA = 58;   /* [v65-patcher:p1] */
+  var DIA_INICIO_HORA = 6;    /* [v65-patcher:p1] */
+  var LIVE_RECHECK_MS = 300000; // [v63-patcher:p3] era 120000 — 5min reduz consumo de cota
+
+  var videos = [];
+  var isLive = false;
+  var isUpcoming = false;
+  var currentLiveId = "";
+  var currentSlotIdx = 0;
+  var loadedVideoId = null;
+  var booted = false;
+  var userStarted = false;
+  var liveCheckTimer = null;
+  var _liveAwaitingFresh = false;
+  var _liveConfirmTimer = null;
+  var playbackWatcher = null;
+  var endWatcher = null;
+  var lastState = -1;
+  var titleCache = {};
+  var _liveStatusUnsub = null;
+  var _seekInterval = null;   /* [v76-patcher:p1] */
+
+  function log(){ try { var a=[].slice.call(arguments); a.unshift("[LIVE]"); console.log.apply(console,a); } catch(e){} }
+  function warn(){ try { var a=[].slice.call(arguments); a.unshift("[LIVE]"); console.warn.apply(console,a); } catch(e){} }
+
+  // Filtra títulos ruins que vêm do HTML do YouTube (números de views, badges, etc)
+  function _tituloOk(s){
+    if (!s) return false;
+    var t = String(s).trim();
+    if (t.length < 5) return false;
+    if (/^\s*[\d.,]+\s*(mil|milhões|milhão|K|M|B|views?|assistindo|watching)?\s*$/i.test(t)) return false;
+    if (/^(ao vivo|live|assistir depois|watch later|compartilhar|share|salvar|save|inscrever|subscribe|inscrito|subscribed|now playing|tocando agora|gostou deste v[íi]deo\??|did you like this video\??|obrigado por assistir|thanks for watching)$/i.test(t)) return false;
+    if (/^(gostou|did you like|liked this)/i.test(t)) return false;
+    if (/^(veja|assista|confira)\s+(tamb[ée]m|mais)/i.test(t)) return false;
+    return true;
+  }
+
+  function mostrarCarregando(msg){
+    var ov = document.getElementById("autoplayOverlay");
+    if (!ov) return;
+    if (!document.getElementById("__live_spin_css")) {
+      var s = document.createElement("style");
+      s.id = "__live_spin_css";
+      s.textContent = "@keyframes __live_spin { to { transform: rotate(360deg); } }";
+      document.head.appendChild(s);
+    }
+    ov.innerHTML =
+      '<div style="text-align:center;padding:20px;">' +
+        '<div style="border:4px solid rgba(255,255,255,0.25);border-top-color:#fdbb2d;border-radius:50%;width:54px;height:54px;animation:__live_spin 1s linear infinite;margin:0 auto 22px;"></div>' +
+        '<h3 style="font-size:1.25rem;margin-bottom:8px;color:#fff;font-weight:600;">' + (msg || "Carregando canal...") + '</h3>' +
+        '<p style="font-size:0.9rem;opacity:0.75;margin:0;">Isso pode levar alguns segundos</p>' +
+      '</div>';
+    ov.classList.remove("hidden");
+  }
+  function esconderCarregando(){
+    var ov = document.getElementById("autoplayOverlay");
+    if (ov) ov.classList.add("hidden");
+  }
+
+  /* [v67-patcher:p1] mostra a tela "Fora do Ar" quando o canal optou por isso */
+  function mostrarOfflineLiveTpl(){
+    var off = document.getElementById("__liveOffline");
+    if (off) return;
+    var yc = document.getElementById("youtubeContainer");
+    if (yc) yc.style.display = "none";
+    var v = document.getElementById("myVideo");
+    if (v) { try { v.pause(); v.removeAttribute("src"); v.load(); v.style.display = "none"; } catch(e){} }
+    if (youtubePlayer) { try { youtubePlayer.destroy(); } catch(e){} youtubePlayer = null; playerReady = false; isYoutubeVideo = false; }
+
+    var w = document.querySelector(".video-wrapper");
+    if (!w) return;
+
+    var ov = document.createElement("div");
+    ov.id = "__liveOffline";
+    ov.style.cssText = "position:absolute;top:0;left:0;right:0;bottom:0;background:#000;z-index:2147483000;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;";
+
+    var img = document.createElement("img");
+    img.src = "https://raw.githubusercontent.com/Playtronic/tv/refs/heads/main/template/TesteDeCores.png";
+    img.alt = "Canal fora do ar";
+    img.style.cssText = "position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0.35;";
+    ov.appendChild(img);
+
+    var box = document.createElement("div");
+    box.style.cssText = "position:relative;z-index:2;background:rgba(0,0,0,0.85);padding:26px 30px;border-radius:12px;text-align:center;color:#fff;max-width:440px;border:2px solid rgba(253,187,45,0.4);";
+    box.innerHTML = '<h3 style="margin:0 0 10px 0;font-size:1.4rem;color:#fdbb2d;">Canal Temporariamente Fora do Ar</h3>' + /* [v71-patcher:p1] */
+                    '<p style="font-size:0.95rem;opacity:0.9;margin:0 0 6px 0;">Este canal não está transmitindo agora.</p>' +
+                    '<p style="font-size:0.95rem;opacity:0.9;margin:0;">Reativaremos quando houver nova transmissão.</p>';
+    ov.appendChild(box);
+
+    w.appendChild(ov);
+    setText("currentProgram", "-");
+    setText("nextProgram", "-");
+    setText("afterNextProgram", "-");
+    setLiveBadge(false);
+  }
+
+  /* [v67-patcher:p1] esconde a tela "Fora do Ar" (se estiver visível) */
+  function esconderOfflineLiveTpl(){
+    var ov = document.getElementById("__liveOffline");
+    if (ov) ov.remove();
+    var yc = document.getElementById("youtubeContainer");
+    if (yc) yc.style.display = "block";
+  }
+
+  function iniciarWatcherPlayback(){
+    if (playbackWatcher) clearInterval(playbackWatcher);
+    var inicio = Date.now();
+    playbackWatcher = setInterval(function(){
+      var st = -1;
+      try { if (youtubePlayer && playerReady) st = youtubePlayer.getPlayerState(); } catch(e){}
+      if (st === 1 || st === 3) { esconderCarregando(); clearInterval(playbackWatcher); playbackWatcher = null; return; }
+      if (Date.now() - inicio > 30000) { esconderCarregando(); clearInterval(playbackWatcher); playbackWatcher = null; }
+    }, 300);
+  }
+  function fetchTitulo(videoId){
+    if (titleCache[videoId]) return Promise.resolve(titleCache[videoId]);
+    var u = "https://www.youtube.com/oembed?url=" + encodeURIComponent("https://www.youtube.com/watch?v=" + videoId) + "&format=json";
+    return fetch(u).then(function(r){ return r.json(); }).then(function(d){
+      if (d && d.title){ titleCache[videoId] = d.title; return d.title; }
+      return "";
+    }).catch(function(){ return ""; });
+  }
+  function getPlayer(){
+    try { if (typeof youtubePlayer !== "undefined" && youtubePlayer) return youtubePlayer; } catch(e){}
+    try { if (window.youtubePlayer) return window.youtubePlayer; } catch(e){}
+    return null;
+  }
+  function doSeek(target){
+    var p = getPlayer(); if (!p) return;
+    try {
+      var st = p.getPlayerState();
+      var wasPlaying = (st === 1 || st === 3);
+      if (wasPlaying) { try { p.pauseVideo(); } catch(e){} }
+      setTimeout(function(){
+        try { p.seekTo(target, true); } catch(e){}
+        setTimeout(function(){ if (wasPlaying) { try { p.playVideo(); } catch(e){} } }, 700);
+      }, 150);
+    } catch(e){ warn("doSeek:", e); }
+  }
+  /* v64.10-goToLiveEdgeSync */
+  function _calcPctSlotUniversal(){
+    try {
+      var SLOT_SEC = (typeof SLOT_DURATION !== "undefined") ? SLOT_DURATION * 60 : 1500;
+      if (typeof PROGRAMMING_MODE !== "undefined" && PROGRAMMING_MODE === "playlist" && typeof RELEASE_DATE !== "undefined" && RELEASE_DATE) {
+        var relMs = new Date(RELEASE_DATE + "T06:00:00").getTime();
+        if (!isNaN(relMs)) {
+          var e1 = (Date.now() - relMs) / 1000;
+          if (e1 < 0) return 0;
+          return (e1 % SLOT_SEC) / SLOT_SEC;
+        }
+      }
+      var agora = new Date();
+      var base = new Date(agora);
+      if (agora.getHours() < 6) base.setDate(base.getDate() - 1);
+      base.setHours(6, 0, 0, 0);
+      var e2 = (agora.getTime() - base.getTime()) / 1000;
+      if (e2 < 0) return 0;
+      return (e2 % SLOT_SEC) / SLOT_SEC;
+    } catch(e){ return 0; }
+  }
+  function goToLiveEdge(){
+    var p = getPlayer(); if (!p) return;
+    var now = Date.now();
+    if (window.__lastLiveBtnClick && (now - window.__lastLiveBtnClick) < 2000) return;
+    window.__lastLiveBtnClick = now;
+    if (isLive) {
+      try {
+        var durL = p.getDuration();
+        if (typeof durL === "number" && isFinite(durL) && durL > 0) {
+          try { p.seekTo(durL, true); } catch(e) { try { p.playVideo(); } catch(_e){} }
+        } else {
+          try { p.playVideo(); } catch(_e){}
+        }
+      } catch(e){ warn("goToLiveEdge (live):", e); }
+      return;
+    }
+    try {
+      var dur = p.getDuration();
+      if (typeof dur !== "number" || !isFinite(dur) || dur <= 0) {
+        try { p.playVideo(); } catch(_e){}
+        return;
+      }
+      var ct = p.getCurrentTime();
+      if (typeof ct !== "number" || !isFinite(ct) || ct < 0) return;
+      var pctSlot = _calcPctSlotUniversal();
+      if (pctSlot < 0) pctSlot = 0;
+      if (pctSlot > 1) pctSlot = 1;
+      var pctVideo = ct / dur;
+      if (pctSlot > pctVideo + 0.005) {
+        var targetTime = dur * pctSlot;
+        if (targetTime > dur - 0.5) targetTime = Math.max(0, dur - 1);
+        try { p.seekTo(targetTime, true); } catch(e) {}
+        log("AO VIVO: sincronizando " + (pctVideo*100).toFixed(1) + "% -> " + (pctSlot*100).toFixed(1) + "% do slot");
+      } else {
+        log("AO VIVO: video ja esta adiantado (" + (pctVideo*100).toFixed(1) + "% >= " + (pctSlot*100).toFixed(1) + "%)");
+      }
+    } catch(e){ warn("goToLiveEdge (sync):", e); }
+  }
+
+  function bindBotoes(){
+    var r10 = document.getElementById("rewind10Btn");
+    var rst = document.getElementById("restartBtn");
+    var lv  = document.getElementById("liveBtn");
+    if (!r10 || !rst || !lv) return;
+    if (r10.getAttribute("data-v9") === "1") return;
+    var r10c = r10.cloneNode(true); r10c.setAttribute("data-v9","1");
+    var rstc = rst.cloneNode(true); rstc.setAttribute("data-v9","1");
+    var lvc  = lv.cloneNode(true);  lvc.setAttribute("data-v9","1");
+    r10.parentNode.replaceChild(r10c, r10);
+    rst.parentNode.replaceChild(rstc, rst);
+    lv.parentNode.replaceChild(lvc, lv);
+    r10c.onclick = function(e){ if(e){e.preventDefault();e.stopPropagation();} var p=getPlayer(); if(!p)return false; var ct=0; try{ct=p.getCurrentTime();}catch(err){return false;} doSeek(Math.max(0,ct-10)); return false; };
+    rstc.onclick = function(e){ if(e){e.preventDefault();e.stopPropagation();} doSeek(0); return false; };
+    lvc.onclick = function(e){ if(e){e.preventDefault();e.stopPropagation();} goToLiveEdge(); return false; };
+  }
+  function setText(id, t){ var el = document.getElementById(id); if (el) el.textContent = (t == null ? "-" : t); }
+  function setLiveBadge(on){ var d = document.getElementById("liveDot"); if (d) { if (on) d.classList.add("active"); else d.classList.remove("active"); } }
+  function fixModePanel(){ var m = document.getElementById("programmingModeDisplay"); if (m && m.textContent !== "Live do YouTube") m.textContent = "Live do YouTube"; }
+  function ensureVisible(){ var pi = document.querySelector(".program-info"); if (pi) pi.style.display = ""; var di = document.querySelector(".debug-info"); if (di) di.style.display = ""; }
+  function computeCurrentSlot(){   /* [v65-patcher:p2] */
+    var agora = new Date();
+    var horas = agora.getHours();
+    var horaBase = new Date(agora);
+    if (horas < DIA_INICIO_HORA) {
+      horaBase.setDate(horaBase.getDate() - 1);
+    }
+    horaBase.setHours(DIA_INICIO_HORA, 0, 0, 0);
+    var elapsedSec = Math.max(0, Math.floor((agora.getTime() - horaBase.getTime()) / 1000));
+    var slotIndexDia = Math.floor(elapsedSec / SLOT_SEC);
+    if (slotIndexDia > TOTAL_SLOTS_DIA - 1) slotIndexDia = TOTAL_SLOTS_DIA - 1;
+    var seekSec = elapsedSec % SLOT_SEC;
+    var n = videos.length || 1;
+    var idx = slotIndexDia % n;
+    return { idx: idx, seek: seekSec };
+  }
+  function playWhenReady(){
+    var tries = 0;
+    var iv = setInterval(function(){
+      tries++;
+      if (tries > 40) { clearInterval(iv); return; }
+      try { if (youtubePlayer && playerReady) { if (youtubePlayer.getPlayerState() !== 1) youtubePlayer.playVideo(); clearInterval(iv); } } catch(e){ clearInterval(iv); }
+    }, 500);
+  }
+  /* [v76-patcher:p2] cancela seeks pendentes antes de agendar um novo */
+  function _cancelarSeekPendente(){
+    if (_seekInterval) {
+      clearInterval(_seekInterval);
+      _seekInterval = null;
+    }
+  }
+
+  function seekToSlotPosition(seekSec){
+    _cancelarSeekPendente();
+    var tries = 0;
+    _seekInterval = setInterval(function(){
+      tries++;
+      if (tries > 60) { _cancelarSeekPendente(); return; }
+      try {
+        if (youtubePlayer && playerReady){
+          var dur = youtubePlayer.getDuration ? youtubePlayer.getDuration() : 0;
+          if (dur > 0){
+            var pos = seekSec % dur;
+            if (pos > 0.5) youtubePlayer.seekTo(pos, true);
+            _cancelarSeekPendente();
+          }
+        }
+      } catch(e){ _cancelarSeekPendente(); }
+    }, 500);
+  }
+
+  // ═══════════════════════════════════════════════════════════════
+  // v9 — iframe para live_stream com origin + referrerpolicy (CORRIGIDO)
+  // ═══════════════════════════════════════════════════════════════
+  function carregarLiveStream(videoId) {
+    var channelId = String(videoId).replace('live_stream?channel=', '').trim();
+    if (!channelId) return false;
+
+    if (youtubePlayer) { try { youtubePlayer.destroy(); } catch(e){} youtubePlayer = null; playerReady = false; }
+    if (videoElement) { try { videoElement.pause(); videoElement.src = ''; } catch(e){} videoElement.style.display = 'none'; }
+
+    var yc = document.getElementById('youtubeContainer');
+    if (!yc) return false;
+
+    yc.style.display = 'block';
+    yc.innerHTML = '';
+
+    var origin = window.location.origin || 'https://canaisdetv.online';
+    var url = 'https://www.youtube.com/embed/live_stream' +
+              '?channel=' + encodeURIComponent(channelId) +
+              '&autoplay=1' +
+              '&controls=0' +   /* [v74-patcher:p3] sem controles nativos */
+              '&playsinline=1' +
+              '&modestbranding=1' +
+              '&rel=0' +
+              '&enablejsapi=1' +
+              '&origin=' + encodeURIComponent(origin) +
+              '&widget_referrer=' + encodeURIComponent(window.location.href);
+
+    var iframe = document.createElement('iframe');
+    iframe.src = url;
+    iframe.style.cssText = 'width:100%;height:100%;border:0;position:absolute;top:0;left:0;';
+    iframe.setAttribute('allow', 'autoplay; encrypted-media; picture-in-picture; fullscreen');
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.setAttribute('frameborder', '0');
+    iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+    yc.appendChild(iframe);
+
+    isYoutubeVideo = true;
+    playerReady = false;
+    loadedVideoId = videoId;
+
+    log("LIVE STREAM iframe carregado: channel=" + channelId + " origin=" + origin);
+    setTimeout(esconderCarregando, 1500);
+    return true;
+  }
+
+  function loadIntoPlayer(videoId, seekSec, autoPlay){
+    _cancelarSeekPendente();   /* [v76-patcher:p3] */
+    if (typeof videoId === 'string' && videoId.indexOf('live_stream?channel=') === 0) {
+      return carregarLiveStream(videoId);
+    }
+
+    if (typeof criarPlayerYouTube !== "function") return false;
+    try {
+      criarPlayerYouTube(videoId, 0, autoPlay);
+      isYoutubeVideo = true;
+      loadedVideoId = videoId;
+      if (seekSec > 0) seekToSlotPosition(seekSec);
+      if (typeof userStartedPlayback !== "undefined" && userStartedPlayback) playWhenReady();
+      setTimeout(bindBotoes, 1500);
+      setTimeout(bindBotoes, 4000);
+      return true;
+    } catch(e){ warn("loadIntoPlayer:", e); return false; }
+  }
+  function playLiveResult(v){
+    if (!v || !v.videoId) return false;
+    if (loadedVideoId === v.videoId && isLive) return true;
+    log("PLAY LIVE " + v.videoId + " - " + (v.title||""));
+
+    var off = document.getElementById("__liveOffline"); if (off) off.remove();
+    isLive = true;
+    isUpcoming = false;
+    currentLiveId = v.videoId;
+    loadIntoPlayer(v.videoId, 0, true);
+
+    var tituloFinal = (v.title && _tituloOk(v.title)) ? v.title : "Transmissão ao Vivo";
+    setText("currentProgram", tituloFinal);
+    setText("nextProgram", "-");
+    setText("afterNextProgram", "-");
+    setLiveBadge(true);
+    return true;
+  }
+  function playSlot(idx, seekSec){
+    if (!videos.length) return;
+    idx = Math.max(0, Math.min(videos.length - 1, idx));
+    var v = videos[idx];
+    if (!v || !v.id) return;
+    log("PLAY SLOT " + idx + " -> " + v.id);
+    var off = document.getElementById("__liveOffline"); if (off) off.remove();
+    var yc = document.getElementById("youtubeContainer"); if (yc) yc.style.display = "block";
+    isLive = false;
+    isUpcoming = false;
+    currentLiveId = "";
+    currentSlotIdx = idx;
+    loadedVideoId = v.id;
+    loadIntoPlayer(v.id, seekSec || 0, true);
+    setText("currentProgram", v.title || "Carregando...");
+    var nxt = videos[(idx + 1) % videos.length];
+    var nxt2 = videos[(idx + 2) % videos.length];
+    setText("nextProgram", nxt ? (nxt.title || "-") : "-");
+    setText("afterNextProgram", nxt2 ? (nxt2.title || "-") : "-");
+    setLiveBadge(false);
+    fetchTitulo(v.id).then(function(tit){
+      if (tit && loadedVideoId === v.id && !isLive) setText("currentProgram", tit);
+    });
+  }
+
+  /* v64.8-clean */
+  function _sortVideosDeterministic(arr){
+    if (!Array.isArray(arr)) return arr;
+    return arr.slice().sort(function(a, b){
+      var da = a.publishedAtMs || 0;
+      var db = b.publishedAtMs || 0;
+      if (da !== db) return da - db;
+      return String(a.id).localeCompare(String(b.id));
+    });
+  }
+  function aplicarStatusLive(s) {
+    if (!s) return;
+    if (s.ytId && CH && s.ytId !== CH) {
+      log("cache ignorado (ytId diferente)");
+      return;
+    }
+    var novoIsLive = !!s.isLive;
+    var novoIsUpcoming = !!s.isUpcoming;
+    log("Firestore: isLive=" + novoIsLive + " videoId=" + (s.liveVideoId || "-"));
+    if (!userStarted) {
+      isLive = novoIsLive;
+      isUpcoming = novoIsUpcoming;
+      if (s.videos && s.videos.length && (!videos.length || novoIsLive)) videos = _sortVideosDeterministic(s.videos);
+      return;
+    }
+    // Live ativa — servidor já decide qual é a correta (a mais antiga).
+    if (novoIsLive && s.liveVideoId) {
+      isLive = true;
+      isUpcoming = false;
+      if (s.videos && s.videos.length) videos = _sortVideosDeterministic(s.videos);
+      if (currentLiveId === s.liveVideoId && loadedVideoId === s.liveVideoId) return;
+      playLiveResult({ videoId: s.liveVideoId, title: s.liveTitle || "" });
+      return;
+    }
+    // Live terminou — volta para histórico.
+    if (!novoIsLive && isLive) {
+      log("Live encerrada - voltando para historico");
+      isLive = false;
+      isUpcoming = novoIsUpcoming;
+      if (s.videos && s.videos.length) videos = _sortVideosDeterministic(s.videos);
+      var slot = computeCurrentSlot();
+      playSlot(slot.idx, slot.seek);
+      return;
+    }
+    // Sempre foi offline.
+    isLive = false;
+    isUpcoming = novoIsUpcoming;
+    if (s.videos && s.videos.length && !videos.length) videos = _sortVideosDeterministic(s.videos);
+    if (!loadedVideoId && videos.length) {
+      var slotB = computeCurrentSlot();
+      playSlot(slotB.idx, slotB.seek);
+    } else if (!loadedVideoId && videos.length === 0) {
+      esconderCarregando();
+      mostrarOfflineLiveTpl();
+    }
+  }
+
+  function iniciarListenerFirestore() {
+    if (_liveStatusUnsub) return;
+    if (!CH) { warn("CH vazio — listener nao iniciado"); return; }
+    try {
+      var db = (typeof firebase !== "undefined" && firebase.firestore) ? firebase.firestore() : null;
+      if (!db) { warn("Firestore nao disponivel"); return; }
+      _liveStatusUnsub = db.collection("liveStatus_yt").doc(CH)
+        .onSnapshot(function(snap){
+          if (!snap.exists){ log("liveStatus_yt/" + CH + " ainda nao existe"); return; }
+          aplicarStatusLive(snap.data());
+        }, function(err){
+          warn("onSnapshot erro:", err.message);
+        });
+      log("listener Firestore ativo em liveStatus_yt/" + CH);
+    } catch(e) { warn("iniciarListenerFirestore:", e.message); }
+  }
+  /* [v63-patcher:p1] refreshManual aceita forceFresh + atalho global */
+  function refreshManual(forceFresh) {
+    var url = REFRESH_CF + "?ytId=" + encodeURIComponent(CH) +
+              (FS_CHANNEL_ID ? "&channelId=" + encodeURIComponent(FS_CHANNEL_ID) : "") +
+              (forceFresh ? "&fresh=1" : "") +
+              "&_=" + Date.now();
+    return fetch(url, { cache: "no-store" })
+      .then(function(r){ return r.json(); })
+      .then(function(d){
+        if (d && d.success){
+          aplicarStatusLive({
+            ytId: CH,
+            isLive: d.isLive,
+            isUpcoming: d.isUpcoming,
+            liveVideoId: d.liveVideoId,
+            liveTitle: d.liveTitle,
+            videos: d.videos
+          });
+        }
+        return d;
+      })
+      .catch(function(e){ warn("refreshManual:", e.message); return null; });
+  }
+
+  // [v63-patcher:p1] atalho global — força revalidação pulando o Tier 1
+  window.__liveForceRefresh = function(){
+    log("FORCE REFRESH (fresh=1)");
+    return refreshManual(true);
+  };
+  function iniciarEndWatcher(){
+    if (endWatcher) clearInterval(endWatcher);
+    lastState = -1;
+    endWatcher = setInterval(function(){
+      var p = getPlayer(); if (!p) return;
+      var st = -1;
+      try { st = p.getPlayerState(); } catch(e){ return; }
+      if (st === 0 && lastState !== 0){
+        log("FIM DE VIDEO | isLive=" + isLive + " currentSlot=" + currentSlotIdx);
+        if (!isLive) {
+          var nxt = ((currentSlotIdx + 1) % (videos.length || 1));
+          playSlot(nxt, 0);
+        } else {
+          refreshManual();
+        }
+      }
+      lastState = st;
+    }, 1000);
+  }
+  function hookStartButton(){
+    var btn = document.getElementById("autoplayButton");
+    if (!btn){ setTimeout(hookStartButton, 500); return; }
+    if (btn.__live) return;
+    var clone = btn.cloneNode(true);
+    clone.__live = true;
+    btn.parentNode.replaceChild(clone, btn);
+    clone.addEventListener("click", function(e){
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      log("Ligar TV clicado CH=" + CH + " FS=" + FS_CHANNEL_ID);
+      userStarted = true;
+      try { userStartedPlayback = true; } catch(err){}
+      mostrarCarregando("Verificando transmissão...");   /* [v72-patcher:p1] */
+      iniciarWatcherPlayback();
+      refreshManual(false).then(function(){   /* [v65-patcher:p4] */
+        iniciarEndWatcher();
+        setTimeout(function(){
+          if (!loadedVideoId && videos.length && !isLive) {
+            var s = computeCurrentSlot();
+            playSlot(s.idx, s.seek);
+          }
+        }, 3000);
+      });
+      if (liveCheckTimer) clearInterval(liveCheckTimer);
+      liveCheckTimer = setInterval(function(){
+        if (!userStarted) return;
+        refreshManual();
+      }, LIVE_RECHECK_MS);
+    }, true);
+    log("hook instalado");
+  }
+  function boot(){
+    if (booted) return;
+    if (!CH) { warn("boot abortado: CH vazio"); return; }
+    if (typeof criarPlayerYouTube !== "function") return setTimeout(boot, 300);
+    booted = true;
+    log("boot CH=" + CH + " FS=" + FS_CHANNEL_ID);
+    ensureVisible();
+    fixModePanel();
+    setInterval(fixModePanel, 5000);
+    iniciarListenerFirestore();
+    hookStartButton();
+    bindBotoes();
+    var _tries = 0;
+    var _iv = setInterval(function(){
+      _tries++;
+      bindBotoes();
+      if (_tries > 40) clearInterval(_iv);
+    }, 250);
+  }
+  setTimeout(boot, 100);   /* [v65-patcher:p5] era 1500ms */
+})();
+</script>
 </body>
 </html>
