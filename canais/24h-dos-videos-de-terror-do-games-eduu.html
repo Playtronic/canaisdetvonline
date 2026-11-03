@@ -16,7 +16,7 @@
 
 
  <!-- METADADOS DE VERSÃO E CONTEÚDO ADULTO -->
-    <meta name="version" content="1.0.0.4">
+    <meta name="version" content="1.0.0.5">
     <meta name="channel-category" content="humor">
     <meta name="channel-id" content="dqygiH578SNKUE8hrZcn">
     <meta name="channel-name" content="24H dos Videos de Terror do Games Eduu">
@@ -1106,6 +1106,35 @@
 
       <!-- 🔥 LIGHTBOX DE SMARTLINK -->
     
+    <div id="smartlinkOverlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 9999; display: none; justify-content: center; align-items: center;">
+
+        <div style="background: rgba(30,30,30,0.95); padding: 35px 40px; border-radius: 15px; text-align: center; border: 3px solid #fdbb2d; max-width: 500px; width: 90%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); backdrop-filter: blur(5px);">
+            <h2 style="color: #fdbb2d; margin-bottom: 20px; font-size: 2rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">🔓 Liberar Canal</h2>
+            <p style="color: white; margin-bottom: 25px; font-size: 1.1rem; line-height: 1.5;">
+                Libere este canal visualizando um único anúncio.<br>
+                <strong>O conteúdo será liberado imediatamente após o clique no botão abaixo.</strong>
+            </p>
+            
+                       <div style="background: rgba(253, 187, 45, 0.1); padding: 15px; border-radius: 8px; margin-bottom: 25px; border-left: 4px solid #fdbb2d; display: flex; align-items: center; gap: 15px;">                <img src="https://scontent.fgig4-1.fna.fbcdn.net/v/t1.6435-9/38600213_648174658873105_8006573373440131072_n.jpg?stp=dst-jpg_tt6&cstp=mx480x455&ctp=s480x455&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=0b6b33&_nc_eui2=AeGj1eQEErK8wA38Mk3Q6TOETuTCYPT8eGRO5MJg9Px4ZFOFjFcPCAsfyM1Lkx2pSw9OZwxL1gu69m_FTzQK2WsM&_nc_ohc=9n7bWgM8Xz8Q7kNvwENu7jg&_nc_oc=AdrnTDOM8ek5HB57JcRENil7a8tlSLxdakkrn8k0KbPtoltCLgyeCSvigm8_ddDpEYZqSZAplVsi--mlDdaRA3O-&_nc_zt=23&_nc_ht=scontent.fgig4-1.fna&_nc_gid=x-oxMfAIY6K__U6kQS-7AQ&_nc_ss=7b2a8&oh=00_AQOuEzPb5QI13ez5l8mXNFJp1vIZ0szbLFMijD6z-jICqg&oe=6B061635" style="width: 50px; height: 50px; border-radius: 8px; border: 2px solid #fdbb2d; object-fit: cover;">
+                <div>
+                    <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 0.95rem;">
+                        <strong>Você está acessando:</strong><br>
+                        <span style="color: #fdbb2d; font-size: 1.1rem; font-weight: bold;">24H dos Videos de Terror do Games Eduu</span><br>
+                        <span style="font-size: 0.9rem; opacity: 0.8;">Programação 24H</span>
+                    </p>
+                </div>
+            </div>
+            
+            <button id="unlockChannelBtn" style="background: linear-gradient(135deg, #2ecc71, #27ae60); color: white; border: none; padding: 15px 40px; border-radius: 8px; font-size: 1.2rem; font-weight: bold; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 10px rgba(46, 204, 113, 0.3); width: 100%;">
+                Liberar Agora
+            </button>
+            
+            <p style="color: rgba(255,255,255,0.6); margin-top: 15px; font-size: 0.85rem;">
+                Após clicar, uma nova aba será aberta com o anúncio
+            </p>
+        </div>
+    </div>
+    
 
         <div id="mainContent">
         <div class="container" style="position: relative; z-index: 1;">
@@ -1222,7 +1251,7 @@
         
  <div class="contact-info">Contato: yago.mattoso.bispo.ramalho@gmail.com</div>
         <div style="text-align: center; margin-top: 5px; font-size: 0.75rem; opacity: 0.5;">
-            Versão 1.0.0.4
+            Versão 1.0.0.5
         </div>
     </div> <!-- Fecha container -->
 </div> <!-- Fecha mainContent -->
@@ -1567,7 +1596,7 @@ function cleanupInactiveViewers() {
     
     // Função para calcular dias desde a estreia (PARA TODOS OS MODOS)
     function calcularDiasDesdeEstreiaCanal() {
-        const RELEASE_DATE = "2026-10-31";
+        const RELEASE_DATE = "2026-11-03";
         
         if (!RELEASE_DATE) {
             return 1;
@@ -2405,7 +2434,7 @@ function calculateExpectedTime(duration) {
         // CONFIGURAÇÕES DO CANAL
 
         const TV_PROGRAMS = [{"id":0,"name":"","totalVideos":0,"videos":[]}];
-        const TV_PLAYLIST = [{"id":0,"name":"1","url":"PTVX::xbOPa+jRB4Tpe+/anJQav965+JHTR5T4QykId9ndhEH8gRRag2kff8vQkre8JnfWfdbFquaFx3297qQ9ztiWVCeclhd/jCq+MdHFxg=="},{"id":1,"name":"2","url":"PTVX::YnVmxZeAxJgckT/Wz40sygb2CkVIfeD6rUpAl5dmPGfo8IyCQybKPcI8sW8X/VUUh2SC+IOZBKfES2CDK48qsu8/4D+SjmTm7n2tiA=="},{"id":2,"name":"3","url":"PTVX::ufHGK+m25tgdJfcctKNyNE+ZymlHLUK+vJ5ivRNLnVexz69DGjUznqKCZTG8Ts1jXA31inh2sq/BV7ZahxJ1v/KuMI4oeTreowsnXg=="},{"id":3,"name":"4","url":"PTVX::X/nlKwSG0wFgRimeJvRS4rejVSlzlBWGKwWT/x2nELgZp0UGlylUDfOjaUpIy8W9AOtSKCK06nFOVSA6ElBCjie8qxeSgyo169zDjg=="},{"id":4,"name":"5","url":"PTVX::qcalgcTVaZoCdB529xBa2IgLaRnsWK/ZMrjgt9Ha/DE1ytgPN8JSS+L1lyhlfwD9IiE3cTh0WrNt4bD8lRms17WFOdG1vT0jAne/Fw=="},{"id":5,"name":"6","url":"PTVX::Qsb5ifAQpfOOKu5DbbzzHMlgRJ+bNpUuxRvmcm9x1WDyvb1er3vboUpSnpHjIsvQnN2CrSBqnbbrUdlmnlGMYh6+C0cJLCYjH0PZIw=="},{"id":6,"name":"7","url":"PTVX::kDwldc9Bp/u3pdE6/yv4VOKdPCMfb7INB3eYvo+Ep7n7u7TeZUWtUqJ/k1gB+i/A23/bt4wGxw0QU5ePrQgn8CY/9SYiMhji3mx7NA=="},{"id":7,"name":"8","url":"PTVX::BjoYTkBZNaVQSts2LHF/9ec6ZBsIQoEIQEwjXkF/RbuesoaosDWxZvh0Jtg8WOmnKgd04HXvzZtJMiXEQyIY5hTOcpa9Isw5XG3BZQ=="},{"id":8,"name":"9","url":"PTVX::JXY1yZIzqCB2GiAT5TTbIiEJR5vaIyQmonF/UzXHbtKe4jSIEhEsMlqH7NOiEh+V2/dIhz2DV81LZ/zaGJ81CZcIsMgs2fXc3jW5ZQ=="},{"id":9,"name":"10","url":"PTVX::JelLEuQNVK6DqrjQ18frgmFndE8kxQ5wfKw6rUNhv66j21Cireh/L99Piy9gIZ1EW8nDy33COdY/Vxe8ZTLxVpFlhmni4UkrcyYXbA=="}];
+        const TV_PLAYLIST = [{"id":0,"name":"1","url":"PTVX::WN7LNEtJHVfkHfDFXRJIjvw7W7xyxlQCCbbyXHVi/BdIX0WSoA4z++KrZprlks20Cu2swRvNSGMgVLCUcyCitCU5QrCQs4+7Z8wMcA=="},{"id":1,"name":"2","url":"PTVX::rQw9iiNYBFVbONuEws7oaY2JfDm9nvCVa5glVMW3tZhdmPHkJAyj8B9/UqlJF8epG9OTwj2Dx0fFVQrssVlIDUjRSx/zvtb2C6gRSg=="},{"id":2,"name":"3","url":"PTVX::LfH5xjOrRchFVrPHUcWgqq5kYnDoCrU3SpiTosSqYfPMuAT5umee4GJSS8Nbpif8rGrsGigHIsS8vMssAQphXxFcxw3TMD2JOIua7g=="},{"id":3,"name":"4","url":"PTVX::sPfGrt/SHkpuLkyD9mUPkjFMl/VxqhhuTtSJ/3nbiaZXFvy8DE+/QUf5B1VSrx9NnUpxFCv2C9i4GQe9vwFTglcoODqWIAJFAsZCFQ=="},{"id":4,"name":"5","url":"PTVX::IfilqsrZ1ofuMVNizG6Lj1K/oyJbQKkEap6qKk78wNHmrjzANtl1fsm48czswWC+ktqssoWEeUZc0zf4j4s8tIVigFdAI/0YxwSJUg=="},{"id":5,"name":"6","url":"PTVX::FPqrPcDGE4thB+riVUP9z8Pfd3pzRXvdSi4rJCuCrYMVg0e08xk0deXnX8+arSTADF6rEUvTPM2Noxh9KOYlbAv8ZAX7v3QTIyT9og=="},{"id":6,"name":"7","url":"PTVX::2bvPQ0KHfL7S55xFKtcYNaIsQoiksJ6NLGM2rC5pXVdcTRKk0ewUbGpCUoEvmxobO3/SR/engnCpTTplOLClRG887PQ9mK3NM3Y2og=="},{"id":7,"name":"8","url":"PTVX::7fxiuvUpo0Pf3vJHFkGwGQcCuL191fFXzbjJU/BzxD8+Nom0Xq0zpEyvQPTKOHM8xh7OJ0QuVILR7wkDP3OtFQsYctSXYAxYNKyPMQ=="},{"id":8,"name":"9","url":"PTVX::ILYuRW1FgnmFEW4dIfRjASJStUGB1Hl38Z+FrrdML78sHV9RDYxc+qVsf8WOx2bpCPz1JfMLcufzMFNgPDxn8uUFUuk/MSoRlr2nXw=="},{"id":9,"name":"10","url":"PTVX::K1jQFJreyVwAYlOdUrubtKEWbc8buL7JbKtdGcatkGsqS2zNWpYVRrnJ9iVgwtvygU1Vo8qe3JOMBaeC+Epjlfh2cwW1Ev0EnJVRxA=="}];
         const PROGRAMMING_MODE = "playlist";const TOTAL_PROGRAMS = 1;
         const TOTAL_PLAYLIST_VIDEOS = 10;
         const PROGRAM_VIDEO_COUNTS = [0];
@@ -2423,9 +2452,9 @@ function calculateExpectedTime(duration) {
         const ENABLE_DEBUG = false;
         const IS_ADULT_CONTENT = false;
         
-        const RELEASE_DATE = "2026-10-31";
+        const RELEASE_DATE = "2026-11-03";
         const IS_OFFLINE = false;
-        const CHANNEL_VERSION = "1.0.0.4";
+        const CHANNEL_VERSION = "1.0.0.5";
         const CHANNEL_ID = "dqygiH578SNKUE8hrZcn";
         // --- Subscription ---
         const SUBSCRIPTION_ENABLED = false;
@@ -5992,6 +6021,38 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
     
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const smartlinkOverlay = document.getElementById('smartlinkOverlay');
+            const unlockBtn = document.getElementById('unlockChannelBtn');
+            const mainContent = document.getElementById('mainContent');
+            
+            if (smartlinkOverlay && unlockBtn && mainContent) {
+                // 1. MOSTRA a lightbox ao carregar
+                smartlinkOverlay.style.display = 'flex';
+                
+                // 2. ESCONDE o conteúdo principal
+                mainContent.style.display = 'none';
+                
+                unlockBtn.addEventListener('click', function() {
+                    // Abre o smartlink em nova aba
+                    window.open('https://www.profitableratecpmnetwork.com/ftfepn861k?key=b6040003d19e2565ba373c501a73b1bb', '_blank');
+                    
+                    // 3. ESCONDE a lightbox
+                    smartlinkOverlay.style.display = 'none';
+                    
+                    // 4. MOSTRA o conteúdo principal
+                    mainContent.style.display = 'block';
+                    
+                    // Inicia o player
+                    if (typeof iniciarPlayer === 'function') {
+                        setTimeout(() => iniciarPlayer(), 300);
+                    }
+                });
+            }
+        });
+    </script>
     
 
 
