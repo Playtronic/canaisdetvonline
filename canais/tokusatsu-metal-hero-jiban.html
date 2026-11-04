@@ -16,9 +16,9 @@
 
 
  <!-- METADADOS DE VERSÃO E CONTEÚDO ADULTO -->
-    <meta name="version" content="1.0.0.0">
+    <meta name="version" content="1.0.0.1">
     <meta name="channel-category" content="animes">
-    <meta name="channel-id" content="tokusatsu-metal-hero-jiban">
+    <meta name="channel-id" content="LimxdQbAkux1I91NJl4o">
     <meta name="channel-name" content="Tokusatsu Metal Hero Jiban">
     <meta name="channel-slogan" content="Programação 24H">
     <meta name="channel-logo" content="https://raw.githubusercontent.com/Playtronic/tv/refs/heads/main/template/logotv.png">
@@ -1106,6 +1106,35 @@
 
       <!-- 🔥 LIGHTBOX DE SMARTLINK -->
     
+    <div id="smartlinkOverlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 9999; display: none; justify-content: center; align-items: center;">
+
+        <div style="background: rgba(30,30,30,0.95); padding: 35px 40px; border-radius: 15px; text-align: center; border: 3px solid #fdbb2d; max-width: 500px; width: 90%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); backdrop-filter: blur(5px);">
+            <h2 style="color: #fdbb2d; margin-bottom: 20px; font-size: 2rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">🔓 Liberar Canal</h2>
+            <p style="color: white; margin-bottom: 25px; font-size: 1.1rem; line-height: 1.5;">
+                Libere este canal visualizando um único anúncio.<br>
+                <strong>O conteúdo será liberado imediatamente após o clique no botão abaixo.</strong>
+            </p>
+            
+                       <div style="background: rgba(253, 187, 45, 0.1); padding: 15px; border-radius: 8px; margin-bottom: 25px; border-left: 4px solid #fdbb2d; display: flex; align-items: center; gap: 15px;">                <img src="https://raw.githubusercontent.com/Playtronic/tv/refs/heads/main/template/logotv.png" style="width: 50px; height: 50px; border-radius: 8px; border: 2px solid #fdbb2d; object-fit: cover;">
+                <div>
+                    <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 0.95rem;">
+                        <strong>Você está acessando:</strong><br>
+                        <span style="color: #fdbb2d; font-size: 1.1rem; font-weight: bold;">Tokusatsu Metal Hero Jiban</span><br>
+                        <span style="font-size: 0.9rem; opacity: 0.8;">Programação 24H</span>
+                    </p>
+                </div>
+            </div>
+            
+            <button id="unlockChannelBtn" style="background: linear-gradient(135deg, #2ecc71, #27ae60); color: white; border: none; padding: 15px 40px; border-radius: 8px; font-size: 1.2rem; font-weight: bold; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 10px rgba(46, 204, 113, 0.3); width: 100%;">
+                Liberar Agora
+            </button>
+            
+            <p style="color: rgba(255,255,255,0.6); margin-top: 15px; font-size: 0.85rem;">
+                Após clicar, uma nova aba será aberta com o anúncio
+            </p>
+        </div>
+    </div>
+    
 
         <div id="mainContent">
         <div class="container" style="position: relative; z-index: 1;">
@@ -1161,7 +1190,16 @@
 
 <div class="action-buttons-wrapper" style="text-align: center; margin: 20px 0; padding: 10px;">
     
+    <button id="paidCommercialBtn" type="button" style="display: inline-block; background: linear-gradient(135deg, #9b59b6, #8e44ad); color: white; padding: 12px 24px; border-radius: 8px; font-weight: bold; font-size: 1.1rem; margin: 5px; border: 2px solid #8e44ad; min-height: 46px; line-height: 22px; vertical-align: middle; box-sizing: border-box; cursor: pointer; font-family: inherit;">
+        Inserir comercial
+    </button>
     
+    
+    
+    <button id="supportButton" 
+       style="display: inline-block; background: linear-gradient(135deg, #2ecc71, #27ae60); color: white; border: none; padding: 12px 24px; border-radius: 8px; font-weight: bold; font-size: 1.1rem; cursor: pointer; margin: 5px; border: 2px solid #27ae60; min-height: 46px; line-height: 22px; vertical-align: middle; box-sizing: border-box;">
+        ❤️ Apoiar
+    </button>
     
     
     
@@ -1239,7 +1277,7 @@
         
  <div class="contact-info">Contato: marcospramalho77@gmail.com</div>
         <div style="text-align: center; margin-top: 5px; font-size: 0.75rem; opacity: 0.5;">
-            Versão 1.0.0.0
+            Versão 1.0.0.1
         </div>
     </div> <!-- Fecha container -->
 </div> <!-- Fecha mainContent -->
@@ -1277,7 +1315,7 @@
                 let userVotesRef = null;
                 
                 function initializeVoteSystem() {
-                    const channelId = "tokusatsu-metal-hero-jiban";
+                    const channelId = "LimxdQbAkux1I91NJl4o";
                     
                     if (!channelId) {
                         console.error("Channel ID não encontrado");
@@ -2422,7 +2460,7 @@ function calculateExpectedTime(duration) {
         // CONFIGURAÇÕES DO CANAL
 
         const TV_PROGRAMS = [];
-        const TV_PLAYLIST = [{"id":0,"name":"Episódio 01 - Jiban, o Policial de Aço ","url":"PTVX::BuV02kBUuTiPJo4dwxRhAUEU57bP5G3BsVxSyu+JhAOR3jGsee4Z3/Zxmwt0RYgwVtjdvT2t2nZoBTVmQp1wdwngDpGdZBbj6ZEtxA=="},{"id":1,"name":"Episódio 02 - Meu Adorável Mano","url":"PTVX::VZKxMY6oWLMJ3ng8qFbgOfEmiXUk0hA5Yqq1zZrvQcmpA1wAlloqvkM/zQk9l7NgBPvk0i4HIkDhQMBdTLnWJwhisNuQTJj21z4xcQ=="},{"id":2,"name":"Episódio 03 - A Conspiração das Verduras ","url":"PTVX::5wDLaNq23mWDrI7hRKU0iSPyh5A3fEXlzYKtQ1lWC/NzdzuAC+BedhPWQ95ftd6NXh7CWGj/3eo="},{"id":3,"name":"Episódio 04 - O Presente de Grego ","url":"PTVX::SaSPd9AkAseJhPHUqZbrwMiGRHRyKL6V70cuJ3JFKjIgFa/D5OGhjsSDWS6KvliagEuIsjucEQg="},{"id":4,"name":"Episódio 05 - O Robô Halley em Perigo","url":"PTVX::g358HC1YRtrHNxdwteRhuJjwqM87N42LOWZAUNbf3eCV9g180ZT28FDbXM9i+Y6kXJIZCWtHX6U="},{"id":5,"name":"Episódio 06 - O Misterioso Ovo Milenar","url":"PTVX::IbjJnKq0WjaqfZFye61xQK1EYmbTsT5TLcO/hdpTwjozDIgUlIJHTvaZO9/Kk0Lu5KUnsw23MK4="},{"id":6,"name":"Episódio 07 - O Monstro do Resfriado ","url":"PTVX::/zhmNgGRl/bX8Jy4gBc206olHysjPu1gFE5Z+cbV6r62YtC047aI2INLP4iX2XUq4EypT9WY/FY="},{"id":7,"name":"Episódio 08 - O Ninho da Topeira","url":"PTVX::dprIRZTzUwI9XQ6apGP7t37bBGh8hevvhzUSX0pGixOYmCVS0R+suhO5xSpZQrJu7ToUeXJuHEk="},{"id":8,"name":"Episódio 09 - O Cão que Mia","url":"PTVX::XmzVpUkkcqAiuoIv4Xs+ZRWIzicjadkJUzTBBXb/JEdixv1j5AcFOVyvq9Pm6bBtE7z8S+43wBU="},{"id":9,"name":"Episódio 10 - A Fita do Sonho","url":"PTVX::Cw5Wvk0X+G2G/qrUOplSJik0+0e5AMi35immby/NElTHDf+sP6EHtdHrWwaxFc6XKj3JmyfUguM="},{"id":10,"name":"Episódio 11 - O Juramento do Policial","url":"PTVX::W7kUk4FeLzPY12A1oRjsF3UIOSgop8JQohGTbXVgTTmmyeX2463b1SO3/2jWtz5UnYH6Y0fBtw0="},{"id":11,"name":"Episódio 12 - O Sequestro da Yoko","url":"PTVX::gTGp40qt7aWe4Kid9TThKpvztzmgweBf8PDeyhrGA+tZ6l3tqV1Yc4Pw9J/yUsTB+uZGJmyrNa4="},{"id":12,"name":"Episódio 13 - Salvem o Jovem que Precisa de Ajuda","url":"PTVX::e8XfAQ/0Of+a14JRDLMDQ7KSLJ6SgN1sq6DwtLYtchcWG/AbmeqiCiAPcQuMXuQgqNJHoOgRwL8="},{"id":13,"name":"Episódio 14 - Amor, a Palavra Chave","url":"PTVX::nCGsA4e6E40IHEb6jLZ8Oasz1x7IsUSPHyeVYAwJEdxC3EmghFI08VYXrfbP9C+D8qQp6LO+MS4="},{"id":14,"name":"Episódio 15 - A Música do Monstro","url":"PTVX::9dSxsFZYjOb3Xg5SCB9/2hjqJyqubt34U1tl4WkoNoICUKXAPTX/LfwagCFktUtFeVt0E6otr+g="},{"id":15,"name":"Episódio 16 - O Monstro Invisível ","url":"PTVX::RIfhAY4/6DOh+9uaYnpKCiVmX+apbLlvYAkPy7IWyKgrgdN5Rn9mzu0SIp9bE//tj7I3kvz4pNo="},{"id":16,"name":"Episódio 17 - Final Triste entre Mãe e Filha","url":"PTVX::j2TWtHl461GaWshHylPqQXX10NKUdm4NQfBhtZUZTetElSftS20W6a6ff9l1mNTrev3KGkyn9uk="},{"id":17,"name":"Episódio 18 - O Triste Destino de Ayume","url":"PTVX::lXr6zi7oQUGgl0rIq12E8urs99YppnB1SEM+kLC8nfpzXkcZq+o16BqG8A6fxNdrdBhYAq58JPs="},{"id":18,"name":"Episódio 19 - A Devolução da Agenda ","url":"PTVX::tHFf867dwc1mZg0o+ChqTdYjd/BThY9ki/LnjPZazaIUEo9pC6IQnpVPseET7bhmj2UUU28FvpU="},{"id":19,"name":"Episódio 20 - A Chuva de Dinheiro ","url":"PTVX::IKzTEq4Nl6sDSpHyl16skMr9dlRJbqum0+y86UrJqAj2s+TEQvL3aCH8RjswEGYV+T3UIlr+QiM="},{"id":20,"name":"Episódio 21 - O Inseto Nocivo","url":"PTVX::FvN0hqTI15vR8f2ALK+7RiQkBKJFJ9OO06pW8M1UZahPyRnOUnCJPPQ3zAovvdCRhLmO/mFf+wA="},{"id":21,"name":"Episódio 22 - O Aparecimento de Ayume","url":"PTVX::Ac8Dfi4/Pi6TCNDCGfCLL+pOus8QFFaioxa2kSbr3c8JMvwRy5MW/hRP/uNyBlKB6TgeM/Bk5r4="},{"id":22,"name":"Episódio 23 - O Monstro que Gostava de Desenhos","url":"PTVX::Um5iZSkBGDAbXO2ke8DA+9srUuEMldTaUoorCcs2XFHVmz0CxOSy05hEIe8IkHv8BjNs301e7zs="},{"id":23,"name":"Episódio 24 - Bem Vindos ao Mundo Espiritual ","url":"PTVX::G4SS4CocRWTCJkCYaTitEKdqH7rKrkoBGZOK891eY17xbtyHv/ae8KLWHt+j/ljtj5wMnnvyyVI="},{"id":24,"name":"Episódio 25 - Acabem com a Santa","url":"PTVX::jH1p6RakByYRbmqcOS3BIgi/WwrjRrfXuA3CXnfo0lLgd2sgA7qGqFDQ8z0qq8LA6kxtHySdv/0="},{"id":25,"name":"Episódio 26 - O Dragão do Pântano","url":"PTVX::elKCq6VPj1FUL4vkTz9shVWRbcYxJO0oFDYPwCGcdP0y7CKSbvPs2fkhV0MG+K/AQ7G9tpI4I6w="},{"id":26,"name":"Episódio 27 - A Transformação dos Pais em Satanás ","url":"PTVX::Y+5cnlVQVCyCHTQic/tuq2Xa53TTnNeemmgig2XqT8EY3wSWXtBzLylqv638Fr57HY3NkP7yDOg="},{"id":27,"name":"Episódio 28 - Papai é o Dr. Jean Marie","url":"PTVX::q34twqXTJEzyDX0NRPdnbBU1INbczRRG2F7j9Oi6j2BCNOFeHngykrXwpyWbInstCl1VrkSlQHY="},{"id":28,"name":"Episódio 29 - Os Diabólicos Encontros Amorosos","url":"PTVX::7Hyq2bjmFoGnefMryEUgC+IW1KKOZzUPQP56PQkuaP9BaxxA/oOmYh3QKMhuxIZV2tB0nvKmDxU="},{"id":29,"name":"Episódio 30 - O Misterioso Ataque ao Ator","url":"PTVX::APg5bBvRtXpWrZ3yr57l/mLWRPGPU7XO6txNGW4WAE1LwXGNxAlhqVYMgITuXt/vRSJ4/DU1EBs="},{"id":30,"name":"Episódio 31 - A Batalha Ninja","url":"PTVX::SCqwZ2Enu8sd0L7EveAp4QdBsuC2a4pKsdtAQvYmIeAh2q/5Dw4PjeAWAim59AKhIhgn9QmBZ3I="},{"id":31,"name":"Episódio 32 - Pérola, a Moça do Além ","url":"PTVX::s7VAtmG3YGtSgHDO94lwFE/75zbLHYStqW29c9kJ/cDtZUdENiQGuF1zYhnZ0mvnsCqgqya+ZTk="},{"id":32,"name":"Episódio 33 - O Nascimento Flor de Lótus na Garbo","url":"PTVX::qOb7YkN0e6Ssn6pjEsxCeQRWZsJZi/YdBaMmCozfDGUU4RLAorwR470FIGhq1AE6YN5aYEX/LnI="},{"id":33,"name":"Episódio 34 - A Morte de Jiban","url":"PTVX::u7k4aX4IhwUWSV4f61S+RjbbUWEPJD5b34SkkNImuGVziIxefzlcnxBGErOYx4UhbSVxDLU5jjo="},{"id":34,"name":"Episódio 35 - A Ressurreição de Jiban","url":"PTVX::CIqhhmcxrF9d0rX4qTpwShdzyn6Rci9o+Gz9M186fLyOsr7thq2iot8bW9GK5Ya6SeKaSVokvA4="}];
+        const TV_PLAYLIST = [{"id":0,"name":"Episódio 01 - Jiban, o Policial de Aço ","url":"PTVX::/S8XhHfnGYsHokV403FQx9SOha4G+cARITCbuGHBiurpMNKRmdnNRtPM4kqBfumHWE/zx633FAo/vCRrRiZJdRPuI7FYiUReEllrFQ=="},{"id":1,"name":"Episódio 02 - Meu Adorável Mano","url":"PTVX::Iee4qc4EY+f7Hj6voeSOmmgQqnceyu47cnCLHTywD1AsFxseak4HC5iRm1YTi8rYpCAfOni6zRTKXJOdBkXK4ujBl/bMHyZn78gXqg=="},{"id":2,"name":"Episódio 03 - A Conspiração das Verduras ","url":"PTVX::DOYeYRV7KpONscYbB9f/SeL5ORe4GOil+M8UU3LmsPZlUbKq/+ZHm0rnR4FyWGMN7zTsq7WcKhw="},{"id":3,"name":"Episódio 04 - O Presente de Grego ","url":"PTVX::hVKLwmfoWQ3fepDYoMSe4y204ONtC5k3QbBdkajkRYrhtNvFI3qYIJY+9iOVqDBzjDrh4TfcQsM="},{"id":4,"name":"Episódio 05 - O Robô Halley em Perigo","url":"PTVX::7AsbbyLk5R4djND2OZJ/nOlTeaNtJ4s/OKRv8IJEcwPJq276R2ctWBICmtIo/PE+hv7XNNgQoLI="},{"id":5,"name":"Episódio 06 - O Misterioso Ovo Milenar","url":"PTVX::iv+blqpLTaHRHKgJKVUazLcreFswu/cUWji+TGHPeUE1z0f+dUyZIBr66j5C2A59gE9sn+fnVU0="},{"id":6,"name":"Episódio 07 - O Monstro do Resfriado ","url":"PTVX::PthpuVqiHVAPNQAWCktc2f+QRcnuBvoWZM48D4SVDBuSqpueXqAoxlKwDJqz2AxZ+uAuVBRq/PA="},{"id":7,"name":"Episódio 08 - O Ninho da Topeira","url":"PTVX::SPkvDcK4xhsYxn6GA8A5Jl57dhmdpoE0SExVzbzsOBFE0GXIkioQX4KHd2PFO8QGpyT+DcwX0tY="},{"id":8,"name":"Episódio 09 - O Cão que Mia","url":"PTVX::qsrG0HMRQ/p+BsP+9eCV+FLgeWPV128PLMy0/Nj5ahX7R9rzWRd8jELQnJv0v2rpH0gNXlFGcuY="},{"id":9,"name":"Episódio 10 - A Fita do Sonho","url":"PTVX::JaaGATo7uPEi6lYqXPAAvuUW6OnJia7u0SiXRUxi1LslZq9DBGx+5q2gEcPk5rl+k4khh9V9wpM="},{"id":10,"name":"Episódio 11 - O Juramento do Policial","url":"PTVX::Fb45p02WWO5XdnMZzVuAHJ6rCn5WeD5uWx05Y9n65WrBAuV28kP5fTGvte8QZJuMmabt/fmYDpc="},{"id":11,"name":"Episódio 12 - O Sequestro da Yoko","url":"PTVX::QWzsniESf1xjDk5tSpveiZ6lYOR1kHdIpwUeZS3EMNd0Dnq68NZ+o+MENoTu9h7ZXQ2VsglKBtU="},{"id":12,"name":"Episódio 13 - Salvem o Jovem que Precisa de Ajuda","url":"PTVX::Nr9cWvQj7FSJsaIDOZNyiI3AAslncCRmjyFP1IZoDetB8z5kmFvkugm4xWgRz/17zdWz8z1nO9w="},{"id":13,"name":"Episódio 14 - Amor, a Palavra Chave","url":"PTVX::p270ui46PncJEJ/tgoJOye4ligtKWM/saKboxSqDvjMCz7pavE+O03HBSGqEamJx3ayyR6mGzgc="},{"id":14,"name":"Episódio 15 - A Música do Monstro","url":"PTVX::K+DiLcUIuK7NvsMmu6Keg2PQhrKUTOwMZ7a1c8uNIIUBq6tNUaRjVx72rXGN1eAG3F5KDt2+hOM="},{"id":15,"name":"Episódio 16 - O Monstro Invisível ","url":"PTVX::OPqYjIAkBlqiQdPLN8MRv/3HxNiknHrpVtqeKUsQBgttMAYkwyR5JMG45F/7nlT6Zl5U7WaBgMk="},{"id":16,"name":"Episódio 17 - Final Triste entre Mãe e Filha","url":"PTVX::AaQ6jF9rifwdtqpnyoBvezkDmlctoH0+fcKVp5MzrwPzm6cxtFbypZwoNMjSt1PlNXywd3CXkbQ="},{"id":17,"name":"Episódio 18 - O Triste Destino de Ayume","url":"PTVX::Xrijdb6oanTpGImTaEgjNC1GXXuoT063BJmnCjGfjGCjsuUYJNfB5p41rN/mQS2PgcYCgZfv5Uk="},{"id":18,"name":"Episódio 19 - A Devolução da Agenda ","url":"PTVX::QtZt4Rl/6c/A4LCg1T2NZqKS+kAiENNf4fn4113Nc7xMn3NixogCaOiPMnZGzE3cTKevnoVtV2g="},{"id":19,"name":"Episódio 20 - A Chuva de Dinheiro ","url":"PTVX::WcVnC0mbrvmumRp7137fkNzGsMY3WDDvJbBaNZ78fPLIQ6/o8Bp2IYTQsVWEcTdPGOSJ261AeSA="},{"id":20,"name":"Episódio 21 - O Inseto Nocivo","url":"PTVX::b2+kM82afPAjp6d4r81JVyrclIoFeQDKWPoK+I/N6BCrrDvrQdxKk+oDKGH+ZIBjCYxs0Qak38c="},{"id":21,"name":"Episódio 22 - O Aparecimento de Ayume","url":"PTVX::iRPNyI5MPs7coxBVgBEEBUVndat1J0ETibzuibyf070WwRLIqcOJZNjXx8ClzMtzLUpKLIxtngw="},{"id":22,"name":"Episódio 23 - O Monstro que Gostava de Desenhos","url":"PTVX::DPKY+H/ypE+BgoySlGwXtqIvquxbX5iXI85aEadD9TBewbKsTwgNlYkq8aJ9p1MhHlg8Yk8Vkd8="},{"id":23,"name":"Episódio 24 - Bem Vindos ao Mundo Espiritual ","url":"PTVX::gWa3K+t33d5jFqdN70aCCVVBfFLZVcKcMrTLMb06Ma2K9f8xM76csKF7mLe91LQ382Zv/9LPdZs="},{"id":24,"name":"Episódio 25 - Acabem com a Santa","url":"PTVX::e7Q89CO8web5MVIlhSD5lnPYbkzdW9YGTyVVkKjkQ0AdptxrJ7iu5e9WPJG31qgBzjZzAplLBdE="},{"id":25,"name":"Episódio 26 - O Dragão do Pântano","url":"PTVX::s9CxMND2mvTurTXn8gRkhuClPjbiYBgu99Xxy7bw8A3ANR9Jda80ow5jDxO8Dntuiuz9KLQCDxc="},{"id":26,"name":"Episódio 27 - A Transformação dos Pais em Satanás ","url":"PTVX::h6jnKTKopOmqdceqSikp263mbcwdixr4xuN8KNmVv02ZU4hNnFhhFaxlAjarJvy5Gyozcf3IDbw="},{"id":27,"name":"Episódio 28 - Papai é o Dr. Jean Marie","url":"PTVX::IgfgcDZVw+M+bwdiqbuo+/hbZKkI0a6egl1H3uGE5l1uHv0kKMEGk8Eby6IOrtonE5lWQhfIwN8="},{"id":28,"name":"Episódio 29 - Os Diabólicos Encontros Amorosos","url":"PTVX::uHFypwOpJ0d/ddPy2lC/5cZOPzqHt6wEMgW5d1GWI0knvLhy89s6sfP9vTC8h6tMcP/AEIc/tVE="},{"id":29,"name":"Episódio 30 - O Misterioso Ataque ao Ator","url":"PTVX::EVKVE20Pu+N5/917Mh6eyV61HsevHSDc2bX7S+qEBBRNK0SbI0i1y14mqjq7/VrwHfipw5jB10I="},{"id":30,"name":"Episódio 31 - A Batalha Ninja","url":"PTVX::eMHLFauA89YS0nP+XJNxgQWr9eP3YibmeXh859wpeqGvjE4ji76M/MxxOUUP2Y35Td4DjJnHZ0Y="},{"id":31,"name":"Episódio 32 - Pérola, a Moça do Além ","url":"PTVX::y1v7UDaN2pzEz4v2Rn40MpZNrh8fxKbcSTniKUw1m0mgm1i1SwlG48XByCdAWF/xuVn/WTVExRc="},{"id":32,"name":"Episódio 33 - O Nascimento Flor de Lótus na Garbo","url":"PTVX::Yl1ShvgQi6he6kuP9nVSOTSIoe4q+f/RhHDncPB2LBXuZE06k5zIJIkcLSBvJSf52t4nZ1DysM4="},{"id":33,"name":"Episódio 34 - A Morte de Jiban","url":"PTVX::Yj3HMd1MKC/Pe3wcZjiNGrCEiIpYzX+/m5aXh9BKIqszlQSwUE7/U9v1AhDMT5pUYBWVef8CLGc="},{"id":34,"name":"Episódio 35 - A Ressurreição de Jiban","url":"PTVX::8gK6vyIIaVcjjx5X3pQc97EMV+u2N0IpS/xfyI7CUwCYY7oeWKMJxKb/IyTMQ5FyrRhQ7O4mEdg="}];
         const PROGRAMMING_MODE = "playlist";const TOTAL_PROGRAMS = 0;
         const TOTAL_PLAYLIST_VIDEOS = 35;
         const PROGRAM_VIDEO_COUNTS = [];
@@ -2442,15 +2480,15 @@ function calculateExpectedTime(duration) {
         
         const RELEASE_DATE = "2026-11-03";
         const IS_OFFLINE = false;
-        const CHANNEL_VERSION = "1.0.0.0";
-        const CHANNEL_ID = "tokusatsu-metal-hero-jiban";
+        const CHANNEL_VERSION = "1.0.0.1";
+        const CHANNEL_ID = "LimxdQbAkux1I91NJl4o";
         // --- Subscription ---
         const SUBSCRIPTION_ENABLED = false;
         try {
             console.log('[gerarHTML] SUBSCRIPTION_ENABLED =', SUBSCRIPTION_ENABLED,
                 '| dados.monetization =', JSON.stringify(dados.monetization || null));
         } catch(_e) {}
-        const SUBSCRIPTION_PRICE = 0;
+        const SUBSCRIPTION_PRICE = 3.99;
         const SUBSCRIPTION_TRIAL_DAYS = 0;
         const SUBSCRIPTION_PLAN_ID = "";
         const CHANNEL_NAME_STR = "Tokusatsu Metal Hero Jiban";
@@ -2663,7 +2701,7 @@ function calculateExpectedTime(duration) {
             btn.addEventListener('click', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
-                var url = 'https://canaisdetv.online/comercial.html?channelId=tokusatsu-metal-hero-jiban';
+                var url = 'https://canaisdetv.online/comercial.html?channelId=LimxdQbAkux1I91NJl4o';
                 if (currentUserChannel && currentUserChannel.uid) {
                     window.open(url, '_blank');
                     return;
@@ -6009,6 +6047,38 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
     
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const smartlinkOverlay = document.getElementById('smartlinkOverlay');
+            const unlockBtn = document.getElementById('unlockChannelBtn');
+            const mainContent = document.getElementById('mainContent');
+            
+            if (smartlinkOverlay && unlockBtn && mainContent) {
+                // 1. MOSTRA a lightbox ao carregar
+                smartlinkOverlay.style.display = 'flex';
+                
+                // 2. ESCONDE o conteúdo principal
+                mainContent.style.display = 'none';
+                
+                unlockBtn.addEventListener('click', function() {
+                    // Abre o smartlink em nova aba
+                    window.open('https://www.profitableratecpmnetwork.com/ftfepn861k?key=b6040003d19e2565ba373c501a73b1bb', '_blank');
+                    
+                    // 3. ESCONDE a lightbox
+                    smartlinkOverlay.style.display = 'none';
+                    
+                    // 4. MOSTRA o conteúdo principal
+                    mainContent.style.display = 'block';
+                    
+                    // Inicia o player
+                    if (typeof iniciarPlayer === 'function') {
+                        setTimeout(() => iniciarPlayer(), 300);
+                    }
+                });
+            }
+        });
+    </script>
     
 
 
