@@ -16,7 +16,7 @@
 
 
  <!-- METADADOS DE VERSÃO E CONTEÚDO ADULTO -->
-    <meta name="version" content="1.0.0.1">
+    <meta name="version" content="1.0.0.2">
     <meta name="channel-category" content="humor">
     <meta name="channel-id" content="4KnYID2jTzEtZW9bMio4">
     <meta name="channel-name" content="Os Caras de Pau TV">
@@ -1147,8 +1147,8 @@
             <div class="custom-controls" id="custom-controls">
                 <div class="playback-controls" id="playbackControls">
                     
-                    
-                    
+                    <button class="control-btn" id="restartBtn" title="Voltar ao início">⏮ Início</button>
+                    <button class="control-btn" id="liveBtn" title="Ir para Ao Vivo"><span class="live-dot" id="liveDot"></span> AO VIVO</button>
                 </div>
                 <div class="volume-controls">
                     <button class="volume-btn" id="volumeBtn">🔊</button>
@@ -1239,7 +1239,7 @@
         
  <div class="contact-info">Contato: ㅤ@email.com</div>
         <div style="text-align: center; margin-top: 5px; font-size: 0.75rem; opacity: 0.5;">
-            Versão 1.0.0.1
+            Versão 1.0.0.2
         </div>
     </div> <!-- Fecha container -->
 </div> <!-- Fecha mainContent -->
@@ -1584,7 +1584,7 @@ function cleanupInactiveViewers() {
     
     // Função para calcular dias desde a estreia (PARA TODOS OS MODOS)
     function calcularDiasDesdeEstreiaCanal() {
-        const RELEASE_DATE = "2026-11-08";
+        const RELEASE_DATE = "2026-11-09";
         
         if (!RELEASE_DATE) {
             return 1;
@@ -2422,7 +2422,7 @@ function calculateExpectedTime(duration) {
         // CONFIGURAÇÕES DO CANAL
 
         const TV_PROGRAMS = [];
-        const TV_PLAYLIST = [{"id":0,"name":"Os Caras de Pau","url":"PTVX::vKhKYowFLu5/ANYm21/79zvmQeIkWBa5t9t0YJLtPK8cxB0tmeYnflRhPFN1QCwuPKd5CSbFrl70Fx6wtnIiFObuZ+GIpNNg0hE9cRWTCssXhEutjXSUM37MGCwnbCuV9j7ZJaBejC8hakQ3i74P"},{"id":1,"name":"Os Caras de Pau","url":"PTVX::fYMEpTUrXd/wW24NaMkJhuFxM+h1Bg+G1vrJ6PpBZux7UnQIPDB97hh5+ghRHavWc0KUAwB/z+KroCmxwIZDMWJILBUQFSWDQVHbywf9pHMeYvbI7zfyZVu28t50Si9KIZgiFvUEfz0XTJ5BvNZ2"},{"id":2,"name":"Os Caras de Pau","url":"PTVX::IuE1bQlYn4V7xIPtvQ4wmn5FtUXvLs9mGVpoM+kshLRp1sTSYXDQyaOvQgOut/x/XAo4/4MeaEypfGyKDrdQSngZ8MEm+V/ecPnJs2SPS/lrZojWGCxercJWnLHpY9e34bN1eF/y5kcSd/3IjBNS"}];
+        const TV_PLAYLIST = [{"id":0,"name":"Os Caras de Pau","url":"PTVX::6BV+QwEEViyVxnBSWEmjNnF03trdlH4KwUmtQ/ESHwBc0tdDqSVf7Ue9Am6ueSrA2E8rVJt0VUPQ8lYueaqL07bG21u8rlx12LI1xL8XdGE0KajZsG/zajhHNEwaK+OcYokd/S4iLhHw6o9Us9U+"},{"id":1,"name":"Os Caras de Pau","url":"PTVX::IoI3zVSWVWF3kFtJHajg+TI0VXDOcKUlwssLsH/cIFTgVeaLDcfkYjISQz7E1bOCZ5fZdnPmnt1a4F4DgsG9P3sLL3plGwQlIMseVPD82nXiPwg6b4Uz8u/R7sJzOGAHcR7RzKTDsvBjlv2xG8Ju"},{"id":2,"name":"Os Caras de Pau","url":"PTVX::NnRuhvlRXl3eBrPetXr0V5GHOJvfyyRROMLGGxDqFODNkxnJraBDo01BunxW8cv/HbTKQgZ0+SFhUpZre7kdljYGmrdJ495pyMqRVIirwxU0usKr/DMRsU7wQg+QBP6dtv8yardAGuKsq8F67L0b"}];
         const PROGRAMMING_MODE = "playlist";const TOTAL_PROGRAMS = 0;
         const TOTAL_PLAYLIST_VIDEOS = 3;
         const PROGRAM_VIDEO_COUNTS = [];
@@ -2440,9 +2440,9 @@ function calculateExpectedTime(duration) {
         const ENABLE_DEBUG = true;
         const IS_ADULT_CONTENT = false;
         
-        const RELEASE_DATE = "2026-11-08";
+        const RELEASE_DATE = "2026-11-09";
         const IS_OFFLINE = false;
-        const CHANNEL_VERSION = "1.0.0.1";
+        const CHANNEL_VERSION = "1.0.0.2";
         const CHANNEL_ID = "4KnYID2jTzEtZW9bMio4";
         // --- Subscription ---
         const SUBSCRIPTION_ENABLED = false;
