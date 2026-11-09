@@ -16,9 +16,9 @@
 
 
  <!-- METADADOS DE VERSÃO E CONTEÚDO ADULTO -->
-    <meta name="version" content="1.0.0.0">
+    <meta name="version" content="1.0.0.1">
     <meta name="channel-category" content="animes">
-    <meta name="channel-id" content="cybercops-os-policiais-do-futuro">
+    <meta name="channel-id" content="CEnb0CnDizou8KUgNyTD">
     <meta name="channel-name" content="Cybercops os Policiais do Futuro">
     <meta name="channel-slogan" content="Programação 24H">
     <meta name="channel-logo" content="https://mir-s3-cdn-cf.behance.net/projects/404/019c03106331449.Y3JvcCwxNDc3LDExNTYsMjQxLDA.png">
@@ -1106,6 +1106,35 @@
 
       <!-- 🔥 LIGHTBOX DE SMARTLINK -->
     
+    <div id="smartlinkOverlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 9999; display: none; justify-content: center; align-items: center;">
+
+        <div style="background: rgba(30,30,30,0.95); padding: 35px 40px; border-radius: 15px; text-align: center; border: 3px solid #fdbb2d; max-width: 500px; width: 90%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); backdrop-filter: blur(5px);">
+            <h2 style="color: #fdbb2d; margin-bottom: 20px; font-size: 2rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">🔓 Liberar Canal</h2>
+            <p style="color: white; margin-bottom: 25px; font-size: 1.1rem; line-height: 1.5;">
+                Libere este canal visualizando um único anúncio.<br>
+                <strong>O conteúdo será liberado imediatamente após o clique no botão abaixo.</strong>
+            </p>
+            
+                       <div style="background: rgba(253, 187, 45, 0.1); padding: 15px; border-radius: 8px; margin-bottom: 25px; border-left: 4px solid #fdbb2d; display: flex; align-items: center; gap: 15px;">                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/019c03106331449.Y3JvcCwxNDc3LDExNTYsMjQxLDA.png" style="width: 50px; height: 50px; border-radius: 8px; border: 2px solid #fdbb2d; object-fit: cover;">
+                <div>
+                    <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 0.95rem;">
+                        <strong>Você está acessando:</strong><br>
+                        <span style="color: #fdbb2d; font-size: 1.1rem; font-weight: bold;">Cybercops os Policiais do Futuro</span><br>
+                        <span style="font-size: 0.9rem; opacity: 0.8;">Programação 24H</span>
+                    </p>
+                </div>
+            </div>
+            
+            <button id="unlockChannelBtn" style="background: linear-gradient(135deg, #2ecc71, #27ae60); color: white; border: none; padding: 15px 40px; border-radius: 8px; font-size: 1.2rem; font-weight: bold; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 10px rgba(46, 204, 113, 0.3); width: 100%;">
+                Liberar Agora
+            </button>
+            
+            <p style="color: rgba(255,255,255,0.6); margin-top: 15px; font-size: 0.85rem;">
+                Após clicar, uma nova aba será aberta com o anúncio
+            </p>
+        </div>
+    </div>
+    
 
         <div id="mainContent">
         <div class="container" style="position: relative; z-index: 1;">
@@ -1161,7 +1190,16 @@
 
 <div class="action-buttons-wrapper" style="text-align: center; margin: 20px 0; padding: 10px;">
     
+    <button id="paidCommercialBtn" type="button" style="display: inline-block; background: linear-gradient(135deg, #9b59b6, #8e44ad); color: white; padding: 12px 24px; border-radius: 8px; font-weight: bold; font-size: 1.1rem; margin: 5px; border: 2px solid #8e44ad; min-height: 46px; line-height: 22px; vertical-align: middle; box-sizing: border-box; cursor: pointer; font-family: inherit;">
+        Inserir comercial
+    </button>
     
+    
+    
+    <button id="supportButton" 
+       style="display: inline-block; background: linear-gradient(135deg, #2ecc71, #27ae60); color: white; border: none; padding: 12px 24px; border-radius: 8px; font-weight: bold; font-size: 1.1rem; cursor: pointer; margin: 5px; border: 2px solid #27ae60; min-height: 46px; line-height: 22px; vertical-align: middle; box-sizing: border-box;">
+        ❤️ Apoiar
+    </button>
     
     
     
@@ -1239,7 +1277,7 @@
         
  <div class="contact-info">Contato: marcospramalho77@gmail.com</div>
         <div style="text-align: center; margin-top: 5px; font-size: 0.75rem; opacity: 0.5;">
-            Versão 1.0.0.0
+            Versão 1.0.0.1
         </div>
     </div> <!-- Fecha container -->
 </div> <!-- Fecha mainContent -->
@@ -1277,7 +1315,7 @@
                 let userVotesRef = null;
                 
                 function initializeVoteSystem() {
-                    const channelId = "cybercops-os-policiais-do-futuro";
+                    const channelId = "CEnb0CnDizou8KUgNyTD";
                     
                     if (!channelId) {
                         console.error("Channel ID não encontrado");
@@ -1584,7 +1622,7 @@ function cleanupInactiveViewers() {
     
     // Função para calcular dias desde a estreia (PARA TODOS OS MODOS)
     function calcularDiasDesdeEstreiaCanal() {
-        const RELEASE_DATE = "2026-11-07";
+        const RELEASE_DATE = "2026-11-09";
         
         if (!RELEASE_DATE) {
             return 1;
@@ -2422,7 +2460,7 @@ function calculateExpectedTime(duration) {
         // CONFIGURAÇÕES DO CANAL
 
         const TV_PROGRAMS = [];
-        const TV_PLAYLIST = [{"id":0,"name":"Episódio 01 - A Chegada de Júpiter ","url":"PTVX::to9yEVi/uSI/NF3bO3tfHfDlDaA52Pocnj24vzNiqVALfzj/yMuF+T0/FBfiVf5RSOv+0+WHi5YyzBq24tW3B4U6tllS/aJgdsmOaA=="},{"id":1,"name":"Episódio 02 - O Desaparecimento da Cidade do Futur","url":"PTVX::4jqccMkUqWT0mp/rtb35a6HKTcLYENWt2/Q2P8bb0x78mVC4gT1CE+sB4iUDH+p3oKFxpmIQmYDF/exoYZi5pSjNyNu1P08ICryHpw=="},{"id":2,"name":"Episódio 03 - O Combate ao Tanque Ciborgue ","url":"PTVX::TaxJ5uUAXUSwnI+BsPAmeVrGEI7zLgMRG0gfRL3h11p/e6zqNjDP/MR27+tQdlVrMU1RKxn0AVTWg/XamC9ASeV3t5NhtH6yohbLKw=="},{"id":3,"name":"Episódio 04 - Pânico na Cidade! A Ameaça do Comput","url":"PTVX::NUOfrc+h4htFfBY9YkMbQ6KFD/G7Hpy+IFBzEYzvTVSfh7CCFgPmP8EHzBMwjbopPU0mbucGI3TfLKFV3lalL0km9E/O6VdI0NumNg=="},{"id":4,"name":"Episódio 05 - Um Príncipe em Apuros ","url":"PTVX::LNGGuZ8RG8kNOBlOINEM3u4QUZ3ltZOV/QBojrh7rjxunRwHLNy8ujwzTRxwKZSuFSeEQDrbhSsGQCj9EHIBMANJbV1pKqrjqzTCLg=="},{"id":5,"name":"Episódio 06 - O Rapto de Oda! O ZAC em Apuros ","url":"PTVX::ZWPIbxZeJkmXgfn8Av/zb+XpV1lcI/o8faPOR++zBBaWBe8eSHvSdgImHzveHFclDgscp0aOCorJlqywDX59K2OWBmHMob9fZgr+qw=="},{"id":6,"name":"Episódio 07 - Avião de Combate Ataca a Metrópole ","url":"PTVX::e11PRyQwvVmjw3FWK1yNtaWH4gWzNetpIFt602sgljjgjhiVibxek834eK6RXjEptR6vxTdU3oHmAXx7puvcfeauqYkuWW40XuaVpA=="},{"id":7,"name":"Episódio 08 - A Usina de Energia por um Triz ","url":"PTVX::7vOqYEdCk8LlQ8mkC3U9DhYeeqy5ribf0REuapxLTqcP/b/LsAMqBruS+ece5rz1POC/dWtO2n3zKm+9lnJYEXK59Fj5yR1dwGXx6A=="},{"id":8,"name":"Episódio 09- Segurança em Perigo!Corra Blade Liner","url":"PTVX::zoxeDDVwYSkI14r++qcj/N4WqmDMnO9ikpnLP16jtoYWa8qzMSrACQCd49a5svGXcJZGm67Nk8zZagPMZam+DPBlEgVyUOFf91hLdg=="},{"id":9,"name":"Episódio 10 - Arrepios no Hotel Mal Assombrado ","url":"PTVX::avFmVE7ZG3u1AoPptZz0LOUmaC+emDpbmwuqr/PQjqiV3oqAFejFp4bBaL8giYe/+KiZG/stleXDGZFAPImWlu+Kh1B1skm2uAKCgg=="},{"id":10,"name":"Episódio 11 - Ameaça na Auto Estrada ","url":"PTVX::OrhJYYJHt2PZVYIplAETlIvaEnuy4QGEhhrRVxMZeancIpIWGgYiVRqvR0tVOdPQQsHUrDY0Sp5HvkmtO8SpozhbuzGX6VEf6xSsLw=="},{"id":11,"name":"Episódio 12 - O Menino e o Dragão ","url":"PTVX::GWe/HUozPzUoRHiB01kP7OJPhtIQzTudEQKgks4y9i+rHIZlPYOlsYBeNw++xs0JP0UdQv0VrLkkwAnLuP3kFdwTK3MsOnt9PzjVLw=="},{"id":12,"name":"Episódio 13 - Satélite Ameaça Destruir Tokio ","url":"PTVX::aOErT+4s9npL7rnocHmSDwft5Qe3S8DjXNPL3zjCrcoEGFuhDxzsUz7ZvpE1/XPYDRBEaDlaEbtF3+16C80/of6TntwgBIsRygIgGw=="},{"id":13,"name":"Episódio 14 - O Segredo de Takeda ","url":"PTVX::wJcaUd2E1CCZYU9ByyuMS6Zl+TrUkhYef2Kt3rmTv4JzbbZB7lVOXjxIM+z5I/1tOcwjw4nvYmpwc+OI7I5ROrjvcXIUy5XO+Kucqw=="},{"id":14,"name":"Episódio 15 - Júpiter, a Esperança do Futuro ","url":"PTVX::EYeI+QKUQkjodRYlNMLxYlZC/xfF7p5y5a9maFklkSq/4kzlAJfzZs5D8zrHkUX/ABCIPK/gSB8r/0clG0v79uVTh7honiiivPEjwQ=="},{"id":15,"name":"Episódio 16 - Lúcifer, o Emissário do Demônio ","url":"PTVX::tVwBR6uNThJvkN8X72nHvtJAtjWwmUnDtb5vyuzaXje85Dj6JM1+CEs+6KvZQObYr5yBLUoEirNN4RhIkmuvorB4t/cW8OOIqDW/qg=="},{"id":16,"name":"Episódio 17 - O Desafio de Lúcifer ","url":"PTVX::GUJ806GjwQLF6ZVZDO1+lBw9TQFf4gVWixwSL1IkShmzDL913JDTMNy5+Iy9UMGLGRNQ/mXGxHT27MpoWpy6U/hMo0Zc0SblUHfIrg=="},{"id":17,"name":"Episódio 18 - Cristalo, a Força Dominadora ","url":"PTVX::NuggBhgXtBwyByzE80w+qOjs1G8ceuuaTh/VTgWNYs/k/x1gW9RqKaegFQhWAxsU1j936tYkwvDr2HCEiI20gC7r/WaBquJszcva6A=="},{"id":18,"name":"Episódio 19 - A Revolta de Tomoko ","url":"PTVX::AN+jWI3leW1tkkYqkhlr+mgUoDdBoKLFZYMRqJvfuJznKFDJR1XY7AGmUxrtRql82iSl1SHom84mPWROF518bPhsMp5Ieh57IAqqCA=="},{"id":19,"name":"Episódio 20 - O Segredo dos Cybercops ","url":"PTVX::1TY4PXcqoJYSKQ/j+pv1h2XsqIcxnD55vBD3Vkg3c4DXGt2s4AT4LpK20LwGt9xfqBAPellTR80kIk0L3V5VaH8pan26q3aqw6Z2kA=="},{"id":20,"name":"Episódio 21 - A Hora da Verdade ","url":"PTVX::+ek6UQGBt7/+0we5kyNToPdKcaAJ/kpA6fhrGbsChLx3mj+sT3IdBVcG5P6da8YtoRxxAQLdOuc/50QOG94oiqDBImTXIrnC0oFp3g=="},{"id":21,"name":"Episódio 22 - Os Falsos Cybercops ","url":"PTVX::6fv4A8etSFkSYgjoiarPBlTPaqoWbnlHv3W1CYtOfSLaxk7f+e+F8wRZWCJP96f79PNcHWM9LDldZkZmguPfAZSi4c9/fuLtLRbsCA=="},{"id":22,"name":"Episódio 23 - O Homem de Hong Kong ","url":"PTVX::70iqNy3TkBwRULFNpQdXGtsBCDwAoXRwJUvPP2Ej5RhXnzZKfqIRua0HPbOGBmWp/pJeVst5gSO6vbds0OQ0ex+25tFSEJTsgZn+0w=="},{"id":23,"name":"Episódio 24 - O Ataque dos Mísseis Subterrâneos ","url":"PTVX::0ClHjFDhX71l2pwECb+SFoo876eR5r0/ZRVf2Ehj4YAyfNTASGVFHTr8BPXouwM61Tt02cOM72dEx/g1a6O2jQ2EbKcnfyvM9AtPGw=="},{"id":24,"name":"Episódio 25 - A Vingança de Luna ","url":"PTVX::rBXH/LGd9uFgtGqj4jTLgRoSGEHDHrNczzlzsIc/c+RB3w7iWdu4+3waGbwo0IsvY3LnNnnnlgsYHh/hS8OZ5n3JG6w4j+3IHVeu4g=="},{"id":25,"name":"Episódio 26 - A Fortaleza Inimiga ","url":"PTVX::xScvR0Tfw1TM+k3qzNXXPUqOff5Z7bS7L9eLYFp2aCq/KDhclTPuziTtOwy4qRRBA11A8K/XRmVYleVgpntgVsrGcV97EreYsV+YRA=="},{"id":26,"name":"Episódio 27 - Falha na Unidade Cyber ","url":"PTVX::r8+wVp6zKp4CeyRZ2pij+3A6I0vaezacPeQVxzhXTKIybuq0xKS5CoHpG2EXgkFkvAZz8DP3bPGmg/dtwg/2a1TxrkL5ekW7CV8FtA=="},{"id":27,"name":"Episódio 28 - O Dirigível Bomba ","url":"PTVX::5ryegO9Nn9raQq44fNe1vROjCmwXfMCVKTT2ySF57+e+DNa+p06seYlouJLo+HbZzj7rFwhPwHjJBqcyYkg4GWa09HpOkNWFMdSOdw=="},{"id":28,"name":"Episódio 29 - Tomoko na Mira da Destrarp ","url":"PTVX::5TdgeLTby1MrEkTQvqExSIFCJUmOhjVkKMiJuKRD0YNsXxm6tpr6ZySrp1eKq8jspI5BiAJ3yG1y297Dr8fzwL9EF4CjPgVYMaNI4g=="},{"id":29,"name":"Episódio 30 - A Carga da Morte ","url":"PTVX::4jsol4MCjC72rWF1O9nfGpGMMNl6rNVbWf304HGfq8jDvuMz1WDlyPqMWegcxKJLcHVVZqsIn+Qye1KQaEAcGtpsoyxIZ4tPVaqHGA=="},{"id":30,"name":"Episódio 31 - O Roubo do Cyber Thunder Arm ","url":"PTVX::qfRtA+0GV9WwLPHMZYBUhh94pPMOIcZn5M9+lxMtZbvI5Wd7Dj4kHHphDr8QVeRm6IjWr/BqyU0RxAAajr0X0wp+ltSLxAQV0dlIhg=="},{"id":31,"name":"Episódio 32 - O Ataque ao Alojamento ","url":"PTVX::Z/8xYgFUDKtnWcjXqwe8Qya32wU0hfVWnRz1nuLQhcTQshjgTL5H/M+4RCzMq3Z6D/tDIAXIYu270RcoN9EuHNtJqu9xMaDHnSpv7Q=="},{"id":32,"name":"Episódio 33 - O Ataque ao Trem Expresso ","url":"PTVX::7i8WxHPxghzRxa92JPzhq0LfBopnPIfLkKgCBkVl7X4o0vimCESEsGDk8IB0vC6CByiN+clb+9vbkAEa+Mv1wH219kYfd4IduKYCXA=="},{"id":33,"name":"Episódio 34 - Neo Tokio em Perigo! A Batalha Final","url":"PTVX::PU9d/6dRuO9SfwQjlPSjtpdR0zuGXDaZtvRgrpDYq6bjhEjL58wuMQkDeNseUlKKfEZL4bXM7QdHgANtfIDLR6BpAZUsOWa35gx/jA=="}];
+        const TV_PLAYLIST = [{"id":0,"name":"Episódio 01 - A Chegada de Júpiter ","url":"PTVX::+d6yloXDfISrL31KMpElPk6GwB1y8Dioloe46uZDuFo2OTpL22MdDQNCJlg1mibQM9QHn9s4QXS5hzubuf8nTyqcN9k6phl/q0EDUA=="},{"id":1,"name":"Episódio 02 - O Desaparecimento da Cidade do Futur","url":"PTVX::WbBId5WoQ5L4yEppFRDdGpV+mdoGigXI4oNOtcpNXUfgXqhrjPW1C8DA28DlW9SiwJW8+nMPKljuB7CTA2Lfmu2JHB4GxKLKbC7uUA=="},{"id":2,"name":"Episódio 03 - O Combate ao Tanque Ciborgue ","url":"PTVX::FE9kZ49++HbvNjNVkzvVTGFUFxhI8V7rVXrVbv9DJoTvW1zY41qlXcepDTYd0yT99D9nxisPwUnNU+ACuZ6y6gdLEVR3Ww6W7uI6BQ=="},{"id":3,"name":"Episódio 04 - Pânico na Cidade! A Ameaça do Comput","url":"PTVX::8CoVOEbSBfFgtwQ39pH6KQYZkIvQyEDLEltxpNV3bq5PYtsCYW/8eeuDkvOD77eyv9MHr3w57XYVaXSJiAjxI1nLx/X3/px+TN6m+w=="},{"id":4,"name":"Episódio 05 - Um Príncipe em Apuros ","url":"PTVX::wYFro8s/kyISRasWXa5yUXsiAhCmdV5c9lNKsd55MHf41rqFmzKB/Gd1LuAK7m2j9+MM4hkWBE7jS9/e56xQLQHZtaQvF0RC5rbjqQ=="},{"id":5,"name":"Episódio 06 - O Rapto de Oda! O ZAC em Apuros ","url":"PTVX::Gmn5ktoSJU5+LWe2qH12hYUE2pa96kLWZ+v85Z0EgUOaethPqUPFuJA1DSyQ0l2ZS+0Ss8Bw33FwcA7ZJBdtlFUhQra82W1wd0nXSg=="},{"id":6,"name":"Episódio 07 - Avião de Combate Ataca a Metrópole ","url":"PTVX::xxkvu0gacCEJaHpESRpsHaAlcX2sBzMpctSCBGJIW9r6WQc3BrUG5HHcEhcVffRbB40r8Ab7qCijiDfh7YVPXwJRCeU3I2TLqVvojw=="},{"id":7,"name":"Episódio 08 - A Usina de Energia por um Triz ","url":"PTVX::SuySJRCIze+Eh/EQ58mUwEt9WDYhYdCE7KfHSL3UTamYiPvptVOhKxQzkLlrwyhxRngG6OVt3Wy3WJPdWNBhlAgHSdi5dsyA9oLqtQ=="},{"id":8,"name":"Episódio 09- Segurança em Perigo!Corra Blade Liner","url":"PTVX::9R7O37dsYf0KWCD39I+EYm1A0/u94fupZS9n1TzQviwwFIDw3HfgCk7EpQbskiFlJWZgF6RyU1WhsD3XN9s+ifQGMZJfjNSrLHlstQ=="},{"id":9,"name":"Episódio 10 - Arrepios no Hotel Mal Assombrado ","url":"PTVX::FF0hP5rMI/r+Z9YUjtDszOzl7V4t3hwfgSN3meAo2DBRzB5sUkhpOKEYTvB5z2bJ9JMquEzpfqhmdFJWa2/J5kZxtvcSbdMOdKBrZw=="},{"id":10,"name":"Episódio 11 - Ameaça na Auto Estrada ","url":"PTVX::/VLqqak8wjDLsw/KLmY7G+/03BB0XqDF7WP6gvunJrgoKw+oV3kPLQP5EIh6/jhToPBJejYk4zvL+LqZIJMzZy40fEzqhSiOxPa7Ig=="},{"id":11,"name":"Episódio 12 - O Menino e o Dragão ","url":"PTVX::1PKYMVvT4NemhdKl62ZbocK8jVCzVqXmyrAvkGkq6E2pNkNy4D5sxFtVAxMxKbGIShDKHayFPAc+JsFwD7BMzTCTbpxOIpT8jtZY3A=="},{"id":12,"name":"Episódio 13 - Satélite Ameaça Destruir Tokio ","url":"PTVX::QUjJ9fYyDHnevSEe1q1xgg1SX8aUDdvU84+l51MDtLghjbCK6mxPcL93zPrAg/Rq0u+Aolgp239baCA8L7jL22k2BygBzgW40pyt/g=="},{"id":13,"name":"Episódio 14 - O Segredo de Takeda ","url":"PTVX::E2ra69Bw5CACEv5K3OEXqI7WUNgQm6V/yyNNAUCk2Xs/5/Xh1Pv3OkO5SD0+6qYK7w9Zaz5WdRNQSgVDa2kZGKmuxSQyVCJMvkyihw=="},{"id":14,"name":"Episódio 15 - Júpiter, a Esperança do Futuro ","url":"PTVX::QsTV8qIryGHRbqR5cb4BV8vlM3AllkiPb21uHbJq01tszVajLpWpG9PLorI85maPvZfGRP81DafsWjduw9jBYqg4ma4FeZsoNooMcg=="},{"id":15,"name":"Episódio 16 - Lúcifer, o Emissário do Demônio ","url":"PTVX::oMDEDMYE9qiIrPlgsV8mWFOsOil+7HJDn64/2X404p8Lz/ePKpWw2QdyGppVOtdqeZ+DkjnOeCsKGg9mMwxsagpH/PVP01Rsful3vA=="},{"id":16,"name":"Episódio 17 - O Desafio de Lúcifer ","url":"PTVX::M9oMyHwzJct6w5ys5f5YBL1XQoi8rpA0qZEOOAvYngDB9mZjSZ3CavPByzO2qLRoR7y74w7jG4mEOsbuVn4yBit5HqDoVSGnVb8TEw=="},{"id":17,"name":"Episódio 18 - Cristalo, a Força Dominadora ","url":"PTVX::dY2Qzee4aTTAB9omB/E+yG1agMmgvj/2sWE96xvaCc7WOBh52WtMGRPL1dt0xMLaTLxcNl54YxTjK8HV4essGC7AuTEUH4UWnqXj6w=="},{"id":18,"name":"Episódio 19 - A Revolta de Tomoko ","url":"PTVX::eee/IyfBbpNLveFpml1al/4sHGa+2MpghvOwQKnlbujlqSOVLne1FuWXDEvCzRocTZjix3SQTLoKhPue9q4hz/AEq4+TzI8052H+5A=="},{"id":19,"name":"Episódio 20 - O Segredo dos Cybercops ","url":"PTVX::MpT/V/El/txRXK6PphFi69sWr11ozyLORQs1T1xrdwbzk7ruKI2DV4aVOLYuGvBa8dQA3b19l2QD9SR4TZcC+1FIuxWi4bF8snvBPw=="},{"id":20,"name":"Episódio 21 - A Hora da Verdade ","url":"PTVX::Pf9QouRR8uQSR64TUZj8SUsch5c0DGFrrRWscjDIjNHyrVfVu0QXp7pj1HEaizhc2gsCV/MKtvL8ope2odw7YtNObSwvaFixY9GcHg=="},{"id":21,"name":"Episódio 22 - Os Falsos Cybercops ","url":"PTVX::mCsrT5vo3Kj5GXNl7KWh5ppV7QKYsHI1RUSrbUsI6mYQa6lz7TrnqwF2MwDSzmKuMxC20HnEm07rYkksE6TwSpctfVJYor3LZo4q0w=="},{"id":22,"name":"Episódio 23 - O Homem de Hong Kong ","url":"PTVX::zySdilx5MGGlvhjFnMpcvyBY7hx2gTtOpHXtAtNmsMp23DTC5bolDQJ7zRu2OuabUJAZlpS1SW0gBKCUJv1JKDBEbbkj2PrGHGcDHg=="},{"id":23,"name":"Episódio 24 - O Ataque dos Mísseis Subterrâneos ","url":"PTVX::FfQgNCCHcob1ePqa5KeI87Wj9R3qLCe6WwRF62Djwf+dg0ens1326udQQRJ08fxusnwOByXKc06g6h2YZIgIi9fXqI0Yge7kEzu4Zg=="},{"id":24,"name":"Episódio 25 - A Vingança de Luna ","url":"PTVX::GBDsE8ib5CUNwa5isKQole/C57VtV+kXFEfIDmm1BhoSh2dZk+cfuxGdwNSbJecdvyzoY0EW6Yw/uGPtuYRy/1KtcLGknOV0beDUoQ=="},{"id":25,"name":"Episódio 26 - A Fortaleza Inimiga ","url":"PTVX::s+ijm5xfCaK9j4R39OTjCKvZGMhuF2vxEjBwzOastURCR1yLFQ3dwkiC001QQPC1nchigdS5aZWlGP5YfA5BDnaCgU9Sl4GTNhmnrA=="},{"id":26,"name":"Episódio 27 - Falha na Unidade Cyber ","url":"PTVX::3CG/DIPMWj0Fy7YvYttnnfsvMPDKJZWeLZpQuxBu4olr7UioQu9egs9RP+j3qYgk7E0W0odpdPMYoVVTVfR1x2bhL1dkbaj3Ka66Jg=="},{"id":27,"name":"Episódio 28 - O Dirigível Bomba ","url":"PTVX::T6aVxXhpNQ1MBd3rdYF6NoX+d84Im7GORhGfgljY4ccf6Y4RVZ87sWiU0y4aCakiqfMqaPydwhaV3SXnZaVLkjTJCPWZyY5P0zqnZQ=="},{"id":28,"name":"Episódio 29 - Tomoko na Mira da Destrarp ","url":"PTVX::7YiUY8slvDF93WyEYgLTBGQqTF1y5EkI2Eznk62hzlnGwPUxk0XMToGqxwdFr2Hdqu7PPG9TjXvCmXCQUZxXG3359Weqt1k/XrzMUQ=="},{"id":29,"name":"Episódio 30 - A Carga da Morte ","url":"PTVX::rh9zTuE3MAYfulqA42ArFqDeIFObedpzMs6hSo5EFfEooK3TTz54uf515Cuiwc1jHW02mgCpDIU45NgWGd6lAm5H+XPYggAY4Ryefg=="},{"id":30,"name":"Episódio 31 - O Roubo do Cyber Thunder Arm ","url":"PTVX::eGO+ECTuWT/MAYFGokYXTCV+mT5aZq2691wOL8mpPjPfplQit0mvDbC4jBS3W1DLyLMw+0Q7pAhGZIUMe1XfXAs/8zS2a4kIWtdtvg=="},{"id":31,"name":"Episódio 32 - O Ataque ao Alojamento ","url":"PTVX::/S9DqdIiQF0k/6teNIJ30XUb61sTGidJ2q8KBxONHgm8ZiJAoKnvYZf+amXC3ik9KAdqP6tqEy+sCCBA+6J9MJB4zll4aQBpCehwEA=="},{"id":32,"name":"Episódio 33 - O Ataque ao Trem Expresso ","url":"PTVX::qPmZRxKeaj5cvUOWmz+ae/PaS8h/qPNn/cKv3/o0PJtPkI42VhXUd+Klf40s3wtjc8MJM0FU6K88p4DTy2vP1Wvsvic0jJRo5ioCAQ=="},{"id":33,"name":"Episódio 34 - Neo Tokio em Perigo! A Batalha Final","url":"PTVX::reLdmuBqQbsWYGXD/dFIV4CwQHVBcOLyi9sAMTIqxHMVBlzogL5z9ILqwpYEb3yHyEafjJGHc0tQ6wrV83XxFqwL60DlAEC3CqJ5vw=="}];
         const PROGRAMMING_MODE = "playlist";const TOTAL_PROGRAMS = 0;
         const TOTAL_PLAYLIST_VIDEOS = 34;
         const PROGRAM_VIDEO_COUNTS = [];
@@ -2440,17 +2478,17 @@ function calculateExpectedTime(duration) {
         const ENABLE_DEBUG = true;
         const IS_ADULT_CONTENT = false;
         
-        const RELEASE_DATE = "2026-11-07";
+        const RELEASE_DATE = "2026-11-09";
         const IS_OFFLINE = false;
-        const CHANNEL_VERSION = "1.0.0.0";
-        const CHANNEL_ID = "cybercops-os-policiais-do-futuro";
+        const CHANNEL_VERSION = "1.0.0.1";
+        const CHANNEL_ID = "CEnb0CnDizou8KUgNyTD";
         // --- Subscription ---
         const SUBSCRIPTION_ENABLED = false;
         try {
             console.log('[gerarHTML] SUBSCRIPTION_ENABLED =', SUBSCRIPTION_ENABLED,
                 '| dados.monetization =', JSON.stringify(dados.monetization || null));
         } catch(_e) {}
-        const SUBSCRIPTION_PRICE = 0;
+        const SUBSCRIPTION_PRICE = 3.99;
         const SUBSCRIPTION_TRIAL_DAYS = 0;
         const SUBSCRIPTION_PLAN_ID = "";
         const CHANNEL_NAME_STR = "Cybercops os Policiais do Futuro";
@@ -2663,7 +2701,7 @@ function calculateExpectedTime(duration) {
             btn.addEventListener('click', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
-                var url = 'https://canaisdetv.online/comercial.html?channelId=cybercops-os-policiais-do-futuro';
+                var url = 'https://canaisdetv.online/comercial.html?channelId=CEnb0CnDizou8KUgNyTD';
                 if (currentUserChannel && currentUserChannel.uid) {
                     window.open(url, '_blank');
                     return;
@@ -6009,6 +6047,38 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
     
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const smartlinkOverlay = document.getElementById('smartlinkOverlay');
+            const unlockBtn = document.getElementById('unlockChannelBtn');
+            const mainContent = document.getElementById('mainContent');
+            
+            if (smartlinkOverlay && unlockBtn && mainContent) {
+                // 1. MOSTRA a lightbox ao carregar
+                smartlinkOverlay.style.display = 'flex';
+                
+                // 2. ESCONDE o conteúdo principal
+                mainContent.style.display = 'none';
+                
+                unlockBtn.addEventListener('click', function() {
+                    // Abre o smartlink em nova aba
+                    window.open('https://www.profitableratecpmnetwork.com/ftfepn861k?key=b6040003d19e2565ba373c501a73b1bb', '_blank');
+                    
+                    // 3. ESCONDE a lightbox
+                    smartlinkOverlay.style.display = 'none';
+                    
+                    // 4. MOSTRA o conteúdo principal
+                    mainContent.style.display = 'block';
+                    
+                    // Inicia o player
+                    if (typeof iniciarPlayer === 'function') {
+                        setTimeout(() => iniciarPlayer(), 300);
+                    }
+                });
+            }
+        });
+    </script>
     
 
 
