@@ -16,9 +16,9 @@
 
 
  <!-- METADADOS DE VERSÃO E CONTEÚDO ADULTO -->
-    <meta name="version" content="1.0.0.0">
+    <meta name="version" content="1.0.0.1">
     <meta name="channel-category" content="animes">
-    <meta name="channel-id" content="tokusatsu-super-sentai-goggle-five">
+    <meta name="channel-id" content="1mKe48ktdgHILf8bkfdj">
     <meta name="channel-name" content="Tokusatsu Super Sentai Goggle Five">
     <meta name="channel-slogan" content="Programação 24H">
     <meta name="channel-logo" content="https://raw.githubusercontent.com/Playtronic/tv/refs/heads/main/template/logotv.png">
@@ -1106,6 +1106,35 @@
 
       <!-- 🔥 LIGHTBOX DE SMARTLINK -->
     
+    <div id="smartlinkOverlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 9999; display: none; justify-content: center; align-items: center;">
+
+        <div style="background: rgba(30,30,30,0.95); padding: 35px 40px; border-radius: 15px; text-align: center; border: 3px solid #fdbb2d; max-width: 500px; width: 90%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); backdrop-filter: blur(5px);">
+            <h2 style="color: #fdbb2d; margin-bottom: 20px; font-size: 2rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">🔓 Liberar Canal</h2>
+            <p style="color: white; margin-bottom: 25px; font-size: 1.1rem; line-height: 1.5;">
+                Libere este canal visualizando um único anúncio.<br>
+                <strong>O conteúdo será liberado imediatamente após o clique no botão abaixo.</strong>
+            </p>
+            
+                       <div style="background: rgba(253, 187, 45, 0.1); padding: 15px; border-radius: 8px; margin-bottom: 25px; border-left: 4px solid #fdbb2d; display: flex; align-items: center; gap: 15px;">                <img src="https://raw.githubusercontent.com/Playtronic/tv/refs/heads/main/template/logotv.png" style="width: 50px; height: 50px; border-radius: 8px; border: 2px solid #fdbb2d; object-fit: cover;">
+                <div>
+                    <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 0.95rem;">
+                        <strong>Você está acessando:</strong><br>
+                        <span style="color: #fdbb2d; font-size: 1.1rem; font-weight: bold;">Tokusatsu Super Sentai Goggle Five</span><br>
+                        <span style="font-size: 0.9rem; opacity: 0.8;">Programação 24H</span>
+                    </p>
+                </div>
+            </div>
+            
+            <button id="unlockChannelBtn" style="background: linear-gradient(135deg, #2ecc71, #27ae60); color: white; border: none; padding: 15px 40px; border-radius: 8px; font-size: 1.2rem; font-weight: bold; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 10px rgba(46, 204, 113, 0.3); width: 100%;">
+                Liberar Agora
+            </button>
+            
+            <p style="color: rgba(255,255,255,0.6); margin-top: 15px; font-size: 0.85rem;">
+                Após clicar, uma nova aba será aberta com o anúncio
+            </p>
+        </div>
+    </div>
+    
 
         <div id="mainContent">
         <div class="container" style="position: relative; z-index: 1;">
@@ -1161,7 +1190,16 @@
 
 <div class="action-buttons-wrapper" style="text-align: center; margin: 20px 0; padding: 10px;">
     
+    <button id="paidCommercialBtn" type="button" style="display: inline-block; background: linear-gradient(135deg, #9b59b6, #8e44ad); color: white; padding: 12px 24px; border-radius: 8px; font-weight: bold; font-size: 1.1rem; margin: 5px; border: 2px solid #8e44ad; min-height: 46px; line-height: 22px; vertical-align: middle; box-sizing: border-box; cursor: pointer; font-family: inherit;">
+        Inserir comercial
+    </button>
     
+    
+    
+    <button id="supportButton" 
+       style="display: inline-block; background: linear-gradient(135deg, #2ecc71, #27ae60); color: white; border: none; padding: 12px 24px; border-radius: 8px; font-weight: bold; font-size: 1.1rem; cursor: pointer; margin: 5px; border: 2px solid #27ae60; min-height: 46px; line-height: 22px; vertical-align: middle; box-sizing: border-box;">
+        ❤️ Apoiar
+    </button>
     
     
     
@@ -1239,7 +1277,7 @@
         
  <div class="contact-info">Contato: marcospramalho77@gmail.com</div>
         <div style="text-align: center; margin-top: 5px; font-size: 0.75rem; opacity: 0.5;">
-            Versão 1.0.0.0
+            Versão 1.0.0.1
         </div>
     </div> <!-- Fecha container -->
 </div> <!-- Fecha mainContent -->
@@ -1277,7 +1315,7 @@
                 let userVotesRef = null;
                 
                 function initializeVoteSystem() {
-                    const channelId = "tokusatsu-super-sentai-goggle-five";
+                    const channelId = "1mKe48ktdgHILf8bkfdj";
                     
                     if (!channelId) {
                         console.error("Channel ID não encontrado");
@@ -2422,7 +2460,7 @@ function calculateExpectedTime(duration) {
         // CONFIGURAÇÕES DO CANAL
 
         const TV_PROGRAMS = [];
-        const TV_PLAYLIST = [{"id":0,"name":"Episódio 01 - O Ataque da Ciência Maligna ","url":"PTVX::tGCtma3oYGoC4XqmU+UHkSSvBBIQb0+lzQXJV/hTic2vfaH+vybtRckXNuWUI4pt7sg7C17nryP1WkfZJj1tschFedCc+ZSLESixb2FP0HgKUkYbpSP1uA=="},{"id":1,"name":"Episódio 02 - Lutem, Guerreiros do Futuro ","url":"PTVX::JK5S3cfgoS7YlVseJuqdLWGYAM9seQPqYHKmawXXCJ7oAuK7JpxXHLL/J8+criWyCeqsxExyvbwM+hu1fyPViQHtIXr43lWwvBDzzQxf4wJS6zSdDbvTNg=="},{"id":2,"name":"Episódio 03 - O Ataque do Destopia","url":"PTVX::Rwy83RwIB73dRvckxC9ZbOS7kNB9YGODU9wND7y0lOQg7qylK0Eum4neCPyNMmGNeDZOhMO7NUbDlW/8RJwJT/t7eR0O3NLacmc+aq4uMEpCwh0s61lMWQ=="},{"id":3,"name":"Episódio 04 - O Planeta Melão ","url":"PTVX::newkPloJ51FvqT3EEVR4cjUKoWy3IoYFZo3bKXyI+VId87kxLXIwcNoM0bcDOytqPgK8M6IHejE4yBDsx+7XwnOrIN1KaPNYN0j2bqGzq5Zp8bkq9eaCSA=="},{"id":4,"name":"Episódio 05 - O Demônio se Esconde na Lenda","url":"PTVX::oFdhKp4Y1wFPZk39UQ0YMUY/neXRBuftA5BUCfmXfV5NcCFI+C9BJr1HXZohUAGUB/H++pF8do82aY+8GeCEJP3SVZiVMMdfrZRtWDoRUrVhArN7Z37kYA=="},{"id":5,"name":"Episódio 06 - O Ator de um Lutador Sujo","url":"PTVX::7IisNga6YHvQK8DdCeSMDnBr/bsqIHS+xq7ByZ5XylhAm1+GzhyjgjkhC4Zu1jPcgCrLB7LC0eMltRy2pSRYNROjx1/2TTkNkQcdWLnLBro0yopytfAdAQ=="},{"id":6,"name":"Episódio 07 - Papai é um Fantasma ","url":"PTVX::8qDbKF79N9xHnUlavUxOAaO6BlI8chcM+KG/NdC1BCGsSjAmRKvdChRCl1L+jxNpOJw4cF7THreOhaLyLo6ZV2v5O7ndRwXrXFQz8cQTHDqj9gS2xvDmug=="},{"id":7,"name":"Episódio 08 - O Alvo é a Bela Jovem ","url":"PTVX::xaAETjF+RN3QPufxQ+yjoeFoS7L4enTwb5Zd89BJA2RrrKq9MHVtxuNKr/nxvINdbOzhxfsyQmSKBe1f9tCb5LpnvDl1jO5LrOIa2TU6524cAN1a+ragDg=="},{"id":8,"name":"Episódio 09 - A Plantação do Cogumelo Infernal ","url":"PTVX::JobS3uhBqcnIS8I5VhT8xzeiHF1r5UhSet2kzI776FWHoHNwy3qTJVBqdFMn5tqr2SPL/QC3P/py7st0lDj7VuY+SAIms7N6GQzGIchUwBy/lIyQtJX1Mg=="},{"id":9,"name":"Episódio 10 - O Estranho Vegetal ","url":"PTVX::qcVZw8wLPhtl7/iveDhT5EnPLGfK6GFObNgnDgq6QTThazBmiobzypj/d0QlYoR4cDMVHNp8G2djI4sRwZRuWRp8v0Ex0U1LGArQQNY8Ki7gB6Kan1HC+g=="},{"id":10,"name":"Episódio 11 - A Terrível Guerra Magma","url":"PTVX::8XmverFPRLol4V+ZIncpr2dGh1eoqjMjDNjuMVfatEVMylmTn88n5Dw+SCS8C8tFv/+Oz852Kbi1VjeODDFY9mmLxkeqICaQjm/lPww6flaj3nAsG62xlg=="},{"id":11,"name":"Episódio 12 - O Fantasma do Inferno Arenoso","url":"PTVX::o8Yg2pLeeaOrBlvL4fAuMOuRM7jyFb5yYc0mC5peCSj4ow2xn70FQHHbiDQaMkp3Asq0TmpaUpnSxRgqjz9elNP529ZDj7+I8P4zsfIo5UYF5/MOID55HA=="},{"id":12,"name":"Episódio 13 - A Fúria do Enguia Mozu","url":"PTVX::+AfcE0wmCuOLWmBn4smGIA3JvHXsxJLggcUweDKYA3drbcp1aJsfrBQAXcqpvwQxqBlBzed85RAhrKIzTG0PWqlq5JkGPWvXsH2KoXP/fyw1G99iMFMSBQ=="},{"id":13,"name":"Episódio 14 - O Afundamento da Terra","url":"PTVX::Z4duAQKVCVabw+MKyvs9pJdwoeZglNXUstqQeS26zeDvJY3RIrUdhjQ6vRVyEHhYsZfc4XP+olNoYBN1MKxKCPHfmuvia4wme24eAGVg3xw9znFvR73OkQ=="},{"id":14,"name":"Episódio 15 - O Renascimento do Diabo","url":"PTVX::FaH+E015XuaWbAr5rQ4tT4LOtN5rqljxh7wK7vneWmyeOelmso5OBIN2qqBgdieTJ8mPabXj4frua4qtZKbMeqLzcE/pBJjzQ6iS9vvmxCdfoQdyuRh1rg=="},{"id":15,"name":"Episódio 16 - Red! O Perigo por um Fio","url":"PTVX::FUdEJ2H99/3TrNO8MtMh41wOeP/rBdw5WG4Qmf0fSXiwEj2NjQjQdN8lqfeEF81z4IPAMBQn2PjdAYJANzn5OApRkhYTH/bOQ0yUKVvVJJaXJ9gzs8l5CA=="},{"id":16,"name":"Episódio 17 - A Lágrima do Kappa","url":"PTVX::SGJ1USKyk4RPjXinZbcn2AL/pVfsBMWCPz7QlRkQBmpU3KCnhehv0bKm56R67TZErn9h48x2TcDcfxlzb8rEC6mYsW6/ZxrutXSj3d+nju4p16bCYRoMTQ=="},{"id":17,"name":"Episódio 18 - O Homem Invisível ","url":"PTVX::jgOYIY2oWSrrw0qAKQprELd6hI5iWTsEWdJcVskakOq1sGhlEa6Q7u/wo/OsSZue1D5NksFBhkCHwOi3zMc2F/eF3fELwo9lZwCWz2eWfy2LyzNfsHTQ+w=="},{"id":18,"name":"Episódio 19 - O Segredo da Mansão ","url":"PTVX::oo+Rs+CYdJjwfltmkFthQZB9tiwWiExQl+9MTqJC6/+WSnK599r0VoDt8DH/hVKvQpMY9+UpPdoumqP+tnEkE/qpX1OmfaLpwSpd2QReMm2YbPlDYxIiDQ=="},{"id":19,"name":"Episódio 20 - O Cacto Venenoso","url":"PTVX::Qy4yE6flFrm/EbvyWbxIFLhtGeW0dzhy0LtTOog3c9Nb7m51LaOOkfqDEQFYTK0E1JwsNUTtLAlatE03ppAPtM8+T/kv1cV0DKCT3pfF48+PF0PURizDEQ=="},{"id":20,"name":"Episódio 21 - A Petrificação dos Peixes","url":"PTVX::69EBsgiLHwXcLsY1UFhIMzp6ZOVcWsiZ2wiMO7tX2S1G519ZONfBAkjYTZyRwJOTL6Ap72Ng3K6UrSOOuj2Rgy1rWNFvWUMsOos9id9aBde7WFiNDlPh0w=="},{"id":21,"name":"Episódio 22 - O Ataque das Bonecas Amaldiçoadas","url":"PTVX::hEBjC64XDYgAX177Q0vBCxR/ptIt86VPQ41lCIEoUT38mAstB2b1JHS3uuQiuaShY0I3WHzy5YVZGdYF4DI4KxP4uGAgfIkl7gu9EJyTbLKgKWexXSakSA=="},{"id":22,"name":"Episódio 23 - Operação Bolha de Sabão ","url":"PTVX::PGzlyeYEdwqaa6RYmgPl1MVB6KTth65pV8Z3Xa/Wc5gllDSLfcgQjRwjlfB+sOko51hdjxyt4xi+t1cprjJkBYotB3YyZcD6a6SnQe8DFKyiNdvk2HZdbA=="},{"id":23,"name":"Episódio 24 - A Guerra Contra o Inimigo Invisível ","url":"PTVX::sStlwlrPtUn3PtkR66LsjuZ9AyQCWyu/3W0DXVSVBT9HJhgYhjvpZMQ+2U16Oz9RJWvLb80dBfEjUC+3SteGA259U0KG0xacHmsxRgf4PcAKjobJrdD9iA=="},{"id":24,"name":"Episódio 25 - Dinossauro, o Mensageiro do Mal","url":"PTVX::gC3xyhYzd4dOdwLbJzRAGbwHFZLsZbvAqO0ntUeTg9mUW4Rpwjg02qCPUd6g1wo1hQ0N+4gUHaVPGXO+4i5x8x43Ih3BqvcAxSm8J0J0buu8//FLfCP/8A=="},{"id":25,"name":"Episódio 26 - A Grande Farsa do Black","url":"PTVX::BeyaGMISrDjDK0iSKMAd8vDcy3Qngj9+n081zAGeFxoiRPK71ywtKf+iy93VTju3/BLFp40gEDhaLtyotyPx6Or8PepXlojef3pQdYex2wKSoQ2aaSd4sw=="},{"id":26,"name":"Episódio 27 - A Selva de Humanos","url":"PTVX::4jEJuKsMr/1+e56MuvA9i7IUhxpcrGQwX/bntkfsiW0/ey0fLj6/BsrOIi/RrRsq+BaYdRPN4sY7NH1s2aacw9I1Crb1zk15KxEvw9clKhYyOOztfhZNyw=="},{"id":27,"name":"Episódio 28 - O Renascimento do Espírito Monstro ","url":"PTVX::cwscD3PUjjW8jfgK/iPqoXamlRSjJHq6zEa5imkiOfznHH0XlILjqT9cKRKnOBj2sp5n9nPvzHHN7KS7UdwY0CX4zHUpCaalhfCJBB6wtdOVYPIhsw87qg=="},{"id":28,"name":"Episódio 29 - Terror na Cidade dos Sonhos","url":"PTVX::OdMtnpSQTty4azw1YR3EoXB3CAosj8SmL+RtFDRSvsEQTU1db0l/4Yq9VMuAljjxPewoPT/B5jWd/5cUDk473b1kG0i7v48jOO3rh9B1f323iYTgnLwCkg=="},{"id":29,"name":"Episódio 30 - A Espada de Ouro","url":"PTVX::j8zFwZ4aHfHspCV3rbZEZ3gVdTeyjRtUMqogaL3Hlc0/GhJ6VmUl3ZRYEMXRydqVIq8x6AV1oYvjcfxVnVItdaeXNzKAAH0utefxdZuC9wxvp54BpiMAeQ=="},{"id":30,"name":"Episódio 31 - O Grande Ataque de Blue","url":"PTVX::zmG069uVi/1veL65P0cArkPzTdd8cVUyw0FHtxn9T1DVgfiM8U3BWsL1wLPKLObxSBqR0jqijZgiOubsEAgpfQFDmnlP2gdpL/UXOUVYVTcU89uk1C6BWA=="},{"id":31,"name":"Episódio 32 - O Homem sem Osso","url":"PTVX::PZdU0SQlDPFTJc8QEzgML3ISWbIVhhwgbgLipw7fOLIfaOHeQQQpgE/FtId9RoKadXVSViLSFWgM/eCTZ0+n1Dtajy7C5d7cYEmhBr+yGKkrcBsiqtqYRQ=="},{"id":32,"name":"Episódio 33 - Tentativa de Explosão ","url":"PTVX::LA0BbHsK4ZMK+GWYD3KtKm8Vn7ArnACVMYVohyx3or/s2Y30hfJxsPDa3uA5EYxuHThS+KS9gzdZ8bi4zXwzllLJaTYOSqfNEpeZGoVY6gFIS5o1VTcHfQ=="},{"id":33,"name":"Episódio 34 - A Espada de Ouro Fatal","url":"PTVX::dHqYP+x45skE780KA+O2NwkPTmdOpad3TscSjOEvpCTbBB8xnVQGIka6xIvS8106DTKXT4MZejbxpamS2e4RXDBORnwvbapRoR4AVTqftaWF2itDmWeRZw=="},{"id":34,"name":"Episódio 35 - O Ataque dos Humanos que Comem Ferro","url":"PTVX::iG3DdyzB7hORGB3OP1vMDMFMHKox4MFcV+HOCH91S/zozHUoGVYHrJrUPG4a1fhS3lCbggw0T18I1p+dbIicJCuKuefce/5WP3Lxt/VC8Bc8VXu0EEWuLQ=="},{"id":35,"name":"Episódio 36 - Um Duelo de 30 Segundos","url":"PTVX::6LAjmUKYQiiBlbBcItbMseLKOuQmlEA73/mX8k6xqj/abuvGjDCBwFiorKaFx/r1Q/A2GjuJphU8Twb2ikMnTKAQvDqyAb6Q434tFXaFWrZZ9p7CRC4Fsw=="},{"id":36,"name":"Episódio 37 - O Enigma do Grande Ataque ","url":"PTVX::1Sqg1bK5Bxc7EC5pjt/ap2QDtaGrbN1pkTD8C6+uWfy5LX9QPcEGQXZ9TmyE2oEI8Baiou4xcFVkM8vKwWQoyRK0BBe2nI/pWA+IfM+wcyFVCcaocuOnaA=="},{"id":37,"name":"Episódio 38 - Os Sentimentos de Amizade","url":"PTVX::sYXH+Q2XufKqcEVjzMIAUTWyLiDi8IHKLTrhxV+ysf/a51lvHZyfe7alYB+ik1afIRySd/nzqQcT1J5NelTHWMa1cz4nSgVkBZ04UpIcTk/UnJsB/8X9yA=="},{"id":38,"name":"Episódio 39 - O Diabo Mora Dentro do Livro","url":"PTVX::i+Eho3calhx1oMGoRXWuEETvJz0gUOxOEk1knjPbkHrg22BWrQYaGFg7V8fFhI+TlrlhR063UjVrPIA06tdwWBbCP4Dkvr8Hkl+25iOsq8YA3ZdGw4rYNg=="},{"id":39,"name":"Episódio 40 - A Base Secreta está em Perigo","url":"PTVX::0ZqKB7DuFafMkaIy7eX97aYzavg4T1ERidaHd0IgjBgc3GXraoKmOFi8p71huJc6S9lxvBCwmZyWMieXsv0rugNUE0chtF6sT8m3uOubAgpH8fFb0riauA=="},{"id":40,"name":"Episódio 41 - A Grande Aventura de Papai","url":"PTVX::62Xb1G1cUqnVjaMUIxwtpT5fNIg+VvXBZYNfuKU7NWmwoMlnTtRLDnPZNaKEvlHURA/E8eqjRsTy9uylt+3jSmYf4UjDdRJqw0IYaD+ujiLDzJL+WYS4mA=="},{"id":41,"name":"Episódio 42 - A Armadilha do Escorpião ","url":"PTVX::ALo9CVDdq3n0UTc57cf9iGkMPK0zerggvrK+T1PNhE5b4+hQEmGUm7CpL0wn8OVaZeZ7xoJDF+9EJRH+SZq1wDWL7XbDj94OuJi/HtY5bN2sx+63MTLRSQ=="},{"id":42,"name":"Episódio 43 - O Roubo do Tesouro","url":"PTVX::/JvwCxeimJYrAi2J051/GEwtzjqH3ZaS/kStuE4EeclLusDLtia9auUVbBROZP6ujVBrDNDIFk0W6ss72lLNHwiclv87JlmJyfq07Nby7nbsalos5VONuA=="},{"id":43,"name":"Episódio 44 - A Transformação dAlimentos em Areia","url":"PTVX::/vMplVZEZGwmwOch1FeLJzq6eFsgYNV98Ek2EMpXrUHASV33iDQhIMDY5B4BP29AiWsHn2vqF7zNle1tInLvrdFMK6CPrbHVTH3Mslpcc8kOLJc0kw4umg=="},{"id":44,"name":"Episódio 45 - O Falso e o Verdadeiro Black","url":"PTVX::lhLXj84UzP/5/sYZaM+W0nt6DhMcmDK43QGkTPamlh/7VGKlf5YD01EMsIg3EeFu+L8VKUTiZAXLkyU2OET26SJ90TRlnn0czjmcc5ns1efYb67xYBp7fA=="},{"id":45,"name":"Episódio 46 - O Aparecimento da Super Energia ","url":"PTVX::IsnPGG+EjkRDoNmSFITuEoSa8D1i3kwQBA1KLz5zKPTBYF+5FzAwz92w4pLKEmBdj3SscNmd6ApKbXQ0Vt/eZIWk5+IViuKzZVbh6swul0Z6OI3cmkMoig=="},{"id":46,"name":"Episódio 47 - A Última Arma","url":"PTVX::TUDrknQQJuMrEVCvyYtEK+bcu5R3/55h1/IccaE+KLYFclEpja1y3he7MTeWSKEWmXADtfGJXqDkq8yGI3Ve1SUzvWoDi79Ia4Z/X8Eq4rkvLLAkNJ0s"},{"id":47,"name":"Episódio 48 - O Último Dia da Base Secreta ","url":"PTVX::hJ63bG8E5yJEaPgOkSCCwkwWVXpfQynJpSu2wqPB9hYIKpoDGGxiV+b2maGXKk/lZITGybECRmNn0RBheGBpcwOSgfCIJ41gPH2rL27dwizLxI47MiB5WQ=="},{"id":48,"name":"Episódio 49 - O Último Desafio","url":"PTVX::Xbz4LllFRhF2CRiDFIQvncb7zbHm6bwgV9gQZySpOwxjGeZPJQgm3clf/4VNoGS2Px+KE8fe+A/8bw7AHSVyPWxnkVizpajm80n/MLRmiuGjMgHI9kbqrQ=="},{"id":49,"name":"Episódio 50 - O Futuro Brilhante ","url":"PTVX::CAvMLJMO/n72tc7R3mnHB+APkBwgixL4jZtG0bF4JwZaLEnwVJlt8YwZDmHn8jcqUSvYnu6qybIxyK9aDqklffczTIj8hFeHw0D+YZOF81SQ0Ze36swGyA=="}];
+        const TV_PLAYLIST = [{"id":0,"name":"Episódio 01 - O Ataque da Ciência Maligna ","url":"PTVX::FkrEbXO89avlmWITTxieVCy6ljOIVod9L9QT/LvLMSeHOOZo1ZB5NqwQ36xbUuiodse/R8D6itHqYZm/iYxFJ21aS/G68ic6M5FSgYzQfEaByC0QPeY++g=="},{"id":1,"name":"Episódio 02 - Lutem, Guerreiros do Futuro ","url":"PTVX::Y/HrKWMoeIWsOH5Vqly+55ZjtxsGdKbCOOyJrpj27xkN2KJGpX+pE4ItElILHPrKTOrWd3MvYR3F+PBNwWvDfZ7jfMzcWO4wG6KbvdS9iyzNQhD8DZrMdg=="},{"id":2,"name":"Episódio 03 - O Ataque do Destopia","url":"PTVX::V9/8zKswb1OrExPO8hmFhGPwLrVjig3Q3qx9QCOMn9D6maVrrjoODK/UsihxfCBymY97E8pavHi0OW9dO8G1rwvJeauFKJFpktlK6m1EeSMZr4XID2QNpw=="},{"id":3,"name":"Episódio 04 - O Planeta Melão ","url":"PTVX::sp9qvsnjtjVmCdFpW3ia2JfBwAeWAL7qN68F/4l+KsCDk7OPqELrKUw4MY+Ut9hryV6dJSXXBeo2CPNC2R4A3tV5dQ7FCGSvmGjKhKwgoEEM0fXJorg1QA=="},{"id":4,"name":"Episódio 05 - O Demônio se Esconde na Lenda","url":"PTVX::vCzUy3asNFnki8s8Sc0HVCmceHCe85rXaZoK/t1fu2doKLnv2OnKRbPWvp96UwpvhW6aUAx94Wo55ZiZYe2uImRcbtnsuEUvgQIqw9JBJRqCpUEAUGY4Hw=="},{"id":5,"name":"Episódio 06 - O Ator de um Lutador Sujo","url":"PTVX::ecOF28BlS05o9mxtjcYW/kM6uTUptscQi354Yw5ivsytrC4TRwqNaJ6uisiwHDTGh+lP9UF2x7nbOKBcRKMEFn54YpaWkEutpHZ7S8g/7mvR6xdhi4cBOg=="},{"id":6,"name":"Episódio 07 - Papai é um Fantasma ","url":"PTVX::x1p9fl/INn/CkPfu8v7YHvIahpU8NQwaywPUOiMrUskf2++2GOzoZ4PhLwwBNd+l/q5B+gsjlknl0di7TQNE2MUsAM+nHIg78OmgXIIaR2KuQjxEDZRLsw=="},{"id":7,"name":"Episódio 08 - O Alvo é a Bela Jovem ","url":"PTVX::JFqCth25/qfhV+HIU606VBhtRc3xbP1gSmbLudPpfCTZogP13ivvP1fife//48WkDY/Kpb+d2CGxNVd0MAG2Qjn9vohIa1Ssz/TRI6Dh27/hXyAoc5kjWw=="},{"id":8,"name":"Episódio 09 - A Plantação do Cogumelo Infernal ","url":"PTVX::Bz+CaYPoZo+ELjsE105UDUMccLSbzhwu0tpPV6KvGgzZDq8Xwkt99bKDIPP4y2f3oMYuCui1ZhymO56CkEFPmY14/b78A85J5nOE7Cv6o3qW4J6kcWHEIQ=="},{"id":9,"name":"Episódio 10 - O Estranho Vegetal ","url":"PTVX::RqKW0DMgf9jhsnCLeD7ZEckCK7SBBe7M3DWUqBWM4gDnnSuf6n+vEnnRZls39MraRrKquBctaAejFvAzDo0v6oQXRWrVrkQ9uQK5ziwqCmrOhs/zyP+Emg=="},{"id":10,"name":"Episódio 11 - A Terrível Guerra Magma","url":"PTVX::7nSPezAJBZev95NYW9fRVXyvoywxBzJRx35Bn9oWtTjAyABgNmfL+tblIwiKYWMXirWdO+ppAgHzpFmAC0kIQlAJhyH90Z4HPxpnao0/kEKwFwN3KCAxUw=="},{"id":11,"name":"Episódio 12 - O Fantasma do Inferno Arenoso","url":"PTVX::KanDpNvt1EhQBqOCChn5usVUosHxtexY7NeJMvv3s0VoNZ6yYTuthfBVRN90MX6v572YCspFoHtPr7wujb+VncC+Leo20/xdeC4C19NOyENWqujYopJjRg=="},{"id":12,"name":"Episódio 13 - A Fúria do Enguia Mozu","url":"PTVX::ZVxKgeKRXmqX/oNVdqLpk54eHXisbu5tNJcOV5Dz/ctYIX6l3zb/c3SHa5B4zvHSbG1Z6e6daB1/7xWTL8f+6u5I8ZFO0mNjhjvnsT7EERPKQYhI/QK+Gw=="},{"id":13,"name":"Episódio 14 - O Afundamento da Terra","url":"PTVX::+uTJcBMa0tK9+HzJtIH44MfloMCHJBIeUt6glBQrtrkb/A0DaAti0Z77otQY3GnHXpmq5Vf7o2Mw/bqpT4ADPtdUCwmt+bi9Oi8k/sQUC739C9DNNSMNJA=="},{"id":14,"name":"Episódio 15 - O Renascimento do Diabo","url":"PTVX::NxC1i5ib/hJaLCpUb1lUVPo63say89H2pVmNdwbKONQVnhTKf8B74hYaOyAkjBRjOq06EluFlroLacaH0QO5L0NjrXET5h8Ixl922l+bVaVkI/dG4YIkEg=="},{"id":15,"name":"Episódio 16 - Red! O Perigo por um Fio","url":"PTVX::Nja3p//9NxDBjlXhYbVOvaLPASiKk4zqfse5Fd4cmubI1jllVBdwUqg/MytYMW+Y9BH+VZyzYLBleLBlrpt99izcfsopKt9WR/mO8C2rhzKiyoUMgvNLFg=="},{"id":16,"name":"Episódio 17 - A Lágrima do Kappa","url":"PTVX::7R7tdPuMkS8NwYvfHEj5h+uzssL0NccAqebtLney9BXwLkcdv6QqEu0IRRlaDW3dFashb8God0fTLcou1vQhTgRm531B1QyY/Hopqq4W2a8WeqPZ045CRw=="},{"id":17,"name":"Episódio 18 - O Homem Invisível ","url":"PTVX::a8/1i+EV/9+SXzwGQSaFuDRRE0g92WHWZ+xzDHLqe5/qbZ9BQGl2xqLVALdQ2Zs/K6d3g06//MjfQC8vjP/7h/qbQkXJOu57BH480gWW2FQrVNiaJnK5bw=="},{"id":18,"name":"Episódio 19 - O Segredo da Mansão ","url":"PTVX::BDbeb/uGaW391fcNSeZDPEHbS2ZBdtLWoSePwrgdSvf3rmzIUd7f+17rfloEWp3GHYLYfu7L8P6jFSABIZDc6mP3qt2ZpkWNtVCJ9YlocrxRvmirAY5e7w=="},{"id":19,"name":"Episódio 20 - O Cacto Venenoso","url":"PTVX::NLqFzloAV09RcuBlXAopBtmjkk1pcIN4oiVzqS0raBCDGuwuCpqNOCdRSdQrL3qDzKVA+Adgd/TxhYJBW1IM1E3WSr/5fvQpOc4vGyI6RcLJtLWb9YnVCw=="},{"id":20,"name":"Episódio 21 - A Petrificação dos Peixes","url":"PTVX::ZIJyNeIv4t7sDXM07mhjof8QrmMQ8bWktBb9oNKP5wwuxD2vkt3TvVdbLojfQIOzdpxttW40A8RQZV+/1w5sAy47ecSQODmSKrqWoy9QEmLUm/jU9x6Mqw=="},{"id":21,"name":"Episódio 22 - O Ataque das Bonecas Amaldiçoadas","url":"PTVX::0cE0MCWkCSPcRT4i/Z5KSplzvT+fNEoUVdyZU8gPNr0l7+JGp3376qN5lc0AuwQTRZZagHtlkTWoel7plF9mMxqEEBQfLnmvrbE98TGOXwOu5N4wEbsWOA=="},{"id":22,"name":"Episódio 23 - Operação Bolha de Sabão ","url":"PTVX::bUIH2IWTuu2XnXmFE6BJP5tIYXkAQSFlyIDE9nmJnMVZ5JB6O2hruVAJ1eTWAjkYoPpkATGJ8Dcy6JyA70XJZR1CyQULm8SyzFzXS18FSFPgYXCBycEwkw=="},{"id":23,"name":"Episódio 24 - A Guerra Contra o Inimigo Invisível ","url":"PTVX::EQdFxmEgkjWuu9ORCEogV6nFKXDYjsila83n0IsV/H761pR1J9qkujfDmPmkD+aaQeTSnFtfiexmihwa8UGNZ34QaGicMlS7ueOLHCc2Y65YnHIBX0uL0A=="},{"id":24,"name":"Episódio 25 - Dinossauro, o Mensageiro do Mal","url":"PTVX::Cy+8/+E/dwILRTlkWMW770kfritimf843zzEtot3ojZADm7umFsceirIBSXp/r58OBG2w7cvqvZKDXy2lQW+N3KV11Orpz0uW0WZQA1AWsKN0IlxNUoxtw=="},{"id":25,"name":"Episódio 26 - A Grande Farsa do Black","url":"PTVX::k7/Zmx0nOVQ9ho3LWwx493xBPRlgrfaPSHgbqvNP2Ho7guK2CiA5Vxikmm53m+7WDDx5Nzby5Lkq8pGtMNieT13W+R9qd18Ns6byuIHapVwBlzorvlmDtQ=="},{"id":26,"name":"Episódio 27 - A Selva de Humanos","url":"PTVX::KEPzbW8Di1VxMj5SuEcRiD0s7Hb1vp6FYehUmyZVfyV65FfDiVUF/Yr3b7QYMLL4HJXBkgdurFfu6H5nD8+44QPoBvlywJEjQGpXdHrLuPuHIu57i7JX+Q=="},{"id":27,"name":"Episódio 28 - O Renascimento do Espírito Monstro ","url":"PTVX::BJo850GMH2IgIrzjiDixiGN3LUoXnUeaxLPSIQEgyttApBhBcXhJz9ar+lkv55Fer4dQFzhUX0CE0rQI9pdRLrx4Je+udk1PIvw9G4cVLgyMahzBDJOXIg=="},{"id":28,"name":"Episódio 29 - Terror na Cidade dos Sonhos","url":"PTVX::EbbNQCHuowej0gO0njn0v5f42/UTUJAMPW5DVZxFNnMIUDnNMauKumB8ABEBUxUQD9tzbfNhNHMNX6DR+MDzduxWOpGTIwbngn6kGvLqpKIhEgjK/uVIVg=="},{"id":29,"name":"Episódio 30 - A Espada de Ouro","url":"PTVX::7nSoGlgbd6nzXOKjFQ0J7n8XUm7lmq6pCAFFvKTHtx3rlkHuIlrgDNiRIXWCwy6lg8/mG3RY1zuL1DmKL/P3Gd1ljyryNMlr65K2BnUPNhvgAcO1okLStw=="},{"id":30,"name":"Episódio 31 - O Grande Ataque de Blue","url":"PTVX::JNOeqQtglDwj0yCoz3Fqk4kPFUel8wDM5vCiYidRNsiVsxwd1Yr7g0EDvQtcnelZpbQCkgezmHveWWyEcKeyzeMiSbXIQr80pzZXk6+5KwCDx9mgOT4Jvg=="},{"id":31,"name":"Episódio 32 - O Homem sem Osso","url":"PTVX::tEldBD0qqu5HsNJgo6zolJHntQgV8l7JPMd0bg5ow1/VkI/lhr/VYgfaa6ftzib7p/+DV6r16/8avmE1AzfVIJDc1f4Q14kq5c3R3p23LD1998ecmLEb7A=="},{"id":32,"name":"Episódio 33 - Tentativa de Explosão ","url":"PTVX::uACvL/mR88mmWlFaLCXExFQuHRZPFVg08wgGIygL9zs0xN6NcR+UvGJ5ohGTpV6J2+cBjFPL7z5Otu1VXp6732Qijj45d9GWnxcQucLBrecAfgznCL1Dzg=="},{"id":33,"name":"Episódio 34 - A Espada de Ouro Fatal","url":"PTVX::ZOFJhx89dQHDqp1F0VhC/e92FI5jZJpaL30s980ttkuWGHwDQUcZHPKIVULmo+7QTOJvcjRgWjlHBi26KGPWBAxw2pIe7k0XF7hflqk+UK2b/bCAN7gBQg=="},{"id":34,"name":"Episódio 35 - O Ataque dos Humanos que Comem Ferro","url":"PTVX::d4XIKREkhHxqsoLiDabN04sW/NX6ZfP1g/8pi/2U5Zbbg6YE9DzkSiGhyJ9uvEcfKB/Wv8Y9aNb/KXVFdv8Yus3R4C+cSGZy8gsDeDLQO8/wZCSuiV4xHQ=="},{"id":35,"name":"Episódio 36 - Um Duelo de 30 Segundos","url":"PTVX::T4FCAKSTP7JwMd+GZth3lCIk9huDh9KnhfnS6fIhICwjfJWXUUwK0IWXCnkbUT8Bv8pDZfURSbjWheN/ZLbIP89hr/Kkn3Vk4817zjbVhCrdA1Hr4+qqWw=="},{"id":36,"name":"Episódio 37 - O Enigma do Grande Ataque ","url":"PTVX::5NzCcKmJYvowAxnPWJ+zfte23SDP8w/MlRJIuNUkWYlrxCMVj4Hu1sI51LNZUbfHeuZtgszre33K6BxZjuw3sUi6QGBBCLYk11MZM0ribBALchWshoxMeg=="},{"id":37,"name":"Episódio 38 - Os Sentimentos de Amizade","url":"PTVX::+0I0DeC7qkOh76XPHHU29DMa5HvMOKa5DT424XrZ8zZM9USaG7T6Rs4UmBJeAVnbCeKK2HBHi5KCiNa3SslWIIaaqE6is+sN7EH5aSQLdoiCRlJhWVGaWQ=="},{"id":38,"name":"Episódio 39 - O Diabo Mora Dentro do Livro","url":"PTVX::ix+ItszjQJJo9JX8ZEol/yaXtWKYA9sjZyqu7xPVvpP0YIHc1MS4x41JUl/8Q28wjIUyvQYRKce8xuAeQtqi2DLb9pqRypQAXqZlNxPHjfgG4JLDwEVNfw=="},{"id":39,"name":"Episódio 40 - A Base Secreta está em Perigo","url":"PTVX::Hg4/Ii0Cb6AdF4B8x9RzBlHmKaIqGlC04Xnga3S5m7wlld7+YT0CaWIFiJPUiQW18hsjb85RNFsatV8jYEgqsie2znCOCS916epK1O9ttSBHXj1bvLlleg=="},{"id":40,"name":"Episódio 41 - A Grande Aventura de Papai","url":"PTVX::HAJEbVpR/hm4N3nlpn7U+OPL8KJnemjmUd+AgqYVGsEqyXJIRjV1GVetW0YCC4LhNHbd0imvmeErfTii0CccwGW2b9sXvBzoY/KQpUSeR4VBI0f9625y0Q=="},{"id":41,"name":"Episódio 42 - A Armadilha do Escorpião ","url":"PTVX::6VmJI9Yix05lxhEYPaYmrrD+ThVe/gIMp0PWzPmnxzSXndZsCHxem9I2kbhrFeQSChL7pTMgMboObBCRutYasmf9KWpfUJeMt5I2LiLVnuRVzkFHQywaqA=="},{"id":42,"name":"Episódio 43 - O Roubo do Tesouro","url":"PTVX::RtI42cmV2sXuCnQSL60BqMwEAAV7zGSyqFujOZxkgMWA1aW8S55yKauGGt46yFNN8mFf4AiFD5hXK/pUR6J9GO7b+c8Zp398P5+XpiXNJNJt9skWH7btxA=="},{"id":43,"name":"Episódio 44 - A Transformação dAlimentos em Areia","url":"PTVX::qChPzckuszDFc86SEBSK0ZHba5kK40udPJyQTrnQ+rNG3jhh+3PH0DAICDHRVeeErSbYs5C95zTKEMVtX3ULalpYVUsei0ktHWio0KBD6Fnkz7Flg3TZeQ=="},{"id":44,"name":"Episódio 45 - O Falso e o Verdadeiro Black","url":"PTVX::HvYsjnFxwkzzwsXjOP5tsb5Gu+4fVTSwF5lvoB8NHetFdObDpPtD6/kMtI6A8iVyGVFn2L4W01uxKH7zHbVrbkj5HjbzD8jsr4Dah7x7Zq91R+TL8hkouA=="},{"id":45,"name":"Episódio 46 - O Aparecimento da Super Energia ","url":"PTVX::HCbB/2ovwpsOwp5Wp5b+McAM2cdng3cCHcQYyJL72AxcEa+kCQR2GHsu9HetyFBR1GsCVuWi4BOwtyYcOV5PKINP+ZDnAuOauzV9JpaVoJ9BuF9zaf2L1Q=="},{"id":46,"name":"Episódio 47 - A Última Arma","url":"PTVX::LcTQd94l9G4ElwfnQBD4i/wFxb3C1hs91IjQJC3RMN2eMflWskbNVFi28OlVB1TGJvOZA2c4iXmXdelBBt2OTkGR+wPwGiFrNWHiASQL46w0N6ixxi7H"},{"id":47,"name":"Episódio 48 - O Último Dia da Base Secreta ","url":"PTVX::mFwMy3ag7mIXMHAXnvLQwIczKkXWgKzgUAhxWK/5pLstFJexf/HOKADLzHRZ4mUL2EuzEkPyBFXhuCaXjpdtkJMh+1VTbZIvmweLHx9FAGJOdNORam8jUA=="},{"id":48,"name":"Episódio 49 - O Último Desafio","url":"PTVX::7uPZo4r0kHpHIr/NJJlplUXJy4Dpr+TOjoxfkIVDpP+hnfo+Di6Z3iytDuRFCgyP/MIuCTCn5gIlcV7OJEZXUZEIx8OFfHuM8sz+T8C/FPtRF3i7pRbLWQ=="},{"id":49,"name":"Episódio 50 - O Futuro Brilhante ","url":"PTVX::9VSjDoHJWUZS6KscdMNEyepdBKFY6Qw4/jzPiSNVgakAEETz1Ue+NAb5Ne2I8UDS7miKWcQcvNkvvDuOyzJCFvrFyE6r8pZU811UP+7/Ck29A9UHkfCggw=="}];
         const PROGRAMMING_MODE = "playlist";const TOTAL_PROGRAMS = 0;
         const TOTAL_PLAYLIST_VIDEOS = 50;
         const PROGRAM_VIDEO_COUNTS = [];
@@ -2442,15 +2480,15 @@ function calculateExpectedTime(duration) {
         
         const RELEASE_DATE = "2026-11-12";
         const IS_OFFLINE = false;
-        const CHANNEL_VERSION = "1.0.0.0";
-        const CHANNEL_ID = "tokusatsu-super-sentai-goggle-five";
+        const CHANNEL_VERSION = "1.0.0.1";
+        const CHANNEL_ID = "1mKe48ktdgHILf8bkfdj";
         // --- Subscription ---
         const SUBSCRIPTION_ENABLED = false;
         try {
             console.log('[gerarHTML] SUBSCRIPTION_ENABLED =', SUBSCRIPTION_ENABLED,
                 '| dados.monetization =', JSON.stringify(dados.monetization || null));
         } catch(_e) {}
-        const SUBSCRIPTION_PRICE = 0;
+        const SUBSCRIPTION_PRICE = 3.99;
         const SUBSCRIPTION_TRIAL_DAYS = 0;
         const SUBSCRIPTION_PLAN_ID = "";
         const CHANNEL_NAME_STR = "Tokusatsu Super Sentai Goggle Five";
@@ -2663,7 +2701,7 @@ function calculateExpectedTime(duration) {
             btn.addEventListener('click', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
-                var url = 'https://canaisdetv.online/comercial.html?channelId=tokusatsu-super-sentai-goggle-five';
+                var url = 'https://canaisdetv.online/comercial.html?channelId=1mKe48ktdgHILf8bkfdj';
                 if (currentUserChannel && currentUserChannel.uid) {
                     window.open(url, '_blank');
                     return;
@@ -6009,6 +6047,38 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
     
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const smartlinkOverlay = document.getElementById('smartlinkOverlay');
+            const unlockBtn = document.getElementById('unlockChannelBtn');
+            const mainContent = document.getElementById('mainContent');
+            
+            if (smartlinkOverlay && unlockBtn && mainContent) {
+                // 1. MOSTRA a lightbox ao carregar
+                smartlinkOverlay.style.display = 'flex';
+                
+                // 2. ESCONDE o conteúdo principal
+                mainContent.style.display = 'none';
+                
+                unlockBtn.addEventListener('click', function() {
+                    // Abre o smartlink em nova aba
+                    window.open('https://www.profitableratecpmnetwork.com/ftfepn861k?key=b6040003d19e2565ba373c501a73b1bb', '_blank');
+                    
+                    // 3. ESCONDE a lightbox
+                    smartlinkOverlay.style.display = 'none';
+                    
+                    // 4. MOSTRA o conteúdo principal
+                    mainContent.style.display = 'block';
+                    
+                    // Inicia o player
+                    if (typeof iniciarPlayer === 'function') {
+                        setTimeout(() => iniciarPlayer(), 300);
+                    }
+                });
+            }
+        });
+    </script>
     
 
 
